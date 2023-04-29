@@ -47,18 +47,8 @@ def CO2_prediction(input_data):
     print(CO2_modelprediction)
     return CO2_modelprediction
 
-def O2_prediction(input_data):
-    O2_model=pickle.load(open('model4.sav','rb'))
-    scaler_O2=pickle.load(open('scaler.sav','rb'))
-    input_data_as_numpy_array=np.asarray(input_data)
-    std_data=scaler_O2.transform(input_data_as_numpy_array)
-    input_data_reshaped=std_data.reshape(1,-1)
-    O2_modelprediction=O2_model.predict(input_data_reshaped)
-    print(O2_modelprediction)
-    return O2_modelprediction
-
 def H2S_prediction(input_data):
-    H2S_model=pickle.load(open('model5.sav','rb'))
+    H2S_model=pickle.load(open('model4.sav','rb'))
     scaler_H2S=pickle.load(open('scaler.sav','rb'))
     input_data_as_numpy_array=np.asarray(input_data)
     std_data=scaler_H2S.transform(input_data_as_numpy_array)
@@ -73,10 +63,10 @@ def H2S_prediction(input_data):
 #Create title and slider
 def main():
     # Giving a title
-    st.title('POME')
-    st.text('This app predicts the performance of a ________')
+    st.title('POME biogas predictor')
+    st.text('This app predicts the biogas output from a closed system POME anaerobic digestion process.')
     # Sidebar header
-    st.sidebar.header('User Input Parameters')
+    st.sidebar.header('Input Parameters')
     # Define user input features
     def user_input_features():
         COD_in = st.sidebar.slider('COD',55000,92000,65000)
@@ -107,11 +97,11 @@ def main():
     
 ########################################################################
 # Create subheaders for main performance indicator  
-    new_title = '<p style="font-family:monospace; color:red; font-size: 30px;">Key Performance Indicators</p>'
+    new_title = '<p style="font-family:monospace; color:red; font-size: 30px;">Biogas components</p>'
     st.markdown(new_title, unsafe_allow_html=True)
-    st.text('This section displays the key performance indicators of __________')
+    #st.text('This section displays the key performance indicators of __________')
     
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3 , col4= st.columns(4)
     
     col1.subheader('Biogas')
     result_Biogas = Biogas_prediction(df)
@@ -131,19 +121,11 @@ def main():
     rounded_CO2 = round(series[0],3)
     col3.write(rounded_CO2)
     
-          
-    col4, col5, col6 = st.columns(3)   
-    col4.subheader('O2')
-    result_O2 = O2_prediction(df)
-    series = pd.Series(result_O2[0])
-    rounded_O2 = round(series[0],2)
-    col4.write(rounded_O2) 
-    
-    col5.subheader('H2S')
+    col4.subheader('H2S')
     result_H2S = H2S_prediction(df)
     series = pd.Series(result_H2S[0])
     rounded_H2S = round(series[0],2)
-    col5.write(rounded_H2S)
+    col4.write(rounded_H2S)
 
 
 
