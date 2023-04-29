@@ -104,25 +104,25 @@ def main():
     
     col1, col2, col3 , col4= st.columns(4)
     
-    col1.subheader('Biogas')
+    col1.subheader('$Biogas$')
     result_Biogas = Biogas_prediction(df)
     series = pd.Series(result_Biogas[0])
     rounded_Biogas = round(series[0],3)
     col1.write(rounded_Biogas)
 
-    col2.subheader('$CH_{4}$')
+    col2.subheader('CH$_{4}$')
     result_CH4 = CH4_prediction(df)
     series = pd.Series(result_CH4[0])
     rounded_CH4 = round(series[0],3)
     col2.write(rounded_CH4)
 
-    col3.subheader('CO2')
+    col3.subheader('CO$_{2}$')
     result_CO2 = CO2_prediction(df)
     series = pd.Series(result_CO2[0])
     rounded_CO2 = round(series[0],3)
     col3.write(rounded_CO2)
     
-    col4.subheader('H2S')
+    col4.subheader('H$_{2}$S')
     result_H2S = H2S_prediction(df)
     series = pd.Series(result_H2S[0])
     rounded_H2S = round(series[0],2)
