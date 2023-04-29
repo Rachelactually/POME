@@ -104,7 +104,7 @@ def main():
     
     col1, col2, col3 , col4= st.columns(4)
     
-    col1.subheader('$Biogas$')
+    col1.subheader('Biogas')
     result_Biogas = Biogas_prediction(df)
     series = pd.Series(result_Biogas[0])
     rounded_Biogas = round(series[0],3)
