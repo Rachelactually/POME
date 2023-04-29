@@ -110,7 +110,7 @@ def main():
     rounded_Biogas = round(series[0],3)
     col1.write(rounded_Biogas)
 
-    col2.subheader(r'$CH_{4}$')
+    col2.subheader('$CH_{4}$')
     result_CH4 = CH4_prediction(df)
     series = pd.Series(result_CH4[0])
     rounded_CH4 = round(series[0],3)
