@@ -64,7 +64,8 @@ def H2S_prediction(input_data):
 def main():
     # Giving a title
     st.title('POME biogas predictor')
-    st.text('This app predicts the biogas output from a closed system POME anaerobic digestion process.')
+    st.text('This app predicts the biogas output from a closed system POME anaerobic digestion')
+    st.text('process.')
     # Sidebar header
     st.sidebar.header('Input Parameters')
     # Define user input features
