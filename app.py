@@ -104,8 +104,8 @@ def main():
         new_title = '<p style="font-family:monospace; color:red; font-size: 30px;">Biogas components</p>'
         st.markdown(new_title, unsafe_allow_html=True)
         st.caption('The **Gaussian Process Regressor (GPR)** model, **Random Forest (RF)** model and **Extreme Gradient Booosting (XGBoost)** model\
-        are among the selected predictors for POME biogas components. The accuracy of the respective models, represented by the R$^{2}$ coefficient of\
-        determination on the prediction of the target outputs are shown in :blue[_italic_].')   
+        are among the selected predictors for POME biogas components. The accuracy of the respective models, represented by the :blue[R$^{2}$ coefficient of\
+        determination] on the prediction of the target outputs are shown in :blue[_italic_].')   
 
         # GPR
         new_title = '<p style="font-family:monospace; color:yellow; font-size: 20px;">Gaussian Process Regressor (GPR)</p>'
@@ -236,13 +236,22 @@ def main():
         rounded_H2S = round(series[0],2)
         col4.write(rounded_H2S)
 
+        mystyle = '''
+            <style>
+                p {
+                    text-align: justify;
+                }
+            </style>
+            '''
 
-
+        st.write(mystyle, unsafe_allow_html=True)
     ########################################################################
 if __name__=='__main__':
     main()
     
-
+ with tab2:
+    
+    
     # OLD Code
     # Create subheaders for dependent variables
         #st.subheader('Coefficient of Performance')
