@@ -100,13 +100,14 @@ def main():
 # Create subheaders for main performance indicator  
     new_title = '<p style="font-family:monospace; color:red; font-size: 30px;">Biogas components</p>'
     st.markdown(new_title, unsafe_allow_html=True)
-    st.text('This section displays the prediction from the Gaussian Process Regressor model.')
-    st.text('The accuracy of the model on the prediction of the target outputs are shown in _italic_')
+    st.caption('This section displays the prediction from the Gaussian Process Regressor model.')
+    st.caption('The accuracy of the model on the prediction of the target outputs are shown in \
+    _italic_')
         
     col1, col2, col3 , col4= st.columns(4)
     
     col1.subheader('Biogas')
-    col1.text('_0.98_')
+    col1.caption('_0.98_')
     result_Biogas = Biogas_prediction(df)
     series = pd.Series(result_Biogas[0])
     rounded_Biogas = round(series[0],3)
