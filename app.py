@@ -70,7 +70,7 @@ def main():
     st.sidebar.header('Input Parameters')
     # Define user input features
     def user_input_features():
-        COD_in = st.sidebar.slider('COD',55000,92000,65000)
+        COD_in = st.sidebar.slider('COD',55000,92000,65000,1000,"%f")
         BOD_in = st.sidebar.slider('BOD',23000,47000,30000)
         SS_in = st.sidebar.slider('SS',13000,55000,35000)
         TS_in = st.sidebar.slider('TS',22000,55000,35000)
