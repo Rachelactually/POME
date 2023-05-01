@@ -17,16 +17,6 @@ st.set_page_config(
     )
 
 
-st.code("""
-[theme]
-primaryColor="#097969"
-backgroundColor="#AfE1AF"
-secondaryBackgroundColor="#40B5AD"
-textColor="#262730"
-font="sans serif"
-""")
-
-
 hide_menu_style = """
         <style>
         #MainMenu {visibility: hidden;}
