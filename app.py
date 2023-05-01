@@ -109,14 +109,14 @@ def main():
 
     ########################################################################
     # Create subheaders for main performance indicator  
-        new_title = '<p style="font-family:sans serif; color:red; font-size: 30px;">Biogas components</p>'
+        new_title = '<p style="font-family:serif; color:red; font-size: 30px;">Biogas components</p>'
         st.markdown(new_title, unsafe_allow_html=True)
         st.caption('The **Gaussian Process Regressor (GPR)** model, **Random Forest (RF)** model and **Extreme Gradient Booosting (XGBoost)** model\
         are among the selected predictors for POME biogas components. The accuracy of the respective models, represented by the :blue[R$^{2}$ coefficient of\
         determination] on the prediction of the target outputs are shown in :blue[_italic_].')   
 
         # GPR
-        new_title = '<p style="font-family:sans serif; color:orange; font-size: 20px;">Gaussian Process Regressor (GPR)</p>'
+        new_title = '<p style="font-family:serif; color:black; font-size: 20px;">Gaussian Process Regressor (GPR)</p>'
         st.markdown(new_title, unsafe_allow_html=True)
         st.caption('GPR is a **probabilistic mode**l bassed on non-parametric kernel models.\
         Unlike linear regression, GPR makes predictions in the form of probability values\
@@ -159,7 +159,7 @@ def main():
         col4.write(rounded_H2S)
 
         # XGBoost
-        new_title = '<p style="font-family:sans serif; color:orange; font-size: 20px;">Extreme Gradient Boosting (XGBoost)</p>'
+        new_title = '<p style="font-family:serif; color:black; font-size: 20px;">Extreme Gradient Boosting (XGBoost)</p>'
         st.markdown(new_title, unsafe_allow_html=True)
         st.caption('Proposed by Chen and Guestrin in 2016, the XGBoost algorithm is an optimised version of\
         gradient boosting. Boosting assigns weight to observations and increased the weight of the\
@@ -204,7 +204,7 @@ def main():
         
         
         # RF
-        new_title = '<p style="font-family:sans serif; color:dark grey; font-size: 20px;">Random Forest (RF)</p>'
+        new_title = '<p style="font-family:serif; color:black; font-size: 20px;">Random Forest (RF)</p>'
         st.markdown(new_title, unsafe_allow_html=True)  
         st.caption('Random forest is a non-parametric model as partr of the Ensemble of Trees (EoT) system\
         that was proposed by Breiman in 2001. The Classification and Regression Tree (CART) methodology\
