@@ -10,7 +10,6 @@ import streamlit as st
 
 st.code("""
 [theme]
-base="dark"
 primaryColor="#097969"
 backgroundColor="#afe1af"
 secondaryBackgroundColor="#40b5ad"
