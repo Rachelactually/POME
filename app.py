@@ -56,13 +56,16 @@ def H2S_prediction(input_data):
     H2S_modelprediction=H2S_model.predict(input_data_reshaped)
     print(H2S_modelprediction)
     return H2S_modelprediction
+########################################################################
+#Create tabs
 
-
+tab1, tab2, tab3 = st.tabs(["Prediction models", "Sustainability", "About"])
 
 ########################################################################
 #Create title and slider
 def main():
     # Giving a title
+    with tab1:
     st.title('POME biogas predictor')
     st.caption('This app predicts the biogas output from a closed system POME anaerobic digestion proccess')
     # Sidebar header
