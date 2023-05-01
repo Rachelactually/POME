@@ -60,7 +60,7 @@ def H2S_prediction(input_data):
 ########################################################################
 #Create tabs
 
-tab1, tab2, tab3 = st.tabs(["Prediction models", "Sustainability", "About"])
+tab1, tab2, tab3, tab4 = st.tabs(["Prediction models", "Methodology", "Sustainability", "About"])
 
 ########################################################################
 #Create title and slider
@@ -249,7 +249,12 @@ def main():
 if __name__=='__main__':
     main()
     
-# with tab2:
+    
+    
+with tab2:
+    st.title('Development of prediction models')
+    st.caption('To develop the models, 4 stages are followed.')
+    
     
     
     # OLD Code
