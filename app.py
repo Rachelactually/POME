@@ -66,84 +66,84 @@ tab1, tab2, tab3 = st.tabs(["Prediction models", "Sustainability", "About"])
 def main():
     # Giving a title
     with tab1:
-    st.title('POME biogas predictor')
-    st.caption('This app predicts the biogas output from a closed system POME anaerobic digestion proccess')
-    # Sidebar header
-    st.sidebar.header('Input Parameters')
-    # Define user input features
-    def user_input_features():
-        POME_in = st.sidebar.slider('POME', 3800, 24000, 12000,1000,"%f")
-        COD_in = st.sidebar.slider('COD',55000,92000,65000,1000,"%f")
-        BOD_in = st.sidebar.slider('BOD',23000,47000,30000,1000,"%f")
-        SS_in = st.sidebar.slider('SS',13000,55000,35000,1000,"%f")
-        TS_in = st.sidebar.slider('TS',22000,55000,35000,1000,"%f")
-        Temp = st.sidebar.slider('Temperature', 37, 48, 41)
-        pH_in = st.sidebar.slider('pH', 6.8, 7.3, 7.0,0.1,"%f")
-        OLR = st.sidebar.slider('OLR', 0.86, 1.70, 1.1, 0.01,"%f")
-        HRT = st.sidebar.slider('HRT', 35, 85, 50,5,"%f")
-        data = {'COD_in': COD_in,
-                'BOD_in': BOD_in,
-                'TS_in': TS_in,
-                'SS_in': SS_in,
-                'Temp': Temp,
-                'pH_in': pH_in,
-                'OLR': OLR,
-                'HRT': HRT,
-                'POME_in': POME_in,}
-        features = pd.DataFrame(data, index=[0])
-        return features
-# Create user input parameters title    
-    df = user_input_features()
-    #st.subheader('User Input Parameters')
-    #st.write(df)
-    
-    
-########################################################################
-# Create subheaders for main performance indicator  
-    new_title = '<p style="font-family:monospace; color:red; font-size: 30px;">Biogas components</p>'
-    st.markdown(new_title, unsafe_allow_html=True)
-    st.caption('The **Gaussian Process Regressor (GPR)** model, **Random Forest (RF)** model and **Extreme Gradient Booosting (XGBoost)** model\
-    are among the selected predictors for POME biogas components. The accuracy of the respective models on the prediction of the target outputs\
-    are shown in :blue[_italic_].')   
-    
-    new_title = '<p style="font-family:monospace; color:yellow; font-size: 20px;">Gaussian Process Regressor (GPR)</p>'
-    st.markdown(new_title, unsafe_allow_html=True)    
-        
-    col1, col2, col3 , col4= st.columns(4)
-    
-    col1.subheader('Biogas')
-    col1.caption(':blue[_0.98_]')
-    result_Biogas = Biogas_prediction(df)
-    series = pd.Series(result_Biogas[0])
-    rounded_Biogas = round(series[0],3)
-    col1.write(rounded_Biogas)
-
-    col2.subheader('CH$_{4}$')
-    col2.caption(':blue[_0.98_]')
-    result_CH4 = CH4_prediction(df)
-    series = pd.Series(result_CH4[0])
-    rounded_CH4 = round(series[0],3)
-    col2.write(rounded_CH4)
-
-    col3.subheader('CO$_{2}$')
-    col3.caption(':blue[_0.98_]')
-    result_CO2 = CO2_prediction(df)
-    series = pd.Series(result_CO2[0])
-    rounded_CO2 = round(series[0],3)
-    col3.write(rounded_CO2)
-    
-    col4.subheader('H$_{2}$S')
-    col4.caption(':blue[_0.98_]')
-    result_H2S = H2S_prediction(df)
-    series = pd.Series(result_H2S[0])
-    rounded_H2S = round(series[0],2)
-    col4.write(rounded_H2S)
+        st.title('POME biogas predictor')
+        st.caption('This app predicts the biogas output from a closed system POME anaerobic digestion proccess')
+        # Sidebar header
+        st.sidebar.header('Input Parameters')
+        # Define user input features
+        def user_input_features():
+            POME_in = st.sidebar.slider('POME', 3800, 24000, 12000,1000,"%f")
+            COD_in = st.sidebar.slider('COD',55000,92000,65000,1000,"%f")
+            BOD_in = st.sidebar.slider('BOD',23000,47000,30000,1000,"%f")
+            SS_in = st.sidebar.slider('SS',13000,55000,35000,1000,"%f")
+            TS_in = st.sidebar.slider('TS',22000,55000,35000,1000,"%f")
+            Temp = st.sidebar.slider('Temperature', 37, 48, 41)
+            pH_in = st.sidebar.slider('pH', 6.8, 7.3, 7.0,0.1,"%f")
+            OLR = st.sidebar.slider('OLR', 0.86, 1.70, 1.1, 0.01,"%f")
+            HRT = st.sidebar.slider('HRT', 35, 85, 50,5,"%f")
+            data = {'COD_in': COD_in,
+                    'BOD_in': BOD_in,
+                    'TS_in': TS_in,
+                    'SS_in': SS_in,
+                    'Temp': Temp,
+                    'pH_in': pH_in,
+                    'OLR': OLR,
+                    'HRT': HRT,
+                    'POME_in': POME_in,}
+            features = pd.DataFrame(data, index=[0])
+            return features
+    # Create user input parameters title    
+        df = user_input_features()
+        #st.subheader('User Input Parameters')
+        #st.write(df)
 
 
+    ########################################################################
+    # Create subheaders for main performance indicator  
+        new_title = '<p style="font-family:monospace; color:red; font-size: 30px;">Biogas components</p>'
+        st.markdown(new_title, unsafe_allow_html=True)
+        st.caption('The **Gaussian Process Regressor (GPR)** model, **Random Forest (RF)** model and **Extreme Gradient Booosting (XGBoost)** model\
+        are among the selected predictors for POME biogas components. The accuracy of the respective models on the prediction of the target outputs\
+        are shown in :blue[_italic_].')   
 
-########################################################################
-if __name__=='__main__':
-    main()
+        new_title = '<p style="font-family:monospace; color:yellow; font-size: 20px;">Gaussian Process Regressor (GPR)</p>'
+        st.markdown(new_title, unsafe_allow_html=True)    
+
+        col1, col2, col3 , col4= st.columns(4)
+
+        col1.subheader('Biogas')
+        col1.caption(':blue[_0.98_]')
+        result_Biogas = Biogas_prediction(df)
+        series = pd.Series(result_Biogas[0])
+        rounded_Biogas = round(series[0],3)
+        col1.write(rounded_Biogas)
+
+        col2.subheader('CH$_{4}$')
+        col2.caption(':blue[_0.98_]')
+        result_CH4 = CH4_prediction(df)
+        series = pd.Series(result_CH4[0])
+        rounded_CH4 = round(series[0],3)
+        col2.write(rounded_CH4)
+
+        col3.subheader('CO$_{2}$')
+        col3.caption(':blue[_0.98_]')
+        result_CO2 = CO2_prediction(df)
+        series = pd.Series(result_CO2[0])
+        rounded_CO2 = round(series[0],3)
+        col3.write(rounded_CO2)
+
+        col4.subheader('H$_{2}$S')
+        col4.caption(':blue[_0.98_]')
+        result_H2S = H2S_prediction(df)
+        series = pd.Series(result_H2S[0])
+        rounded_H2S = round(series[0],2)
+        col4.write(rounded_H2S)
+
+
+
+    ########################################################################
+    if __name__=='__main__':
+        main()
     
 
     # OLD Code
