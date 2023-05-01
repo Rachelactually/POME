@@ -13,11 +13,8 @@ primaryColor="#F63366"
 backgroundColor="#FFFFFF"
 secondaryBackgroundColor="#F0F2F6"
 textColor="#262730"
-font="sans serif"
+#font="sans serif"
 
-#[theme]
-base="dark"
-primaryColor="purple"
 
 ########################################################################
 # Creating a function and loading the model
@@ -110,34 +107,130 @@ def main():
         are among the selected predictors for POME biogas components. The accuracy of the respective models on the prediction of the target outputs\
         are shown in :blue[_italic_].')   
 
+        # GPR
         new_title = '<p style="font-family:monospace; color:yellow; font-size: 20px;">Gaussian Process Regressor (GPR)</p>'
-        st.markdown(new_title, unsafe_allow_html=True)    
+        st.markdown(new_title, unsafe_allow_html=True)
+        st.caption('GPR is a **probabilistic mode**l bassed on non-parametric kernel models.\
+        Unlike linear regression, GPR makes predictions in the form of probability values\
+        instead of scalar values [1]. This is achieved by assigning a prior probability to a\
+        set of functions, with higher probability given to functions that are more representative\
+        of the data. The combination of the prior distribution and the available data points\
+        results in a posterior distribution.')
+        st.caption('GPR is defined by a function which includes the mean function and a covariance\
+        function (otherwise known as a kernel). In this tuned GPR model, the **rational quaduatic** kernel\
+        is used.')
 
         col1, col2, col3 , col4= st.columns(4)
 
         col1.subheader('Biogas')
-        col1.caption(':blue[_0.98_]')
+        col1.caption(':blue[_0.990_]')
         result_Biogas = Biogas_prediction(df)
         series = pd.Series(result_Biogas[0])
         rounded_Biogas = round(series[0],3)
         col1.write(rounded_Biogas)
 
         col2.subheader('CH$_{4}$')
-        col2.caption(':blue[_0.98_]')
+        col2.caption(':blue[_0.989_]')
         result_CH4 = CH4_prediction(df)
         series = pd.Series(result_CH4[0])
         rounded_CH4 = round(series[0],3)
         col2.write(rounded_CH4)
 
         col3.subheader('CO$_{2}$')
-        col3.caption(':blue[_0.98_]')
+        col3.caption(':blue[_0.990_]')
         result_CO2 = CO2_prediction(df)
         series = pd.Series(result_CO2[0])
         rounded_CO2 = round(series[0],3)
         col3.write(rounded_CO2)
 
         col4.subheader('H$_{2}$S')
-        col4.caption(':blue[_0.98_]')
+        col4.caption(':blue[_0.986_]')
+        result_H2S = H2S_prediction(df)
+        series = pd.Series(result_H2S[0])
+        rounded_H2S = round(series[0],2)
+        col4.write(rounded_H2S)
+
+        # XGBoost
+        new_title = '<p style="font-family:monospace; color:yellow; font-size: 20px;">Extreme Gradient Boosting (XGBoost)</p>'
+        st.markdown(new_title, unsafe_allow_html=True)
+        st.caption('Proposed by Chen and Guestrin in 2016, the XGBoost algorithm is an optimised version of\
+        gradient boosting. Boosting assigns weight to observations and increased the weight of the\
+        misclassified observations in subsequent training rounds. Results from each tree are then\
+        combined to improve the accuracy of the model. Gradient boosting focuses on reducing the\
+        gradient of the loss function in previous models through an iterative feedback process\
+        to minimise the degree of error in the gradient direction. The main improvement of XGBoost\
+        is the **normalisation of the loss function** using Taylor expansion to mitigate model variances\
+        and reduce modelling complexities, which could lead to overfitting.')
+        st.caption('The objective function contains a loss function and a regularisation function.\
+        The aim is to minimise this function.')
+
+        col1, col2, col3 , col4= st.columns(4)
+
+        col1.subheader('Biogas')
+        col1.caption(':blue[_0.961_]')
+        result_Biogas = Biogas_prediction(df)
+        series = pd.Series(result_Biogas[0])
+        rounded_Biogas = round(series[0],3)
+        col1.write(rounded_Biogas)
+
+        col2.subheader('CH$_{4}$')
+        col2.caption(':blue[_0.951_]')
+        result_CH4 = CH4_prediction(df)
+        series = pd.Series(result_CH4[0])
+        rounded_CH4 = round(series[0],3)
+        col2.write(rounded_CH4)
+
+        col3.subheader('CO$_{2}$')
+        col3.caption(':blue[_0.950_]')
+        result_CO2 = CO2_prediction(df)
+        series = pd.Series(result_CO2[0])
+        rounded_CO2 = round(series[0],3)
+        col3.write(rounded_CO2)
+
+        col4.subheader('H$_{2}$S')
+        col4.caption(':blue[_0.947_]')
+        result_H2S = H2S_prediction(df)
+        series = pd.Series(result_H2S[0])
+        rounded_H2S = round(series[0],2)
+        col4.write(rounded_H2S)
+        
+        
+        # RF
+        new_title = '<p style="font-family:monospace; color:yellow; font-size: 20px;">Random Forest (RF)</p>'
+        st.markdown(new_title, unsafe_allow_html=True)  
+        st.caption('Random forest is a non-parametric model as partr of the Ensemble of Trees (EoT) system\
+        that was proposed by Breiman in 2001. The Classification and Regression Tree (CART) methodology\
+        is applied, where subspace randomisation with bagging is conducted to resample the training set\
+        with replacement each time a new tree is grown. This technique trains multiple subsets using\
+        bootsttrap replicas of the original ttraining dataset with replacement. This resampling approach\
+        generates a diverse set of conditions, whereby the final prediction is based upon the average value\
+        from the combined prediction value of each ensemble.')
+
+        col1, col2, col3 , col4= st.columns(4)
+
+        col1.subheader('Biogas')
+        col1.caption(':blue[_0.920_]')
+        result_Biogas = Biogas_prediction(df)
+        series = pd.Series(result_Biogas[0])
+        rounded_Biogas = round(series[0],3)
+        col1.write(rounded_Biogas)
+
+        col2.subheader('CH$_{4}$')
+        col2.caption(':blue[_0.916_]')
+        result_CH4 = CH4_prediction(df)
+        series = pd.Series(result_CH4[0])
+        rounded_CH4 = round(series[0],3)
+        col2.write(rounded_CH4)
+
+        col3.subheader('CO$_{2}$')
+        col3.caption(':blue[_0.916_]')
+        result_CO2 = CO2_prediction(df)
+        series = pd.Series(result_CO2[0])
+        rounded_CO2 = round(series[0],3)
+        col3.write(rounded_CO2)
+
+        col4.subheader('H$_{2}$S')
+        col4.caption(':blue[_0.922_]')
         result_H2S = H2S_prediction(df)
         series = pd.Series(result_H2S[0])
         rounded_H2S = round(series[0],2)
