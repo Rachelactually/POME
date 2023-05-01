@@ -8,6 +8,15 @@ import numpy as np
 import pickle
 import streamlit as st
 
+
+st.set_page_config(
+    page_title="POME biogas predictor",
+    page_icon=":palm_tree:",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    )
+
+
 st.code("""
 [theme]
 primaryColor="#097969"
@@ -16,13 +25,6 @@ secondaryBackgroundColor="#40B5AD"
 textColor="#262730"
 font="sans serif"
 """)
-
-st.set_page_config(
-    page_title="POME biogas predictor",
-    page_icon=":palm_tree:",
-    layout="wide",
-    initial_sidebar_state="expanded",
-    )
 
 
 hide_menu_style = """
