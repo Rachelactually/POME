@@ -10,12 +10,21 @@ import streamlit as st
 
 st.code("""
 [theme]
+primaryColor="#F39C12"
+backgroundColor="#2E86C1"
+secondaryBackgroundColor="#AED6F1"
+textColor="#FFFFFF"
+font="monospace"
+""")
+
+'''
+[theme]
 primaryColor="#097969"
 backgroundColor="#AfE1AF"
 secondaryBackgroundColor="#40B5AD"
 textColor="#262730"
 font="sans serif"
-""")
+'''
 
 st.set_page_config(
     page_title="POME biogas predictor",
