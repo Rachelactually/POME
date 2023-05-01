@@ -8,6 +8,7 @@ import numpy as np
 import pickle
 import streamlit as st
 
+CURRENT_THEME = theme
 base="dark"
 primaryColor="#097969"
 backgroundColor="#afe1af"
