@@ -1,9 +1,8 @@
-# -*- coding: utf-8 -*-
-"""
+'''
 Created on Wed Oct 26 15:45:07 2022
+@author: joshua and qianyee
+'''
 
-@author: joshu
-"""
 import pandas as pd
 import numpy as np
 import pickle
