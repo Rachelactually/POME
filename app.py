@@ -13,7 +13,7 @@ primaryColor="#F63366"
 backgroundColor="#FFFFFF"
 secondaryBackgroundColor="#F0F2F6"
 textColor="#262730"
-font="serif"
+font="monospace"
 
 ########################################################################
 # Creating a function and loading the model
