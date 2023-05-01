@@ -17,10 +17,12 @@ textColor="#262730"
 
 st.set_page_config(page_title='POME biogas predictor',page_icon=':palm_tree:')
 
-st.markdown(""" <style>
-MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-</style> """, unsafe_allow_html=True)
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        </style>
+        """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 ########################################################################
 # Creating a function and loading the model
