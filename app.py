@@ -22,8 +22,7 @@ st.set_page_config(
     page_icon=":palm_tree:",
     layout="wide",
     initial_sidebar_state="expanded",
-    }
-)
+    )
 
 
 hide_menu_style = """
