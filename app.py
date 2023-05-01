@@ -101,13 +101,12 @@ def main():
     new_title = '<p style="font-family:monospace; color:red; font-size: 30px;">Biogas components</p>'
     st.markdown(new_title, unsafe_allow_html=True)
     st.text('This section displays the prediction from the Gaussian Process Regressor model.')
-    st.text('The accuracy of the model on the prediction of the target outputs are shown in')
-    st.text('italic')
-    
+    st.text('The accuracy of the model on the prediction of the target outputs are shown in _italic_')
+        
     col1, col2, col3 , col4= st.columns(4)
     
     col1.subheader('Biogas')
-    col1.text('Accuracy : 0.98')
+    col1.text('_0.98_')
     result_Biogas = Biogas_prediction(df)
     series = pd.Series(result_Biogas[0])
     rounded_Biogas = round(series[0],3)
