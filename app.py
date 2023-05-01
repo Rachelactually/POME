@@ -9,7 +9,7 @@ import numpy as np
 import pickle
 import streamlit as st
 
-base="light"
+base="dark"
 primaryColor="#097969"
 backgroundColor="#afe1af"
 secondaryBackgroundColor="#40b5ad"
