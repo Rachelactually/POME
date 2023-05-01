@@ -17,7 +17,19 @@ textColor="#262730"
 font="sans serif"
 
 
-st.set_page_config(page_title='POME biogas predictor',page_icon=':palm_tree:')
+#st.set_page_config(page_title='POME biogas predictor',page_icon=':palm_tree:')
+st.set_page_config(
+    page_title="POME biogas predictor",
+    page_icon=":palm_tree:",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
+)
+
 
 #hide_menu_style = """
         #<style>
