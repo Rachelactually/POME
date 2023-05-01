@@ -65,7 +65,7 @@ tab1, tab2, tab3 = st.tabs(["Prediction models", "Sustainability", "About"])
 #Create title and slider
 def main():
     # Giving a title
-    #with tab1:
+ with tab1:
         st.title('POME biogas predictor')
         st.caption('This app predicts the biogas output from a closed system POME anaerobic digestion proccess')
         # Sidebar header
