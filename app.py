@@ -71,14 +71,14 @@ def main():
     # Define user input features
     def user_input_features():
         COD_in = st.sidebar.slider('COD',55000,92000,65000,1000,"%f")
-        BOD_in = st.sidebar.slider('BOD',23000,47000,30000)
-        SS_in = st.sidebar.slider('SS',13000,55000,35000)
-        TS_in = st.sidebar.slider('TS',22000,55000,35000)
-        Temp = st.sidebar.slider('Temperature', 37, 48, 41)
-        pH_in = st.sidebar.slider('pH', 6.8, 7.3, 7.0)
+        BOD_in = st.sidebar.slider('BOD',23000,47000,30000,1000,"%f")
+        SS_in = st.sidebar.slider('SS',13000,55000,35000,1000,"%f")
+        TS_in = st.sidebar.slider('TS',22000,55000,35000,1000,"%f")
+        Temp = st.sidebar.slider('Temperature', 37, 48, 41,0.5,"%f")
+        pH_in = st.sidebar.slider('pH', 6.8, 7.3, 7.0,0.1,"%f")
         OLR = st.sidebar.slider('OLR', 0.86, 1.70, 1.1, 0.01,"%f")
-        HRT = st.sidebar.slider('HRT', 35, 85, 50)
-        POME_in = st.sidebar.slider('POME', 3710, 24000, 12000)
+        HRT = st.sidebar.slider('HRT', 35, 85, 50,5,"%f")
+        POME_in = st.sidebar.slider('POME', 3800, 24000, 12000,1000,"%f")
         data = {'COD_in': COD_in,
                 'BOD_in': BOD_in,
                 'TS_in': TS_in,
