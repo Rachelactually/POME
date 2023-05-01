@@ -17,12 +17,12 @@ font="sans serif"
 
 st.set_page_config(page_title='POME biogas predictor',page_icon=':palm_tree:')
 
-hide_menu_style = """
-        <style>
-        #MainMenu {visibility: hidden;}
-        </style>
-        """
-st.markdown(hide_menu_style, unsafe_allow_html=True)
+#hide_menu_style = """
+        #<style>
+        ##MainMenu {visibility: hidden;}
+        #</style>
+        #"""
+#st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 ########################################################################
 # Creating a function and loading the model
