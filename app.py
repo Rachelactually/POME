@@ -9,11 +9,13 @@ import numpy as np
 import pickle
 import streamlit as st
 
-primaryColor="#F63366"
-backgroundColor="#097969"
-secondaryBackgroundColor="#AFE1AF"
+base="light"
+primaryColor="#097969"
+backgroundColor="#afe1af"
+secondaryBackgroundColor="#40b5ad"
 textColor="#262730"
 font="sans serif"
+
 
 st.set_page_config(page_title='POME biogas predictor',page_icon=':palm_tree:')
 
