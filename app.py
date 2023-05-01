@@ -64,8 +64,7 @@ def H2S_prediction(input_data):
 def main():
     # Giving a title
     st.title('POME biogas predictor')
-    st.text('This app predicts the biogas output from a closed system POME anaerobic digestion')
-    st.text('process.')
+    st.caption('This app predicts the biogas output from a closed system POME anaerobic digestion proccess')
     # Sidebar header
     st.sidebar.header('Input Parameters')
     # Define user input features
@@ -100,9 +99,12 @@ def main():
 # Create subheaders for main performance indicator  
     new_title = '<p style="font-family:monospace; color:red; font-size: 30px;">Biogas components</p>'
     st.markdown(new_title, unsafe_allow_html=True)
-    st.caption('This section displays the prediction from the **Gaussian Process Regressor (GPR)** model.\
-    The accuracy of the model on the prediction of the target outputs are shown in \
-    _italic_')
+    st.caption('The **Gaussian Process Regressor (GPR)** model, **Random Forest (RF)** model and **Extreme Gradient Booosting (XGBoost)** model\
+    are among the selected predictors for POME biogas components. The accuracy of the respective models on the prediction of the target outputs\
+    are shown in _italic_')   
+    
+    new_title = '<p style="font-family:monospace; color:yellow; font-size: 20px;">Gaussian Process Regressor (GPR)</p>'
+    st.markdown(new_title, unsafe_allow_html=True)    
         
     col1, col2, col3 , col4= st.columns(4)
     
