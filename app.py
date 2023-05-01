@@ -11,8 +11,8 @@ import streamlit as st
 st.code("""
 [theme]
 primaryColor="#097969"
-backgroundColor="#afe1af"
-secondaryBackgroundColor="#40b5ad"
+backgroundColor="#AfE1AF"
+secondaryBackgroundColor="#40B5AD"
 textColor="#262730"
 font="sans serif"
 """)
