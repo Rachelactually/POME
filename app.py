@@ -104,8 +104,8 @@ def main():
         new_title = '<p style="font-family:monospace; color:red; font-size: 30px;">Biogas components</p>'
         st.markdown(new_title, unsafe_allow_html=True)
         st.caption('The **Gaussian Process Regressor (GPR)** model, **Random Forest (RF)** model and **Extreme Gradient Booosting (XGBoost)** model\
-        are among the selected predictors for POME biogas components. The accuracy of the respective models on the prediction of the target outputs\
-        are shown in :blue[_italic_].')   
+        are among the selected predictors for POME biogas components. The accuracy of the respective models, represented by the R$^{2}$ coefficient of\
+        determination on the prediction of the target outputs are shown in :blue[_italic_].')   
 
         # GPR
         new_title = '<p style="font-family:monospace; color:yellow; font-size: 20px;">Gaussian Process Regressor (GPR)</p>'
