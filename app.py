@@ -10,10 +10,10 @@ import pickle
 import streamlit as st
 
 primaryColor="#F63366"
-backgroundColor="#FFFFFF"
-secondaryBackgroundColor="#F0F2F6"
+backgroundColor="#097969"
+secondaryBackgroundColor="#AFE1AF"
 textColor="#262730"
-#font="sans serif"
+font="sans serif"
 
 st.set_page_config(page_title='POME biogas predictor',page_icon=':palm_tree:')
 
@@ -253,7 +253,7 @@ def main():
             '''
         st.write(mystyle, unsafe_allow_html=True)
         
-        '''
+        """
         import base64
         def add_bg_from_local(image_file):
             with open(image_file, "rb") as image_file:
@@ -271,7 +271,7 @@ def main():
             )
         add_bg_from_local('Wallpaper.jpg')    
         
-        '''
+        """
     ########################################################################
 if __name__=='__main__':
     main()
