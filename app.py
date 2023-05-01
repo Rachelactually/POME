@@ -13,7 +13,11 @@ primaryColor="#F63366"
 backgroundColor="#FFFFFF"
 secondaryBackgroundColor="#F0F2F6"
 textColor="#262730"
-font="monospace"
+font="sans serif"
+
+[theme]
+base="dark"
+primaryColor="purple"
 
 ########################################################################
 # Creating a function and loading the model
