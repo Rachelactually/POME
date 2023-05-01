@@ -16,6 +16,13 @@ st.set_page_config(
     initial_sidebar_state="expanded",
     )
 
+st.config(
+    primaryColor="#097969",
+    backgroundColor="#AfE1AF",
+    secondaryBackgroundColor="#40B5AD",
+    textColor="#262730",
+    font="sans serif",
+)
 
 hide_menu_style = """
         <style>
