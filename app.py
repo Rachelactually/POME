@@ -15,7 +15,7 @@ secondaryBackgroundColor="#F0F2F6"
 textColor="#262730"
 #font="sans serif"
 
-st.set_page_config(page_title='POME app',page_icon=':palm_tree:')
+st.set_page_config(page_title='POME biogas predictor',page_icon=':palm_tree:')
 ########################################################################
 # Creating a function and loading the model
 def Biogas_prediction(input_data):
