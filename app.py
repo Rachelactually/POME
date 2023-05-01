@@ -73,20 +73,20 @@ def main():
         POME_in = st.sidebar.slider('POME', 3800, 24000, 12000,1000,"%f")
         COD_in = st.sidebar.slider('COD',55000,92000,65000,1000,"%f")
         BOD_in = st.sidebar.slider('BOD',23000,47000,30000,1000,"%f")
-        #SS_in = st.sidebar.slider('SS',13000,55000,35000,1000,"%f")
+        SS_in = st.sidebar.slider('SS',13000,55000,35000,1000,"%f")
         TS_in = st.sidebar.slider('TS',22000,55000,35000,1000,"%f")
         Temp = st.sidebar.slider('Temperature', 37, 48, 41)
         pH_in = st.sidebar.slider('pH', 6.8, 7.3, 7.0,0.1,"%f")
         OLR = st.sidebar.slider('OLR', 0.86, 1.70, 1.1, 0.01,"%f")
-        #HRT = st.sidebar.slider('HRT', 35, 85, 50,5,"%f")
+        HRT = st.sidebar.slider('HRT', 35, 85, 50,5,"%f")
         data = {'COD_in': COD_in,
                 'BOD_in': BOD_in,
                 'TS_in': TS_in,
-                #'SS_in': SS_in,
+                'SS_in': SS_in,
                 'Temp': Temp,
                 'pH_in': pH_in,
                 'OLR': OLR,
-                #'HRT': HRT,
+                'HRT': HRT,
                 'POME_in': POME_in,}
         features = pd.DataFrame(data, index=[0])
         return features
