@@ -532,7 +532,7 @@ with tab3:
     the impact of this process throughout the system boundary, a **life cycle assessment (LCA)** \
     approach was carried out.')
     
-    st.subheader('Life Cycle Assessment (LCA)'):
+    st.subheader('Life Cycle Assessment (LCA)')
      
     st.write('An LCA of the AD covered lagoon unit was conducted on the base case (Lepar \
     Hilir Plant) **with bioelectricity production** and another case **without \
