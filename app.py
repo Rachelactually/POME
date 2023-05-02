@@ -312,8 +312,8 @@ with tab2:
     st.write('Due to limited available plant data, data expansion was carried out using the \
     Synthetic Minority Oversampling Technique (SMOTE) to generate synthetic datasets. SMOTE uses \
     the k-nearest neighbour approach to synthesise new observations based on the existing dataset.')
-    st.write('In this tudy, the SMOTE algorithm for regression developed by **Larsen (2023)** \
-    on MATLAB was employed.
+    st.write('In this tudy, the SMOTE algorithm for regression developed by **Larsen** \
+    on MATLAB was employed. [1]')
     
     
     
