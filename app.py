@@ -573,7 +573,7 @@ with tab3:
     
     with st.beta_expander('**Phase (ii): Life cycle inventory (LCI)**'):
         
-        col1,col2,col3,col4,col5 = st.columns([3,1,0.5,1,0.5])
+        col1,col2,col3,col4,col5 = st.columns([0.5,0.5,0.5,0.5,0.5])
         
         with col1:
             st.markdown("""
