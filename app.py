@@ -220,7 +220,7 @@ def main():
         new_title = '<p style="font-size: 20px;"><strong>Random Forest (RF)<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)
         with st.beta_expander("Learn more about Random Forest here."):
-            st.write('Random forest is a non-parametric model as partr of the Ensemble of Trees (EoT) system\
+            st.write('Random forest is a non-parametric model as part of the Ensemble of Trees (EoT) system\
             that was proposed by Breiman in 2001 [3]. The Classification and Regression Tree (CART) methodology\
             is applied, where subspace randomisation with bagging is conducted to resample the training set\
             with replacement each time a new tree is grown. This technique trains multiple subsets using\
@@ -364,9 +364,9 @@ with tab2:
     #new_title = '<p style="font-size: 20px;"><strong>Stage 3: Model Development<strong></p>'
     #st.markdown(new_title, unsafe_allow_html=True)
     with st.beta_expander('**Stage 3: Model Development**'):
-        st.write('Prior to training, z-score data normalisation technique was applied to the input variables.\
-        Upon performing z-score normalisation, the dataset will be converted into a single, standardised\
-        data format, where the new mean and standard deviation values are 0 and 1.')
+        st.write('GPR was imported from the :blue[_scikit learn_] library under _"gaussian_process.GaussianProcessRegressor"_.\
+        XGBoost was directly imported from the :blue[_xgboost_] library.\
+        Random Forest was imported from the :blue[_scikit learn_] library under _"ensemble.RandomForestRegressor"_')
     
     
         # OLD Code
