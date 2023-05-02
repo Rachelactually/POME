@@ -126,8 +126,7 @@ def main():
         instead of scalar values [1]. This is achieved by assigning a prior probability to a\
         set of functions, with higher probability given to functions that are more representative\
         of the data. The combination of the prior distribution and the available data points\
-        results in a posterior distribution.')
-        st.caption('GPR is defined by a function which includes the mean function and a covariance\
+        results in a posterior distribution. GPR is defined by a function which includes the mean function and a covariance\
         function (otherwise known as a kernel). In this tuned GPR model, the **rational quaduatic** kernel\
         is used.')
 
@@ -171,8 +170,7 @@ def main():
         gradient of the loss function in previous models through an iterative feedback process\
         to minimise the degree of error in the gradient direction. The main improvement of XGBoost\
         is the **normalisation of the loss function** using Taylor expansion to mitigate model variances\
-        and reduce modelling complexities, which could lead to overfitting.')
-        st.caption('The objective function contains a loss function and a regularisation function.\
+        and reduce modelling complexities, which could lead to overfitting. The objective function contains a loss function and a regularisation function.\
         The aim is to minimise this function.')
 
         col1, col2, col3 , col4= st.columns(4)
@@ -276,19 +274,35 @@ with tab2:
     Felda Lok Heng Palm Oil Mill.')
     st.write('All data used were monthly average values.')
     st.markdown("""
-    The collected dataset contains 96 data points, where the input parameters consist of: <br>\
+    The collected dataset contains 96 data points, where the input parameters consist of:
+    - POME inlet flowrate
     - Chemical Oxygen Demand (COD)
+    - Biological Oxygen Demand (BOD$_{5}$)
+    - Total solids (TS)
+    - Suspended solids (SS)
+    - Temperature
+    - pH
+    - Organic loading rate (OLR)
+    - Hydraulic retention time (HRT)
     """)
-    st.caption('- Biological Oxygen Demand (BOD$_{5}$')
-    st.caption('- Total solids (TS)')
-    st.caption('- Suspended solids (SS)')
-    st.caption('- Temperature')
-    st.caption('- pH')
-    st.caption('- Organic loading rate (OLR)')
-    st.caption('- Hydraulic retention time (HRT)')
-    st.caption('- POME inlet flowrate')
+
+    st.write('The collected dataset contains 96 data points, where the input parameters \
+    are within the range of:')
     
+    col21,col22,col23 = st.columns(3)
+    col21.metric("POME inlet flowrate (m$^{3}$/month)","3600 to 24200", delta=None)
+    col22.metric("Chemical Oxygen Demand, COD (mg/L)","53500 to 92800", delta=None)
+    col23.metric("Biological Oxygen Demand, BOD$_{5}$ (mg/L)","22500 to 47500", delta=None)
     
+    col24,col25,col26 = st.columns(3)
+    col24.metric("Total solids, TS (mg/L)","20200 to 56500", delta=None)
+    col25.metric("Suspended solids, SS (mg/L)","12300 to 57650", delta=None)
+    col26.metric("Hydraulic retention time, HRT (days)","34 to 88", delta=None)    
+    
+    col27,col28,col29 = st.columns(3)
+    col27.metric("Temperature (°C)","47 to 62", delta=None)
+    col28.metric("pH","6.80 to 7.40", delta=None)
+    col29.metric("Organic loading rate, OLR (kg COD in/m$^{3}$ day)","0.85 to 1.80", delta=None)
     
     # OLD Code
     # Create subheaders for dependent variables
