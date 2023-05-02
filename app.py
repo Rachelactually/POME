@@ -259,12 +259,12 @@ def main():
         reference2 = '<p font-size: 10px;">[2] Chen, T. and Guestrin, C. (2016) ‘XGBoost: A Scalable Tree Boosting System’, in Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. New York, NY, USA: ACM, pp. 785–794. doi: 10.1145/2939672.2939785.</p>'
         reference3 = '<p font-size: 10px;">[3] Breiman, L. (2001) ‘Random forests’, Machine Learning. Springer, 45(1), pp. 5–32. doi: 10.1023/A:1010933404324/METRICS.</p>'
         
-        st.markdown("""
+        st.markdown(
         **References**
-        reference1
-        reference2
-        reference3
-        """,unsafe_allow_html=True) 
+        reference1,unsafe_allow_html=True
+        reference2,unsafe_allow_html=True
+        reference3,unsafe_allow_html=True
+        ) 
     ########################################################################
 if __name__=='__main__':
     main()
