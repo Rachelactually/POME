@@ -314,8 +314,7 @@ with tab2:
     Synthetic Minority Oversampling Technique (SMOTE) to generate synthetic datasets. SMOTE uses \
     the k-nearest neighbour approach to synthesise new observations based on the existing dataset.')
   
-    st.write('In this study, the SMOTE algorithm for regression developed by [**Larsen**]\
-    (https://www.mathworks.com/matlabcentral/fileexchange/75401-synthetic-minority-over-sampling-technique-smote) \
+    st.write('In this study, the SMOTE algorithm for regression developed by [**Larsen**](https://www.mathworks.com/matlabcentral/fileexchange/75401-synthetic-minority-over-sampling-technique-smote) \
     on MATLAB was employed [1]. **Fig 1** illustrates that to construct a synthetic sample with\
     SMOTE, a random observation from the initial dataset (origin) was chosen. Then, among its \
     nearest neighbours, _k_ number of points with distance _b$_{k}$_ was selected. In accordance\
