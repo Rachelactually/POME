@@ -585,8 +585,8 @@ with tab3:
             <br>Sludge\
             <br>Raw biogas\
             <br>CH<sub>4</sub>\
-            <br>CO$_{2}$\
-            <br>H$_{2}$S\
+            <br>CO<sub>2</sub>\
+            <br>H<sub>2</sub>\
             <br><strong>OTHER</strong>\
             <br>COD POME in\
             <br>COD POME out\
@@ -617,20 +617,20 @@ with tab3:
 
         with col3:
             h1 = '<p font-size: 5px;">\
-            <br>m$^{3}$\
-            <br>m$^{3}$\
+            <br>m<sup>3</sup>\
+            <br>m<sup>3</sup>\
             <br>kWh\
             <br>\
-            <br>m$^{3}$\
-            <br>m$^{3}$\
-            <br>m$^{3}$\
-            <br>m$^{3}$\
-            <br>m$^{3}$\
-            <br>m$^{3}$\
+            <br>m<sup>3</sup>\
+            <br>m<sup>3</sup>\
+            <br>m<sup>3</sup>\
+            <br>m<sup>3</sup>\
+            <br>m<sup>3</sup>\
+            <br>m<sup>3</sup>\
             <br>\
-            <br>kg/m$^{3}$\
-            <br>kg/m$^{3}$\
-            <br>kg/m$^{3}$\
+            <br>kg/m<sup>3</sup>\
+            <br>kg/m<sup>3</sup>\
+            <br>kg/m<sup>3</sup>\
             <br>kWh</p>'
             st.markdown(h1, unsafe_allow_html=True)    
             
