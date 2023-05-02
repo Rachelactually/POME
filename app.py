@@ -566,6 +566,116 @@ with tab3:
         #displaying the image on streamlit app
         st.image(image, caption='Fig 2: System boundary of a covered lagoon AD in a POME plant with electricity generation.')
         
+        st.markdown("""
+
+        """)
+    
+    
+    with st.beta_expander('**Phase (ii): Life cycle inventory (LCI)**'):
+        
+        col1,col2,col3,col4,col5 = st.columns([3,1,0.5,1,0.5])
+        
+        with col1:
+            st.markdown("""
+            **INPUT**
+            POME to AD (f.u.)
+            Biogas recirculation
+            Electricity (pump)
+            **OUTPUT**
+            Raw effluent
+            Sludge
+            Raw biogas
+            CH$_{4}$ 
+            CO$_{2}$
+            H$_{2}$S
+            **OTHER**
+            COD POME in
+            COD POME out
+            COD sludge out
+            Electricity generated
+            """)
+         
+        with col2:
+            st.markdown("""
+
+            1.000
+            0.694
+            1.872
+
+            0.944
+            0.056
+            19.437
+            12.140
+            6.576
+            0.014
+
+            67.362
+            14.273
+            26.853
+            72.536
+            """)
+
+        with col3:
+            st.markdown("""
+            
+            m$^{3}$
+            m$^{3}$
+            kWh
+            
+            m$^{3}$
+            m$^{3}$
+            m$^{3}$
+            m$^{3}$
+            m$^{3}$
+            m$^{3}$
+            
+            kg/m$^{3}$
+            kg/m$^{3}$
+            kg/m$^{3}$
+            kWh
+            """)
+         
+        with col4:
+            st.markdown("""
+            
+            
+            
+            
+            
+            
+            48.657
+            19.380
+            7.369
+            10.975
+            0.022
+            
+            
+            
+            
+            
+            """)            
+            
+         with col5:
+            st.markdown("""
+            
+            
+            
+            
+            
+            
+            kg
+            kg
+            kg
+            kg
+            kg
+            
+            
+            
+            
+            
+            """)    
+    
+    
     
     st.markdown("""
 
