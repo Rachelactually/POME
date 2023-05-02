@@ -384,20 +384,20 @@ with tab2:
         
         st.subheader('Random Forest [4]')
         st.markdown("""
-        **"max_depth"** _"max no. of levels in each decision tree"_
-        "[20, 30, 50, 80, 100, None]"
+        **max_depth** _max no. of levels in each decision tree_
+        [20, 30, 50, 80, 100, None]
         
-        **"max_features"** _"max no. of features considered for node splitting"_
-        "[sqrt, log2, None]" 
+        **max_features** _max no. of features considered for node splitting_
+        [sqrt, log2, None] 
         
-        **"min_samples_leaf"** _"min no. of points allowed in a leaf node"_
-        "[1,2,4]"
+        **min$_$samples$_$leaf** _min no. of points allowed in a leaf node_
+        [1,2,4]
         
-        **"min_samples_split"** _"min no. of points placed in a node before split"_
-        "[2,5,10]"
+        **"min$_$samples$_$split"** _min no. of points placed in a node before split_
+        [2,5,10]
         
-        **"n_estimators"** _"no. of trees in the forest"_
-        "[100, 150, 200, 250,300, 350, 400, 450, 500, 600, 800, 1000]" 
+        **"n_estimators"** _no. of trees in the forest_
+        [100, 150, 200, 250,300, 350, 400, 450, 500, 600, 800, 1000] 
         """)
         
         
