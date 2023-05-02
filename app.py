@@ -456,8 +456,32 @@ with tab2:
         <br>[100, 150, 200, 250,300, 350, 400, 450, 500, 600, 800, 1000]</p>'
         st.markdown(h1, unsafe_allow_html=True)
         
+        st.markdown("""
+
+        """)
         
-      
+        st.subheader('Model validation')
+        st.write('To account for overfitting, k-fold cross validation (CV) was also performed \
+        during tuning. In k-fold CV, training sets were split into k number of subsets (or folds).\
+        The model was then iteratively fitted for k times, where data was trained each time on\
+        k-1 of the folds, while evaluated in the k$^{th}$ fold. After training, the performance on\
+        each fold was summed and averaged to obtain the final validation metrics for the model.\
+        In this study, a 10-fold CV (k = 10) was carried out, as 10 was the most commonly used\
+        value in data validation.')
+        
+        st.markdown("""
+
+        """)
+        
+        st.subheader('Model evaluation')   
+        st.write('To assess the performance of trained models, the predicted value, _y$_{i}$_\
+        was compared to the observed (test) value, _x$_{i}$_. Several evaluation metrics came\
+        into play to measure the accuracy of the model. The first metric was the :blue[R$^{2}$]\
+        score, also known as the coefficient of determination. The R$^{2}$ metric compared the\
+        model with a baseline, to be selected via the mean of the observed data. Another metric was\
+        the :blue[root mean squared error (RMSE)], which assumed that the errors follow a normal\
+        distribution. In RMSE, the square root nature allowed the display of the plausible\
+        magnitude of the error term regardless of its negativity.')
         
         st.markdown("""
 
