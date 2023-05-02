@@ -24,6 +24,13 @@ hide_menu_style = """
         """
 st.markdown(hide_menu_style, unsafe_allow_html=True)
 
+
+hide_footer_style = """
+        <style>
+        .reportview-container .main footer {visibility: hidden;}    
+"""
+st.markdown(hide_footer_style, unsafe_allow_html=True)
+
 ########################################################################
 # Creating a function and loading the model
 def Biogas_prediction(input_data):
