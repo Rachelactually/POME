@@ -573,6 +573,9 @@ with tab3:
     
     with st.beta_expander('**Phase (ii): Life cycle inventory (LCI)**'):
         
+        st.write('This LCI contains all essential information for the assessment of the base \
+        case and alternate case to be carried out.')
+        
         col1,col2,col3,col4,col5 = st.columns([2,0.5,0.5,0.5,0.5])
         
         with col1:
@@ -686,7 +689,7 @@ with tab3:
         st.write('In this study, the [EcoInvent](https://ecoinvent.org/) database was employed. With over 18,000 \
         LCI datasets, this database encompasses sectors including agriculture, waste treatments, \
         and water supply. For this study, certain process specific information was not included in \
-        the EcoInvent database, including POME biogas and sludge streams, SO2 emission from AD \
+        the EcoInvent database, including POME biogas and sludge streams, SO$_{2}$ emission from AD \
         process and phosphate emission due to COD and TN in POME. Hence, manual calculation was \
         conducted to obtain the important environmental impacts as a result of those parameters.')
         st.write('To conduct these calculations, emission, equivalence, and methane correction factors \
@@ -695,7 +698,8 @@ with tab3:
         applications, which uses the 2014 CDM electricity baseline and the 2006 IPCC Guidelines\
         for National Greenhouse Gas Inventories default emission factor values. Methane correction \
         factors were also reviewed on a scenario basis.')
-        st.write('The ReCiPe 2016 approach was used to perform LCIA calculations. Using the ReCiPe \
+        st.write('The [ReCiPe 2016](https://pre-sustainability.com/legacy/download/Report_ReCiPe_2017.pdf) \
+        approach was used to perform LCIA calculations. Using the ReCiPe \
         2016 (World-H) midpoint technique, only midpoints were used to compute the effect categories. \
         18 distinct effect categories at the midpoint were examined using ReCiPe 2016. In this study, \
         focus was placed on 3 categories, namely: (i) global warming potential (GWP), (ii) terrestrial \
