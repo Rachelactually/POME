@@ -365,9 +365,11 @@ with tab2:
     #st.markdown(new_title, unsafe_allow_html=True)
     with st.beta_expander('**Stage 3: Model Development**'):
         st.markdown("""
-        - GPR was imported from the :blue[_scikit learn_] library under **"gaussian_process.GaussianProcessRegressor"**.
-        - XGBoost was directly imported from the :blue[_xgboost_] library.
-        - Random Forest was imported from the :blue[_scikit learn_] library under **"ensemble.RandomForestRegressor"**
+        - GPR was imported from the [**scikit learn**](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.GaussianProcessRegressor.html)\
+        library under **"gaussian_process.GaussianProcessRegressor"**.
+        - XGBoost was directly imported from the [**xgboost**](https://xgboost.readthedocs.io/en/stable/) library.
+        - Random Forest was imported from the [**scikit learn**](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html)\
+        library under **"ensemble.RandomForestRegressor"**
         """)
     
     
