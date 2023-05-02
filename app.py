@@ -382,7 +382,7 @@ with tab2:
         A parameter grid for the models was created with a variety of hyperparameter options:')
 
         
-        st.subheader('Random Forest [4]')
+        st.subheader('Random Forest')
         st.markdown("""
         **max_depth** _max no. of levels in each decision tree_
         [20, 30, 50, 80, 100, None]
