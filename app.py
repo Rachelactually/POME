@@ -171,15 +171,16 @@ def main():
         # XGBoost
         new_title = '<p style="font-size: 20px;"><strong>Extreme Gradient Boosting (XGBoost)<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)
-        st.write('Proposed by Chen and Guestrin in 2016, the XGBoost algorithm is an optimised version of\
-        gradient boosting [2]. Boosting assigns weight to observations and increased the weight of the\
-        misclassified observations in subsequent training rounds. Results from each tree are then\
-        combined to improve the accuracy of the model. Gradient boosting focuses on reducing the\
-        gradient of the loss function in previous models through an iterative feedback process\
-        to minimise the degree of error in the gradient direction. The main improvement of XGBoost\
-        is the **normalisation of the loss function** using Taylor expansion to mitigate model variances\
-        and reduce modelling complexities, which could lead to overfitting. The objective function contains a loss function and a regularisation function.\
-        The aim is to minimise this function.')
+        with st.beta_expander("Learn more about XGBoost here."):
+            st.write('Proposed by Chen and Guestrin in 2016, the XGBoost algorithm is an optimised version of\
+            gradient boosting [2]. Boosting assigns weight to observations and increased the weight of the\
+            misclassified observations in subsequent training rounds. Results from each tree are then\
+            combined to improve the accuracy of the model. Gradient boosting focuses on reducing the\
+            gradient of the loss function in previous models through an iterative feedback process\
+            to minimise the degree of error in the gradient direction. The main improvement of XGBoost\
+            is the **normalisation of the loss function** using Taylor expansion to mitigate model variances\
+            and reduce modelling complexities, which could lead to overfitting. The objective function contains a loss function and a regularisation function.\
+            The aim is to minimise this function.')
 
         col1, col2, col3 , col4= st.columns(4)
 
@@ -217,14 +218,15 @@ def main():
         
         # RF
         new_title = '<p style="font-size: 20px;"><strong>Random Forest (RF)<strong></p>'
-        st.markdown(new_title, unsafe_allow_html=True)  
-        st.write('Random forest is a non-parametric model as partr of the Ensemble of Trees (EoT) system\
-        that was proposed by Breiman in 2001 [3]. The Classification and Regression Tree (CART) methodology\
-        is applied, where subspace randomisation with bagging is conducted to resample the training set\
-        with replacement each time a new tree is grown. This technique trains multiple subsets using\
-        bootstrap replicas of the original ttraining dataset with replacement. This resampling approach\
-        generates a diverse set of conditions, whereby the final prediction is based upon the average value\
-        from the combined prediction value of each ensemble.')
+        st.markdown(new_title, unsafe_allow_html=True)
+        with st.beta_expander("Learn more about Random Forest here.")
+            st.write('Random forest is a non-parametric model as partr of the Ensemble of Trees (EoT) system\
+            that was proposed by Breiman in 2001 [3]. The Classification and Regression Tree (CART) methodology\
+            is applied, where subspace randomisation with bagging is conducted to resample the training set\
+            with replacement each time a new tree is grown. This technique trains multiple subsets using\
+            bootstrap replicas of the original ttraining dataset with replacement. This resampling approach\
+            generates a diverse set of conditions, whereby the final prediction is based upon the average value\
+            from the combined prediction value of each ensemble.')
 
         col1, col2, col3 , col4= st.columns(4)
 
