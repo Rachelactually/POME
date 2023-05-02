@@ -70,18 +70,18 @@ def H2S_prediction(input_data):
 col1, col2, col3 = st.beta_columns([1,3,1])
 
 with col1:
-st.title('POME biogas predictor')
-st.caption('This app predicts the biogas output from a closed system POME anaerobic digestion proccess')
+    st.title('POME biogas predictor')
+    st.caption('This app predicts the biogas output from a closed system POME anaerobic digestion process')
 
 with col2:
-st.write("")
+    st.write("")
 
 with col3:
-from PIL import Image
-#opening the image
-image = Image.open('SMOTE.png')
-#displaying the image on streamlit app
-st.image(image, caption='Fig 1: Random point along the vector connecting the origin to the KNN points.')
+    from PIL import Image
+    #opening the image
+    image = Image.open('SMOTE.png')
+    #displaying the image on streamlit app
+    st.image(image, caption='Fig 1: Random point along the vector connecting the origin to the KNN points.')
 
 #Create tabs
 tab1, tab2, tab3, tab4 = st.tabs(["Prediction models", "Methodology", "Sustainability", "About"])
