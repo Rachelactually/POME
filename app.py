@@ -696,8 +696,8 @@ with tab3:
         were first obtained. Most Malaysian POMs with biogas systems compute carbon emissions\
         according to the Intergovernmental Panel on Climate Change (IPCC) criteria for CDM\
         applications, which uses the 2014 CDM electricity baseline and the 2006 IPCC Guidelines\
-        for National Greenhouse Gas Inventories default emission factor values. Methane correction \
-        factors were also reviewed on a scenario basis.')
+        for National Greenhouse Gas Inventories default emission factor values [2,3]. Methane correction \
+        factors were also reviewed on a scenario basis [4].')
         st.write('The [ReCiPe 2016](https://pre-sustainability.com/legacy/download/Report_ReCiPe_2017.pdf) \
         approach was used to perform LCIA calculations. Using the ReCiPe \
         2016 (World-H) midpoint technique, only midpoints were used to compute the effect categories. \
@@ -706,6 +706,15 @@ with tab3:
         acidification (TAP), and (iii) freshwater eutrophication. (FEP).')
     
     
+    with st.beta_expander('**Phase (iv) : LCA interpretation**'):
+        
+        st.subheader('Global warming potential (GWP)')
+        
+        
+        st.subheader('Acidification potential (AP)')
+        
+        
+        st.subheader('Eutrophication potential (EP)')
     
     
     st.markdown("""
@@ -713,9 +722,10 @@ with tab3:
     """)
     
     st.write('**References**')
-    st.caption('[1] Lim ')
-    st.caption('[2] Pedregosa, F. et al. (2011) ‘Scikit-learn: Machine Learning in Python’, Journal of Machine Learning Research, 12, pp. 2825--2830.')
-    st.caption('[3] Developers, X. (2023) xgboost- Release 2.0.0-dev.')    
+    st.caption('[1] Lim, C. and K. Biswas, W. (2019) ‘Sustainability Implications of the Incorporation of a Biogas Trapping System into a Conventional Crude Palm Oil Supply Chain’, Sustainability, 11(3), p. 792. doi: 10.3390/su11030792.')
+    st.caption('[2] Eggleston, H. S. et al. (2006) IPCC guidelines for national greenhouse gas Inventories. Hayama, Japan.')
+    st.caption('[3] CDM (2014) ‘Study on grid connected electricity baselines in Malaysia.’, in Malaysia: Clean Development Mechanism.')    
+    st.caption('[4] Doorn, M. et al. (2006) Chapter 6-wastewater treatment and discharge. IPCC guidelines for national greenhouse gas Inventories. Hayama, Japan.')  
     
     
     
