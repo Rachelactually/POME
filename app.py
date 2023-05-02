@@ -425,7 +425,7 @@ with tab2:
         st.markdown(h1, unsafe_allow_html=True)
 
         
-        st.subheader('Random Forest'):    
+        st.subheader('Random Forest')    
         h1 = '<p font-size: 5px;"><strong>max_depth</strong>\
         <em> max no. of levels in each decision tree</em>\
         <br>[20, 30, 50, 80, 100, None]</p>'
