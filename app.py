@@ -288,9 +288,9 @@ with tab2:
     st.markdown(new_title, unsafe_allow_html=True)   
     st.write('To develop the models, 4 stages are followed.')
         
-    new_title = '<p style="font-size: 20px;"><strong>Stage 1: Scoping & data collection<strong></p>'
-    with st.beta_expander(new_title, unsafe_allow_html=True):
+    #new_title = '<p style="font-size: 20px;"><strong>Stage 1: Scoping & data collection<strong></p>'
     #st.markdown(new_title, unsafe_allow_html=True)
+    with st.beta_expander('**Stage 1: Scoping & data collection**'):
         st.write('Real scale industrial data of the covered lagoon POME anerobic digestor used in this study were\
         obtained from four Malaysian plants over a period of 24 months (July 2019 to June 2021).')
         st.write('The plants inlude (i) Lepar Hilir Palm Oil Mill, (ii) Adela Palm Oil Mill, (iii) Keratong Estate Oil Palm Mill and (iv)\
