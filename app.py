@@ -381,74 +381,77 @@ with tab2:
         each trial in continuous processing.\
         A parameter grid for the models was created with a variety of hyperparameter options:')
 
-        with st.beta_expander('GPR'):
-            h1 = '<p font-size: 5px;"><strong>kernel</strong>\
-            <em> specifies covariance function of GPR</em>\
-            <br>[RBF, Rational Quadratic, Matern, Exponential]</p>'
-            st.markdown(h1, unsafe_allow_html=True)
+        st.subheader('GPR')
+        h1 = '<p font-size: 5px;"><strong>kernel</strong>\
+        <em> specifies covariance function of GPR</em>\
+        <br>[RBF, Rational Quadratic, Matern, Exponential]</p>'
+        st.markdown(h1, unsafe_allow_html=True)
 
-            h1 = '<p font-size: 5px;"><strong>n_restarts_optimizer </strong>\
-            <em> no. of restarts of the optimizer for to maximise the log-marginal likelihood</em>\
-            <br>[4, 6, 8, 20, 12, 15]</p>'
-            st.markdown(h1, unsafe_allow_html=True)
+        h1 = '<p font-size: 5px;"><strong>n_restarts_optimizer </strong>\
+        <em> no. of restarts of the optimizer for to maximise the log-marginal likelihood</em>\
+        <br>[4, 6, 8, 20, 12, 15]</p>'
+        st.markdown(h1, unsafe_allow_html=True)
 
-            h1 = '<p font-size: 5px;"><strong>alpha</strong>\
-            <em> value added to diagonal of kernel matrix during fitting to obtain a positive definite matrix</em>\
-            <br>[1e-10, 1e-5, 1e-2, log-uniform]</p>'
-            st.markdown(h1, unsafe_allow_html=True)
+        h1 = '<p font-size: 5px;"><strong>alpha</strong>\
+        <em> value added to diagonal of kernel matrix during fitting to obtain a positive definite matrix</em>\
+        <br>[1e-10, 1e-5, 1e-2, log-uniform]</p>'
+        st.markdown(h1, unsafe_allow_html=True)
 
-        with st.beta_expander('XGBoost'):
-            h1 = '<p font-size: 5px;"><strong>learning_rate</strong>\
-            <em> step size shrinkage to prevent overfitting</em>\
-            <br>[0.05, 0.1, 0.15, 0.2, 0.25, 0.3]</p>'
-            st.markdown(h1, unsafe_allow_html=True)
+        
+        st.subheader('XGBoost')
+        h1 = '<p font-size: 5px;"><strong>learning_rate</strong>\
+        <em> step size shrinkage to prevent overfitting</em>\
+        <br>[0.05, 0.1, 0.15, 0.2, 0.25, 0.3]</p>'
+        st.markdown(h1, unsafe_allow_html=True)
 
-            h1 = '<p font-size: 5px;"><strong>max_depth </strong>\
-            <em> max no. of nodes allowed from root to leaf</em>\
-            <br>[3, 4, 5, 6, 7, 8, 9, 10]</p>'
-            st.markdown(h1, unsafe_allow_html=True)
+        h1 = '<p font-size: 5px;"><strong>max_depth </strong>\
+        <em> max no. of nodes allowed from root to leaf</em>\
+        <br>[3, 4, 5, 6, 7, 8, 9, 10]</p>'
+        st.markdown(h1, unsafe_allow_html=True)
 
-            h1 = '<p font-size: 5px;"><strong>n_estimators</strong>\
-            <em> no. of trees in ensemble/ no. of boosting rounds</em>\
-            <br>[100, 150, 200, 250,300, 350, 400, 450, 500]</p>'
-            st.markdown(h1, unsafe_allow_html=True)
+        h1 = '<p font-size: 5px;"><strong>n_estimators</strong>\
+        <em> no. of trees in ensemble/ no. of boosting rounds</em>\
+        <br>[100, 150, 200, 250,300, 350, 400, 450, 500]</p>'
+        st.markdown(h1, unsafe_allow_html=True)
 
-            h1 = '<p font-size: 5px;"><strong>colsample_bytree</strong>\
-            <em> fraction of features to use</em>\
-            <br>[0.3, 0.5, 0.8, 1]</p>'
-            st.markdown(h1, unsafe_allow_html=True)
+        h1 = '<p font-size: 5px;"><strong>colsample_bytree</strong>\
+        <em> fraction of features to use</em>\
+        <br>[0.3, 0.5, 0.8, 1]</p>'
+        st.markdown(h1, unsafe_allow_html=True)
 
-            h1 = '<p font-size: 5px;"><strong>subsample</strong>\
-            <em> fraction of observations to subsample at each step</em>\
-            <br>[0.3, 0.5, 0.7, 1 ]</p>'
-            st.markdown(h1, unsafe_allow_html=True)
+        h1 = '<p font-size: 5px;"><strong>subsample</strong>\
+        <em> fraction of observations to subsample at each step</em>\
+        <br>[0.3, 0.5, 0.7, 1 ]</p>'
+        st.markdown(h1, unsafe_allow_html=True)
 
-        with st.beta_expander('Random Forest'):    
-            h1 = '<p font-size: 5px;"><strong>max_depth</strong>\
-            <em> max no. of levels in each decision tree</em>\
-            <br>[20, 30, 50, 80, 100, None]</p>'
-            st.markdown(h1, unsafe_allow_html=True)
+        
+        st.subheader('Random Forest'):    
+        h1 = '<p font-size: 5px;"><strong>max_depth</strong>\
+        <em> max no. of levels in each decision tree</em>\
+        <br>[20, 30, 50, 80, 100, None]</p>'
+        st.markdown(h1, unsafe_allow_html=True)
 
-            h1 = '<p font-size: 5px;"><strong>max_features</strong>\
-            <em> max no. of features considered for node splitting</em>\
-            <br>[sqrt, log2, None]</p>'
-            st.markdown(h1, unsafe_allow_html=True)
+        h1 = '<p font-size: 5px;"><strong>max_features</strong>\
+        <em> max no. of features considered for node splitting</em>\
+        <br>[sqrt, log2, None]</p>'
+        st.markdown(h1, unsafe_allow_html=True)
 
-            h1 = '<p font-size: 5px;"><strong>min_samples_leaf</strong>\
-            <em> min no. of points allowed in a leaf node</em>\
-            <br>[1, 2, 4]</p>'
-            st.markdown(h1, unsafe_allow_html=True)
+        h1 = '<p font-size: 5px;"><strong>min_samples_leaf</strong>\
+        <em> min no. of points allowed in a leaf node</em>\
+        <br>[1, 2, 4]</p>'
+        st.markdown(h1, unsafe_allow_html=True)
 
-            h1 = '<p font-size: 5px;"><strong>min_samples_split</strong>\
-            <em> min no. of points placed in a node before split</em>\
-            <br>[2, 5, 10]</p>'
-            st.markdown(h1, unsafe_allow_html=True)
+        h1 = '<p font-size: 5px;"><strong>min_samples_split</strong>\
+        <em> min no. of points placed in a node before split</em>\
+        <br>[2, 5, 10]</p>'
+        st.markdown(h1, unsafe_allow_html=True)
 
-            h1 = '<p font-size: 5px;"><strong>n_estimators</strong>\
-            <em> no. of trees in the forest</em>\
-            <br>[100, 150, 200, 250,300, 350, 400, 450, 500, 600, 800, 1000]</p>'
-            st.markdown(h1, unsafe_allow_html=True)
-        ""     
+        h1 = '<p font-size: 5px;"><strong>n_estimators</strong>\
+        <em> no. of trees in the forest</em>\
+        <br>[100, 150, 200, 250,300, 350, 400, 450, 500, 600, 800, 1000]</p>'
+        st.markdown(h1, unsafe_allow_html=True)
+        
+        
       
         
         st.markdown("""
