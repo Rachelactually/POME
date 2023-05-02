@@ -72,14 +72,13 @@ col1, col2, col3 = st.beta_columns([4,1,1])
 with col1:
     st.title('POME biogas predictor')
     
-
 with col2:
     st.write("")
 
 with col3:
     from PIL import Image
     #opening the image
-    image = Image.open('SMOTE.png')
+    image = Image.open('UNMC.png')
     #displaying the image on streamlit app
     st.image(image)
     
