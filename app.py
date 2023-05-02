@@ -84,7 +84,7 @@ with col3:
     
 st.caption('© 2023 Website is the creation of **Q.Y. Ong**, **X.Y. Kiew** and **Joshua Liew Y.L.** \
 under the :blue[**Department of Chemical with Environmental Engineering**], **University of Nottingham Malaysia.**')
-st.write('This app predicts the biogas output from a closed system POME anaerobic digestion process.')
+st.write('**This app predicts the biogas output from a closed system POME anaerobic digestion process.**')
 #Create tabs
 tab1, tab2, tab3, tab4 = st.tabs(["Prediction models", "Methodology", "Sustainability", "About"])
 
