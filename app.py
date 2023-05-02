@@ -275,8 +275,8 @@ with tab2:
     (i) Lepar Hilir Palm Oil Mill, (ii) Adela Palm Oil Mill, (iii) Keratong Estate Oil Palm Mill and (iv)\
     Felda Lok Heng Palm Oil Mill.')
     st.caption('All data used were monthly average values.')
-    st.markdown("""
-    The collected dataset contains 96 data points, where the input parameters consist of: 
+    st.caption("""
+    The collected dataset contains 96 data points, where the input parameters consist of: <br>\
     - Chemical Oxygen Demand (COD)
     """)
     st.caption('- Biological Oxygen Demand (BOD$_{5}$')
