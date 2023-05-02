@@ -133,9 +133,8 @@ def main():
         determination] on the prediction of the target outputs are shown in :blue[_italic_].\
         The predicted components include total biogas production, methane (CH$_{4}$), carbon dioxide (CO$_{2}$) and hydrogen sulphide (H$_{2}$S).')
         
-        with st.container():
-            st.write(':blue[**Try out our predictor!**]')
-            st.caption(':blue[On the top left of the screen, click on **>** to specify input values.]')
+        st.write(':blue[**Try out our predictor!**]')
+        st.info('On the top left of the screen, click on **>** to specify input values.')
         #st.text_area(':blue[**Try out our predictor!**]',':blue[On the top left of the screen, click on **>** to specify input values.]')
 
         st.markdown("""
