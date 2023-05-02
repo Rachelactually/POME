@@ -118,17 +118,21 @@ def main():
         determination] on the prediction of the target outputs are shown in :blue[_italic_].\
         The predicted components include total biogas production, methane (CH$_{4}$), carbon dioxide (CO$_{2}$) and hydrogen sulphide (H$_{2}$S).')   
 
+        st.markdown("""
+        
+        """)
         # GPR
         new_title = '<p style="font-size: 20px;"><strong>Gaussian Process Regressor (GPR)<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)
-        st.write('GPR is a **probabilistic model** bassed on non-parametric kernel models.\
-        Unlike linear regression, GPR makes predictions in the form of probability values\
-        instead of scalar values [1]. This is achieved by assigning a prior probability to a\
-        set of functions, with higher probability given to functions that are more representative\
-        of the data. The combination of the prior distribution and the available data points\
-        results in a posterior distribution. GPR is defined by a function which includes the mean function and a covariance\
-        function (otherwise known as a kernel). In this tuned GPR model, the **rational quaduatic** kernel\
-        is used.')
+        with st.beta_expander("Learn more about GPR here."):
+            st.write('GPR is a **probabilistic model** bassed on non-parametric kernel models.\
+            Unlike linear regression, GPR makes predictions in the form of probability values\
+            instead of scalar values [1]. This is achieved by assigning a prior probability to a\
+            set of functions, with higher probability given to functions that are more representative\
+            of the data. The combination of the prior distribution and the available data points\
+            results in a posterior distribution. GPR is defined by a function which includes the mean function and a covariance\
+            function (otherwise known as a kernel). In this tuned GPR model, the **rational quaduatic** kernel\
+            is used.')
 
         col1, col2, col3 , col4= st.columns(4)
 
@@ -160,6 +164,10 @@ def main():
         rounded_H2S = round(series[0],2)
         col4.write(rounded_H2S)
 
+        st.markdown("""
+        
+        """)
+            
         # XGBoost
         new_title = '<p style="font-size: 20px;"><strong>Extreme Gradient Boosting (XGBoost)<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)
@@ -202,7 +210,10 @@ def main():
         series = pd.Series(result_H2S[0])
         rounded_H2S = round(series[0],2)
         col4.write(rounded_H2S)
+
+        st.markdown("""
         
+        """)
         
         # RF
         new_title = '<p style="font-size: 20px;"><strong>Random Forest (RF)<strong></p>'
@@ -335,6 +346,19 @@ with tab2:
     image = Image.open('SMOTE.png')
     #displaying the image on streamlit app
     st.image(image, caption='Fig 1: Random point along the vector connecting the origin to the KNN points.')
+    
+    st.write('Prior to training, z-score data normalisation technique was applied to the input variables.\
+    Upon performing z-score normalisation, the dataset will be converted into a single, standardised\
+    data format, where the new mean and standard deviation values are 0 and 1.')
+    
+    st.markdown("""
+    
+    """)
+
+    ########################################################################   
+    
+    new_title = '<p style="font-size: 20px;"><strong>Stage 3: Model Development<strong></p>'
+    st.markdown(new_title, unsafe_allow_html=True)
     
     
     
