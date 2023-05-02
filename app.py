@@ -773,43 +773,52 @@ with tab3:
 
         st.subheader('About us')
 
-        new_title = '<p style="font-size: 15px;"><strong>Project researchers<strong></p>'
+        new_title = '<p style="font-size: 20 px;"><strong>Project researchers<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)
 
         col1,col2,col3 = st.columns(3)
 
         with col1:
             image = Image.open('QY.png')
-            st.image(image, caption='Masters in Chemical with Environmental Engineering, University of Nottingham Malaysia')
-            st.markdown("""
-            **Qian Yee Ong**
-            Model development, Primary website author
-            :e-mail:: slenderqianyeeong@gmail.com
-            """)
-
+            st.image(image, caption='Qian Yee Ong')
+            st.caption('Masters in Chemical with Environmental Engineering, University of Nottingham Malaysia')
+            st.caption(':e-mail:: slenderqianyeeong@gmail.com')
+             h1 = '<p font-size: 5px;">\
+             - Model development \
+            <br> - Primary website author </p>'
+            st.markdown(h1, unsafe_allow_html=True)
+            
+           
         with col2:
             image = Image.open('Amanda.png')
-            st.image(image, caption='Masters in Chemical with Environmental Engineering, University of Nottingham Malaysia')
-            st.markdown("""
-            **Xin Yun Kiew**
-            Data pre-processing, Life Cycle Assessment
-            :e-mail:: amandakiewxy@gmail.com
-            """)
+            st.image(image, caption='Xin Yun Kiew')
+            st.caption('Masters in Chemical with Environmental Engineering, University of Nottingham Malaysia')
+            st.caption(':e-mail:: amandakiewxy@gmail.com')
+             h1 = '<p font-size: 5px;">\
+             - Data pre-processing \
+            <br> - Life Cycle Assessment </p>'
+            st.markdown(h1, unsafe_allow_html=True)
+
 
         with col3:
             image = Image.open('Joshua.png')
-            st.image(image, caption='Masters in Chemical Engineering, University of Nottingham Malaysia')
-            st.markdown("""
-            **Joshua Liew Yeh Loong**
-            Website deployment, website author
-            :e-mail::joshualiew10@gmail.com
-            """)
+            st.image(image, caption='Joshua Liew Yeh Loong')
+            st.caption('Masters in Chemical Engineering, University of Nottingham Malaysia')
+            st.caption(':e-mail:: joshualiew10@gmail.com')
+             h1 = '<p font-size: 5px;">\
+             - Website deployment \
+            <br> - Website author </p>'
+            st.markdown(h1, unsafe_allow_html=True)
+            
+            
+        st.markdown("""
 
+        """)
 
-        new_title = '<p style="font-size: 15px;"><strong>Supervisors<strong></p>'
+        new_title = '<p style="font-size: 20 px;"><strong>Supervisors<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)
 
-        col1,col2,col3 = st.columns(3)
+        col1,col2 = st.columns(2)
         with col1:
             st.markdown("""
             **Dr. Sara Kazemi Yazdi**
