@@ -373,6 +373,8 @@ with tab2:
     ########################################################################     
 
     with st.beta_expander('**Stage 4: Model Tuning and Validation**'):
+        
+        st.subheader('Hyperparameter tuning')
         st.write('Hyperparameter tuning was performed to optimise all models prior to performance comparisons.\
         In this study, RandomizedSearchCV was imported from [**sklearn.model_selection**](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html).\
         Random search implemented a “fit” and “score” method, where sampling without replacement \
@@ -381,7 +383,9 @@ with tab2:
         each trial in continuous processing.\
         A parameter grid for the models was created with a variety of hyperparameter options:')
 
-        st.subheader('GPR')
+        new_title = '<p style="font-size: 20px;"><strong>GPR<strong></p>'
+        st.markdown(new_title, unsafe_allow_html=True)
+        
         h1 = '<p font-size: 5px;"><strong>kernel</strong>\
         <em> specifies covariance function of GPR</em>\
         <br>[RBF, Rational Quadratic, Matern, Exponential]</p>'
@@ -398,7 +402,9 @@ with tab2:
         st.markdown(h1, unsafe_allow_html=True)
 
         
-        st.subheader('XGBoost')
+        new_title = '<p style="font-size: 20px;"><strong>XGBoost<strong></p>'
+        st.markdown(new_title, unsafe_allow_html=True
+                    
         h1 = '<p font-size: 5px;"><strong>learning_rate</strong>\
         <em> step size shrinkage to prevent overfitting</em>\
         <br>[0.05, 0.1, 0.15, 0.2, 0.25, 0.3]</p>'
@@ -425,7 +431,9 @@ with tab2:
         st.markdown(h1, unsafe_allow_html=True)
 
         
-        st.subheader('Random Forest')    
+        new_title = '<p style="font-size: 20px;"><strong>Random forest<strong></p>'
+        st.markdown(new_title, unsafe_allow_html=True
+                    
         h1 = '<p font-size: 5px;"><strong>max_depth</strong>\
         <em> max no. of levels in each decision tree</em>\
         <br>[20, 30, 50, 80, 100, None]</p>'
