@@ -280,8 +280,7 @@ with tab2:
     st.write('Real scale industrial data of the covered lagoon POME anerobic digestor used in this study were\
     obtained from four Malaysian plants over a period of 24 months (July 2019 to June 2021). The plants inlude\
     (i) Lepar Hilir Palm Oil Mill, (ii) Adela Palm Oil Mill, (iii) Keratong Estate Oil Palm Mill and (iv)\
-    Felda Lok Heng Palm Oil Mill.')
-    st.write('All data used were monthly average values.')
+    Felda Lok Heng Palm Oil Mill. All data used were monthly average values.')
     st.write('The collected dataset contains 96 data points, where the input parameters \
     are within the range of:')
     
@@ -311,7 +310,7 @@ with tab2:
     st.write('Due to limited available plant data, data expansion was carried out using the \
     Synthetic Minority Oversampling Technique (SMOTE) to generate synthetic datasets. SMOTE uses \
     the k-nearest neighbour approach to synthesise new observations based on the existing dataset.')
-    st.write('In this tudy, the SMOTE algorithm for regression developed by **Larsen** \
+    st.write('In this study, the SMOTE algorithm for regression developed by **Larsen** \
     on MATLAB was employed. [1]')
     
     
