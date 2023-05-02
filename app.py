@@ -556,6 +556,15 @@ with tab3:
         biogas repurposing to the process to be made, where bio-energy generation should offset the \
         negative impacts of the process. A functional unit of 1m3 of POME influent was used for this study.')
         
+        from PIL import Image
+        #opening the image
+        image = Image.open('boundary_1.png')
+        #displaying the image on streamlit app
+        st.image(image, caption='Fig 1: System boundary of a covered lagoon AD in a POME plant without electricity generation.')
+        
+        image = Image.open('boundary_2.png')
+        #displaying the image on streamlit app
+        st.image(image, caption='Fig 2: System boundary of a covered lagoon AD in a POME plant with electricity generation.')
         
     
     st.markdown("""
