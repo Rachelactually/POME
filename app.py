@@ -268,15 +268,18 @@ with tab2:
     st.markdown(new_title, unsafe_allow_html=True)   
     st.caption('To develop the models, 4 stages are followed.')
         
-    new_title = '<p style="font-size: 20px;"><strong>Stage 1: Scoping $&$ data collection<strong></p>'
+    new_title = '<p style="font-size: 20px;"><strong>Stage 1: Scoping & data collection<strong></p>'
     st.markdown(new_title, unsafe_allow_html=True)
     st.caption('Real scale industrial data of the covered lagoon POME anerobic digestor used in this study were\
     obtained from four Malaysian plants over a period of 24 months (July 2019 to June 2021). The plants inlude\
     (i) Lepar Hilir Palm Oil Mill, (ii) Adela Palm Oil Mill, (iii) Keratong Estate Oil Palm Mill and (iv)\
     Felda Lok Heng Palm Oil Mill.')
     st.caption('All data used were monthly average values.')
-    st.caption('The collected dataset contains 96 data points, where the input parameters consist of:')
-    st.caption('- Chemical Oxygen Demand (COD)')
+    st.write("""
+    The collected dataset contains 96 data points, where the input parameters consist of:
+    <br>
+    - Chemical Oxygen Demand (COD)
+    """,unsafe_allow_html=True)
     st.caption('- Biological Oxygen Demand (BOD$_{5}$')
     st.caption('- Total solids (TS)')
     st.caption('- Suspended solids (SS)')
