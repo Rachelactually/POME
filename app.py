@@ -364,9 +364,11 @@ with tab2:
     #new_title = '<p style="font-size: 20px;"><strong>Stage 3: Model Development<strong></p>'
     #st.markdown(new_title, unsafe_allow_html=True)
     with st.beta_expander('**Stage 3: Model Development**'):
-        st.write('GPR was imported from the :blue[_scikit learn_] library under _"gaussian_process.GaussianProcessRegressor"_.\
-        XGBoost was directly imported from the :blue[_xgboost_] library.\
-        Random Forest was imported from the :blue[_scikit learn_] library under _"ensemble.RandomForestRegressor"_')
+        st.markdown("""
+        - GPR was imported from the :blue[_scikit learn_] library under **"gaussian_process.GaussianProcessRegressor"**.
+        - XGBoost was directly imported from the :blue[_xgboost_] library.
+        - Random Forest was imported from the :blue[_scikit learn_] library under **"ensemble.RandomForestRegressor"**
+        """)
     
     
         # OLD Code
