@@ -780,7 +780,7 @@ with tab3:
         with col1:
             image = Image.open('QY.png')
             st.image(image, caption='Qian Yee Ong', width=150)
-            st.caption('Masters in Chemical with Environmental Engineering, University of Nottingham Malaysia')
+            st.caption('Masters in Chemical with Environmental Engineering')
             st.caption(':e-mail:: slenderqianyeeong@gmail.com')
             h1 = '<p font-size: 5px;">\
              - Model development \
@@ -791,7 +791,7 @@ with tab3:
         with col2:
             image = Image.open('Amanda.png')
             st.image(image, caption='Xin Yun Kiew', width=150)
-            st.caption('Masters in Chemical with Environmental Engineering, University of Nottingham Malaysia')
+            st.caption('Masters in Chemical with Environmental Engineering')
             st.caption(':e-mail:: amandakiewxy@gmail.com')
             h1 = '<p font-size: 5px;">\
              - Data pre-processing \
@@ -802,7 +802,7 @@ with tab3:
         with col3:
             image = Image.open('Joshua.png')
             st.image(image, caption='Joshua Liew Yeh Loong', width=150)
-            st.caption('Masters in Chemical Engineering, University of Nottingham Malaysia')
+            st.caption('Masters in Chemical Engineering')
             st.caption(':e-mail:: joshualiew10@gmail.com')
             h1 = '<p font-size: 5px;">\
              - Website deployment \
