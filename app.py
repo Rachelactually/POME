@@ -558,11 +558,11 @@ with tab3:
         
         from PIL import Image
         #opening the image
-        image = Image.open('boundary_1.png')
+        image = Image.open('Boundary_1.png')
         #displaying the image on streamlit app
         st.image(image, caption='Fig 1: System boundary of a covered lagoon AD in a POME plant without electricity generation.')
         
-        image = Image.open('boundary_2.png')
+        image = Image.open('Boundary_2.png')
         #displaying the image on streamlit app
         st.image(image, caption='Fig 2: System boundary of a covered lagoon AD in a POME plant with electricity generation.')
         
