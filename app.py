@@ -219,7 +219,7 @@ def main():
         # RF
         new_title = '<p style="font-size: 20px;"><strong>Random Forest (RF)<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)
-        with st.beta_expander("Learn more about Random Forest here.")
+        with st.beta_expander("Learn more about Random Forest here."):
             st.write('Random forest is a non-parametric model as partr of the Ensemble of Trees (EoT) system\
             that was proposed by Breiman in 2001 [3]. The Classification and Regression Tree (CART) methodology\
             is applied, where subspace randomisation with bagging is conducted to resample the training set\
