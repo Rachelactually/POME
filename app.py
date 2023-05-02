@@ -111,9 +111,7 @@ def main():
     ########################################################################
     # Create subheaders for main performance indicator 
         
-        <h2>Heading level 2</h2>
-        st.write('##Markdown')
-        new_title = '<p style="color:red; font-size: 30px;">Predicting biogas components</p>'
+        new_title = '<p style="color:red; font-size: 30px;"><em><strong>Predicting biogas components<strong><em></p>'
         st.markdown(new_title, unsafe_allow_html=True)
         st.caption('The **Gaussian Process Regressor (GPR)** model, **Random Forest (RF)** model and **Extreme Gradient Booosting (XGBoost)** model\
         are among the selected predictors for POME biogas components. The accuracy of the respective models, represented by the :blue[R$^{2}$ coefficient of\
