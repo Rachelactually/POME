@@ -746,7 +746,7 @@ with tab3:
         of Environment Malaysia.')
         st.write('In Malaysia, over 50% of POME is commonly treated via conventional ponding system, owing to the available land spaces, cost-effectiveness, \
         and low manpower requirement. However, ponding systems are often deemed redundant as it requires long retention times of up to 200 days and \
-        unnecessarily large areas. During the AD process, biogas is formed. POME biogas typically contains 50—75 vol% CH$_{4}$), 25—45 vol% CO$_{2}$, \
+        unnecessarily large areas. During the AD process, biogas is formed. POME biogas typically contains 50—75 vol% (CH$_{4}$), 25—45 vol% (CO$_{2}$), \
         2—7 vol% water vapor, < 1 vol% oxygen and traces of H$_{2}$S. Various studies on biogas production from POME AD treatment corroborated that 1 \
         tonne of raw POME produces approximately 8.72—12.4 kg CH$_{4}$, or 28m$^{3}$ biogas.')
         st.write('Under the clean development mechanism (CDM) of the Kyoto Protocol, projects that utilize biogas generated from AD as a form of renewable \
