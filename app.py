@@ -385,7 +385,6 @@ with tab2:
 
         new_title = '<p style="font-size: 20px;"><strong>GPR<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)
-        
         h1 = '<p font-size: 5px;"><strong>kernel</strong>\
         <em> specifies covariance function of GPR</em>\
         <br>[RBF, Rational Quadratic, Matern, Exponential]</p>'
@@ -403,8 +402,7 @@ with tab2:
 
         
         new_title = '<p style="font-size: 20px;"><strong>XGBoost<strong></p>'
-        st.markdown(new_title, unsafe_allow_html=True
-                    
+        st.markdown(new_title, unsafe_allow_html=True)           
         h1 = '<p font-size: 5px;"><strong>learning_rate</strong>\
         <em> step size shrinkage to prevent overfitting</em>\
         <br>[0.05, 0.1, 0.15, 0.2, 0.25, 0.3]</p>'
@@ -432,8 +430,7 @@ with tab2:
 
         
         new_title = '<p style="font-size: 20px;"><strong>Random forest<strong></p>'
-        st.markdown(new_title, unsafe_allow_html=True
-                    
+        st.markdown(new_title, unsafe_allow_html=True)          
         h1 = '<p font-size: 5px;"><strong>max_depth</strong>\
         <em> max no. of levels in each decision tree</em>\
         <br>[20, 30, 50, 80, 100, None]</p>'
