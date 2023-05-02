@@ -261,8 +261,8 @@ def main():
         
         st.markdown(
         **References**
-        reference1,unsafe_allow_html=True
-        reference2,unsafe_allow_html=True
+        reference1
+        reference2
         reference3,unsafe_allow_html=True
         ) 
     ########################################################################
