@@ -131,7 +131,9 @@ def main():
         st.write('The **Gaussian Process Regressor (GPR)** model, **Random Forest (RF)** model and **Extreme Gradient Booosting (XGBoost)** model\
         are among the selected predictors for POME biogas components. The accuracy of the respective models, represented by the :blue[R$^{2}$ coefficient of\
         determination] on the prediction of the target outputs are shown in :blue[_italic_].\
-        The predicted components include total biogas production, methane (CH$_{4}$), carbon dioxide (CO$_{2}$) and hydrogen sulphide (H$_{2}$S).')   
+        The predicted components include total biogas production, methane (CH$_{4}$), carbon dioxide (CO$_{2}$) and hydrogen sulphide (H$_{2}$S).')
+        
+        st.text_input('Try out our predictor!','On the top left of the screen, click on **>** to specify input values.')
 
         st.markdown("""
         
