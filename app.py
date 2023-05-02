@@ -11,7 +11,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title="POME biogas predictor",
-    page_icon=":Palm tree:",
+    page_icon=":palm_tree:",
     layout="wide",
     initial_sidebar_state="expanded",
     )
