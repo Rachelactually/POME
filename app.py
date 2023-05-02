@@ -111,6 +111,7 @@ def main():
     ########################################################################
     # Create subheaders for main performance indicator 
         
+        <h2>Heading level 2</h2>
         st.write('##Markdown')
         new_title = '<p style="color:red; font-size: 30px;">Predicting biogas components</p>'
         st.markdown(new_title, unsafe_allow_html=True)
