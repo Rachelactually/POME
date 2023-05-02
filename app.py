@@ -67,7 +67,7 @@ def H2S_prediction(input_data):
     return H2S_modelprediction
 ########################################################################
 
-st.title('POME biogas predictor')
+st.header('POME biogas predictor')
 st.caption('This app predicts the biogas output from a closed system POME anaerobic digestion proccess')
 
 #Create tabs
