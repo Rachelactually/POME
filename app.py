@@ -366,27 +366,27 @@ with tab2:
     with st.beta_expander('**Stage 3: Model Development**'):
     
     
-    # OLD Code
-    # Create subheaders for dependent variables
-        #st.subheader('Coefficient of Performance')
-        #result_COP = COP_prediction(df)
-        #rounded = round(result[0],2)
-        #st.write(result_COP)
+        # OLD Code
+        # Create subheaders for dependent variables
+            #st.subheader('Coefficient of Performance')
+            #result_COP = COP_prediction(df)
+            #rounded = round(result[0],2)
+            #st.write(result_COP)
 
-    
-   # st.subheader('Manual Input Section')
-    #Getting the input data from the user 
-    #RefrigerantFeed = st.number_input('Refrigerant Feed')
-    #MolFractionPropane = st.number_input('Mol fraction of propane')
-    #DP_LV9004 = st.number_input('Pressure drop across LV-9004')
-    #DP_LV9005 = st.number_input('Pressure drop across LV-9005')
-    #CondenserDuty = st.number_input('Condenser duty')
-    #S12Ratio = st.number_input('Split fraction of S12')
-    
-    #output =''
-    
-    #creating a button for prediction
-    #if st.button ('Predict the Coefficient of Performance'):
-        #result = COP_prediction([[RefrigerantFeed,MolFractionPropane, DP_LV9004, DP_LV9005, CondenserDuty, S12Ratio]])
-        #output = round(result[0],2)
-    #st.success(output)
+
+       # st.subheader('Manual Input Section')
+        #Getting the input data from the user 
+        #RefrigerantFeed = st.number_input('Refrigerant Feed')
+        #MolFractionPropane = st.number_input('Mol fraction of propane')
+        #DP_LV9004 = st.number_input('Pressure drop across LV-9004')
+        #DP_LV9005 = st.number_input('Pressure drop across LV-9005')
+        #CondenserDuty = st.number_input('Condenser duty')
+        #S12Ratio = st.number_input('Split fraction of S12')
+
+        #output =''
+
+        #creating a button for prediction
+        #if st.button ('Predict the Coefficient of Performance'):
+            #result = COP_prediction([[RefrigerantFeed,MolFractionPropane, DP_LV9004, DP_LV9005, CondenserDuty, S12Ratio]])
+            #output = round(result[0],2)
+        #st.success(output)
