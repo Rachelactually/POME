@@ -535,7 +535,7 @@ with tab3:
     electricity can be produced by this by-product. The application of this **_waste to wealth_** \
     concept allows energy to be recirculated back into the process, producing a :blue[**circular**] loop.')
     
-    image = Image.open('Boundary_1.png')
+    image = Image.open('Circular.png')
     st.image(image, caption='Fig 1: Circular economy of a POM with a biogas plant.')
     
     st.subheader('Life Cycle Assessment (LCA)')
