@@ -386,16 +386,12 @@ with tab2:
         st.markdown("""
         **max_depth** _max no. of levels in each decision tree_
         [20, 30, 50, 80, 100, None]
-        
         **max_features** _max no. of features considered for node splitting_
         [sqrt, log2, None] 
-        
-        **min$_$samples$_$leaf** _min no. of points allowed in a leaf node_
+        **min_samples_leaf** _min no. of points allowed in a leaf node_
         [1,2,4]
-        
-        **"min$_$samples$_$split"** _min no. of points placed in a node before split_
+        **"min_samples_split"** _min no. of points placed in a node before split_
         [2,5,10]
-        
         **"n_estimators"** _no. of trees in the forest_
         [100, 150, 200, 250,300, 350, 400, 450, 500, 600, 800, 1000] 
         """)
