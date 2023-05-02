@@ -278,7 +278,7 @@ with tab2:
     st.caption("""
     The collected dataset contains 96 data points, where the input parameters consist of: 
     - Chemical Oxygen Demand (COD)
-    """,unsafe_allow_html=True)
+    """)
     st.caption('- Biological Oxygen Demand (BOD$_{5}$')
     st.caption('- Total solids (TS)')
     st.caption('- Suspended solids (SS)')
