@@ -82,7 +82,8 @@ with col3:
     #displaying the image on streamlit app
     st.image(image)
     
-st.caption('This app predicts the biogas output from a closed system POME anaerobic digestion process')
+st.caption('\textcopyright*')
+st.caption('This app predicts the biogas output from a closed system POME anaerobic digestion process.')
 #Create tabs
 tab1, tab2, tab3, tab4 = st.tabs(["Prediction models", "Methodology", "Sustainability", "About"])
 
