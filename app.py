@@ -395,7 +395,7 @@ with tab2:
         
         h1 = '<p font-size: 5px;"><strong>alpha</strong>\
         <em> value added to diagonal of kernel matrix during fitting to obtain a positive definite matrix</em>\
-        <br>[1e-10, 1e-5, 1e-2,'log-uniform']</p>'
+        <br>[1e-10, 1e-5, 1e-2, log-uniform]</p>'
         st.markdown(h1, unsafe_allow_html=True)
         ""
         
