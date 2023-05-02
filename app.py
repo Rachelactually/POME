@@ -66,8 +66,11 @@ def H2S_prediction(input_data):
     print(H2S_modelprediction)
     return H2S_modelprediction
 ########################################################################
-#Create tabs
 
+st.title('POME biogas predictor')
+st.caption('This app predicts the biogas output from a closed system POME anaerobic digestion proccess')
+
+#Create tabs
 tab1, tab2, tab3, tab4 = st.tabs(["Prediction models", "Methodology", "Sustainability", "About"])
 
 ########################################################################
@@ -75,8 +78,6 @@ tab1, tab2, tab3, tab4 = st.tabs(["Prediction models", "Methodology", "Sustainab
 def main():
     # Giving a title
  with tab1:
-        st.title('POME biogas predictor')
-        st.caption('This app predicts the biogas output from a closed system POME anaerobic digestion proccess')
         # Sidebar header
         st.sidebar.header('Input Parameters')
         # Define user input features
@@ -118,7 +119,7 @@ def main():
         # GPR
         new_title = '<p style="font-family:monospace; color:black; font-size: 20px;">Gaussian Process Regressor (GPR)</p>'
         st.markdown(new_title, unsafe_allow_html=True)
-        st.caption('GPR is a **probabilistic mode**l bassed on non-parametric kernel models.\
+        st.caption('GPR is a **probabilistic model** bassed on non-parametric kernel models.\
         Unlike linear regression, GPR makes predictions in the form of probability values\
         instead of scalar values [1]. This is achieved by assigning a prior probability to a\
         set of functions, with higher probability given to functions that are more representative\
