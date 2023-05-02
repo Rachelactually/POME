@@ -321,48 +321,49 @@ with tab2:
 
     ########################################################################   
     
-    new_title = '<p style="font-size: 20px;"><strong>Stage 2: Data pre-processing<strong></p>'
-    st.markdown(new_title, unsafe_allow_html=True)
+    #new_title = '<p style="font-size: 20px;"><strong>Stage 2: Data pre-processing<strong></p>'
+    #st.markdown(new_title, unsafe_allow_html=True)
+    with st.beta_expander('**Stage 2: Data pre-processing**'):
    
-    st.write('Due to limited available plant data, data expansion was carried out using the \
-    Synthetic Minority Oversampling Technique (SMOTE) to generate synthetic datasets. SMOTE uses \
-    the k-nearest neighbour approach to synthesise new observations based on the existing dataset.')
-  
-    st.write('In this study, the SMOTE algorithm for regression developed by [**Larsen**](https://www.mathworks.com/matlabcentral/fileexchange/75401-synthetic-minority-over-sampling-technique-smote) \
-    on MATLAB was employed [1]. **Fig 1** illustrates that to construct a synthetic sample with\
-    SMOTE, a random observation from the initial dataset (origin) was chosen. Then, among its \
-    nearest neighbours, _k_ number of points with distance _b$_{k}$_ was selected. In accordance\
-    with a random assigned weight, _w_, a new sample point, _s$_{k}$_, was crerated along vector\
-    _b$_{k}$_. The sampling process was repeated for _n_ times until _N_ was fullfilled.')
-    st.write('Prior to model training, SMOTE was applied to the raw dataset to perform data \
-    expansion. In theory, more training data should coincide with a model of higher accuracy, \
-    and it should therefore be logical to create as many synthetic data as possible. \
-    However, as SMOTE is an extrapolation performed upon the original data, a higher accuracy \
-    cannot be assumed for higher number of synthesized data.')
-    st.write('In this study, the ideal setting for SMOTE, (_N, k_) is found to be (7, 7).\
-    Using this setting, a total of 672 datasets containing all input and output parameters\
-    were synthesised. As synthesised data will only be used for model training, this leaves the\
-    train-test ratio to be at 87.5 to 12.5.')
-    
-    from PIL import Image
-    #opening the image
-    image = Image.open('SMOTE.png')
-    #displaying the image on streamlit app
-    st.image(image, caption='Fig 1: Random point along the vector connecting the origin to the KNN points.')
-    
-    st.write('Prior to training, z-score data normalisation technique was applied to the input variables.\
-    Upon performing z-score normalisation, the dataset will be converted into a single, standardised\
-    data format, where the new mean and standard deviation values are 0 and 1.')
-    
-    st.markdown("""
-    
-    """)
+        st.write('Due to limited available plant data, data expansion was carried out using the \
+        Synthetic Minority Oversampling Technique (SMOTE) to generate synthetic datasets. SMOTE uses \
+        the k-nearest neighbour approach to synthesise new observations based on the existing dataset.')
+
+        st.write('In this study, the SMOTE algorithm for regression developed by [**Larsen**](https://www.mathworks.com/matlabcentral/fileexchange/75401-synthetic-minority-over-sampling-technique-smote) \
+        on MATLAB was employed [1]. **Fig 1** illustrates that to construct a synthetic sample with\
+        SMOTE, a random observation from the initial dataset (origin) was chosen. Then, among its \
+        nearest neighbours, _k_ number of points with distance _b$_{k}$_ was selected. In accordance\
+        with a random assigned weight, _w_, a new sample point, _s$_{k}$_, was crerated along vector\
+        _b$_{k}$_. The sampling process was repeated for _n_ times until _N_ was fullfilled.')
+        st.write('Prior to model training, SMOTE was applied to the raw dataset to perform data \
+        expansion. In theory, more training data should coincide with a model of higher accuracy, \
+        and it should therefore be logical to create as many synthetic data as possible. \
+        However, as SMOTE is an extrapolation performed upon the original data, a higher accuracy \
+        cannot be assumed for higher number of synthesized data.')
+        st.write('In this study, the ideal setting for SMOTE, (_N, k_) is found to be (7, 7).\
+        Using this setting, a total of 672 datasets containing all input and output parameters\
+        were synthesised. As synthesised data will only be used for model training, this leaves the\
+        train-test ratio to be at 87.5 to 12.5.')
+
+        from PIL import Image
+        #opening the image
+        image = Image.open('SMOTE.png')
+        #displaying the image on streamlit app
+        st.image(image, caption='Fig 1: Random point along the vector connecting the origin to the KNN points.')
+
+        st.write('Prior to training, z-score data normalisation technique was applied to the input variables.\
+        Upon performing z-score normalisation, the dataset will be converted into a single, standardised\
+        data format, where the new mean and standard deviation values are 0 and 1.')
+
+        st.markdown("""
+
+        """)
 
     ########################################################################   
     
-    new_title = '<p style="font-size: 20px;"><strong>Stage 3: Model Development<strong></p>'
-    st.markdown(new_title, unsafe_allow_html=True)
-    
+    #new_title = '<p style="font-size: 20px;"><strong>Stage 3: Model Development<strong></p>'
+    #st.markdown(new_title, unsafe_allow_html=True)
+    with st.beta_expander('**Stage 3: Model Development**'):
     
     
     # OLD Code
