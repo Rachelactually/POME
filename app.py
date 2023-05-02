@@ -11,7 +11,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title="POME biogas predictor",
-    page_icon="(https://universitas21.com/sites/default/files/styles/scale_640_w/public/2018-04/University%20of%20Nottingham.jpg?itok=BA8I2vEi)",
+    page_icon=":Palm tree:",
     layout="wide",
     initial_sidebar_state="expanded",
     )
