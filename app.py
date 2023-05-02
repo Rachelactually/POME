@@ -779,7 +779,7 @@ with tab3:
 
         with col1:
             image = Image.open('QY.png')
-            st.image(image, caption='Qian Yee Ong')
+            st.image(image, caption='Qian Yee Ong', width=1)
             st.caption('Masters in Chemical with Environmental Engineering, University of Nottingham Malaysia')
             st.caption(':e-mail:: slenderqianyeeong@gmail.com')
             h1 = '<p font-size: 5px;">\
@@ -790,7 +790,7 @@ with tab3:
            
         with col2:
             image = Image.open('Amanda.png')
-            st.image(image, caption='Xin Yun Kiew')
+            st.image(image, caption='Xin Yun Kiew', width=1)
             st.caption('Masters in Chemical with Environmental Engineering, University of Nottingham Malaysia')
             st.caption(':e-mail:: amandakiewxy@gmail.com')
             h1 = '<p font-size: 5px;">\
@@ -801,7 +801,7 @@ with tab3:
 
         with col3:
             image = Image.open('Joshua.png')
-            st.image(image, caption='Joshua Liew Yeh Loong')
+            st.image(image, caption='Joshua Liew Yeh Loong', width=1)
             st.caption('Masters in Chemical Engineering, University of Nottingham Malaysia')
             st.caption(':e-mail:: joshualiew10@gmail.com')
             h1 = '<p font-size: 5px;">\
@@ -828,29 +828,3 @@ with tab3:
             st.caption('Head of School of Computer Science/ Associate Professor')
             st.caption(':e-mail:: Zhiyuan.Chen@nottingham.edu.my')
             
-
-    
-        # OLD Code
-        # Create subheaders for dependent variables
-            #st.subheader('Coefficient of Performance')
-            #result_COP = COP_prediction(df)
-            #rounded = round(result[0],2)
-            #st.write(result_COP)
-
-
-       # st.subheader('Manual Input Section')
-        #Getting the input data from the user 
-        #RefrigerantFeed = st.number_input('Refrigerant Feed')
-        #MolFractionPropane = st.number_input('Mol fraction of propane')
-        #DP_LV9004 = st.number_input('Pressure drop across LV-9004')
-        #DP_LV9005 = st.number_input('Pressure drop across LV-9005')
-        #CondenserDuty = st.number_input('Condenser duty')
-        #S12Ratio = st.number_input('Split fraction of S12')
-
-        #output =''
-
-        #creating a button for prediction
-        #if st.button ('Predict the Coefficient of Performance'):
-            #result = COP_prediction([[RefrigerantFeed,MolFractionPropane, DP_LV9004, DP_LV9005, CondenserDuty, S12Ratio]])
-            #output = round(result[0],2)
-        #st.success(output)
