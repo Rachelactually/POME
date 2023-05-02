@@ -773,10 +773,9 @@ with tab3:
 
         st.subheader('About us')
 
-        new_title = '<p style="font-size: 20 px;"><strong>Project researchers<strong></p>'
-        st.markdown(new_title, unsafe_allow_html=True)
+        st.write('**Researchers**')
 
-        col1,col2,col3 = st.columns(3)
+        col1,col2,col3 = st.columns([1,1,1])
 
         with col1:
             image = Image.open('QY.png')
@@ -820,20 +819,16 @@ with tab3:
 
         col1,col2 = st.columns(2)
         with col1:
-            st.markdown("""
-            **Dr. Sara Kazemi Yazdi**
-            **_Assistant Professor_**
-            :blue[Department of Chemical with Environmental Engineering]
-            :e-mail:: Sara.Yazdi@nottingham.edu.my
-            """)
+            st.caption('Dr. Sara Kazemi Yazdi')
+            st.caption('Assistant Professor, :blue[Department of Chemical with Environmental Engineering]')
+            st.caption(':e-mail:: Sara.Yazdi@nottingham.edu.my')
 
         with col2:
-            st.markdown("""
-            **Dr. Zhiyuan Chen**
-            **_Head of School of Computer Science/ Associate Professor_**
-            :grey[School of Computer Science]
-            :e-mail:: Zhiyuan.Chen@nottingham.edu.my
-            """)
+            st.caption('Dr. Zhiyuan Chen')
+            st.caption('Head of School of Computer Science/ Associate Professor')
+            st.caption(':e-mail:: Zhiyuan.Chen@nottingham.edu.my')
+            
+
     
         # OLD Code
         # Create subheaders for dependent variables
