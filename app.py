@@ -76,7 +76,7 @@ def H2S_prediction(input_data):
     return H2S_modelprediction
 ########################################################################
 
-col1, col2, col3 = st.beta_columns([4,1,1])
+col1, col2, col3 = st.columns([4,1,1])
 
 with col1:
     st.title('POME biogas predictor')
