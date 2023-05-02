@@ -390,4 +390,3 @@ with tab2:
         #result = COP_prediction([[RefrigerantFeed,MolFractionPropane, DP_LV9004, DP_LV9005, CondenserDuty, S12Ratio]])
         #output = round(result[0],2)
     #st.success(output)
-    
