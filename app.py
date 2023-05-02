@@ -383,7 +383,7 @@ with tab2:
         each trial in continuous processing.\
         A parameter grid for the models was created with a variety of hyperparameter options:')
 
-        new_title = '<p style="font-size: 20px;"><strong>GPR<strong></p>'
+        new_title = '<p style="font-size: 20px;"><strong>GPR [2]<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)
         h1 = '<p font-size: 5px;"><strong>kernel</strong>\
         <em> specifies covariance function of GPR</em>\
@@ -401,7 +401,7 @@ with tab2:
         st.markdown(h1, unsafe_allow_html=True)
 
         
-        new_title = '<p style="font-size: 20px;"><strong>XGBoost<strong></p>'
+        new_title = '<p style="font-size: 20px;"><strong>XGBoost [3]<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)           
         h1 = '<p font-size: 5px;"><strong>learning_rate</strong>\
         <em> step size shrinkage to prevent overfitting</em>\
@@ -429,7 +429,7 @@ with tab2:
         st.markdown(h1, unsafe_allow_html=True)
 
         
-        new_title = '<p style="font-size: 20px;"><strong>Random forest<strong></p>'
+        new_title = '<p style="font-size: 20px;"><strong>Random forest [2]<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)          
         h1 = '<p font-size: 5px;"><strong>max_depth</strong>\
         <em> max no. of levels in each decision tree</em>\
@@ -486,6 +486,12 @@ with tab2:
         st.markdown("""
 
         """)
+        
+        st.write('**References**')
+        st.caption('[1] Larsen, B. S. (2023) Synthetic Minority Over-sampling Technique (SMOTE). Available at: https://github.com/dkbsl/matlab_smote/releases/tag/1.0 (Accessed: 31 March 2023).')
+        st.caption('[2] Pedregosa, F. et al. (2011) ‘Scikit-learn: Machine Learning in Python’, Journal of Machine Learning Research, 12, pp. 2825--2830.')
+        st.caption('[3] Developers, X. (2023) xgboost- Release 2.0.0-dev.')
+
         # OLD Code
         # Create subheaders for dependent variables
             #st.subheader('Coefficient of Performance')
