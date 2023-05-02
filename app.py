@@ -676,6 +676,32 @@ with tab3:
             <br></p>'
             st.markdown(h1, unsafe_allow_html=True) 
     
+        st.markdown("""
+
+        """)
+    
+    
+    
+    with st.beta_expander('**Phase (iii) : Life Cycle Impact Assessment (LCIA)**'):
+        st.write('In this study, the [EcoInvent](https://ecoinvent.org/) database was employed. With over 18,000 \
+        LCI datasets, this database encompasses sectors including agriculture, waste treatments, \
+        and water supply. For this study, certain process specific information was not included in \
+        the EcoInvent database, including POME biogas and sludge streams, SO2 emission from AD \
+        process and phosphate emission due to COD and TN in POME. Hence, manual calculation was \
+        conducted to obtain the important environmental impacts as a result of those parameters.')
+        st.write('To conduct these calculations, emission, equivalence, and methane correction factors \
+        were first obtained. Most Malaysian POMs with biogas systems compute carbon emissions\
+        according to the Intergovernmental Panel on Climate Change (IPCC) criteria for CDM\
+        applications, which uses the 2014 CDM electricity baseline and the 2006 IPCC Guidelines\
+        for National Greenhouse Gas Inventories default emission factor values. Methane correction \
+        factors were also reviewed on a scenario basis.')
+        st.write('The ReCiPe 2016 approach was used to perform LCIA calculations. Using the ReCiPe \
+        2016 (World-H) midpoint technique, only midpoints were used to compute the effect categories. \
+        18 distinct effect categories at the midpoint were examined using ReCiPe 2016. In this study, \
+        focus was placed on 3 categories, namely: (i) global warming potential (GWP), (ii) terrestrial \
+        acidification (TAP), and (iii) freshwater eutrophication. (FEP).')
+    
+    
     
     
     st.markdown("""
