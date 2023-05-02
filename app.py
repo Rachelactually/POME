@@ -111,7 +111,7 @@ def main():
     ########################################################################
     # Create subheaders for main performance indicator 
         
-        new_title = '<p style="color:red; font-size: 30px;"><em><strong>Predicting biogas components<strong><em></p>'
+        new_title = '<p style="color:#097969; font-size: 30px;"><strong>Predicting biogas components<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)
         st.caption('The **Gaussian Process Regressor (GPR)** model, **Random Forest (RF)** model and **Extreme Gradient Booosting (XGBoost)** model\
         are among the selected predictors for POME biogas components. The accuracy of the respective models, represented by the :blue[R$^{2}$ coefficient of\
@@ -119,7 +119,7 @@ def main():
         The predicted components include total biogas production, methane (CH$_{4}$), carbon dioxide (CO$_{2}$) and hydrogen sulphide (H$_{2}$S).')   
 
         # GPR
-        new_title = '<p style="font-family:monospace; color:black; font-size: 20px;">Gaussian Process Regressor (GPR)</p>'
+        new_title = '<p style="color:#5F9EA0; font-size: 20px;"><strong>Gaussian Process Regressor (GPR)<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)
         st.caption('GPR is a **probabilistic model** bassed on non-parametric kernel models.\
         Unlike linear regression, GPR makes predictions in the form of probability values\
@@ -162,7 +162,7 @@ def main():
         col4.write(rounded_H2S)
 
         # XGBoost
-        new_title = '<p style="font-family:monospace; color:black; font-size: 20px;">Extreme Gradient Boosting (XGBoost)</p>'
+        new_title = '<p style="color:#5F9EA0; font-size: 20px;"><strong>Extreme Gradient Boosting (XGBoost)<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)
         st.caption('Proposed by Chen and Guestrin in 2016, the XGBoost algorithm is an optimised version of\
         gradient boosting. Boosting assigns weight to observations and increased the weight of the\
@@ -207,7 +207,7 @@ def main():
         
         
         # RF
-        new_title = '<p style="font-family:monospace; color:black; font-size: 20px;">Random Forest (RF)</p>'
+        new_title = '<p style="color:#5F9EA0; font-size: 20px;"><strong>Random Forest (RF)<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)  
         st.caption('Random forest is a non-parametric model as partr of the Ensemble of Trees (EoT) system\
         that was proposed by Breiman in 2001. The Classification and Regression Tree (CART) methodology\
