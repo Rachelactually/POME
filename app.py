@@ -576,104 +576,105 @@ with tab3:
         col1,col2,col3,col4,col5 = st.columns([0.5,0.5,0.5,0.5,0.5])
         
         with col1:
-            st.markdown("""
-            **INPUT**
-            POME to AD (f.u.)
-            Biogas recirculation
-            Electricity (pump)
-            **OUTPUT**
-            Raw effluent
-            Sludge
-            Raw biogas
-            CH$_{4}$ 
-            CO$_{2}$
-            H$_{2}$S
-            **OTHER**
-            COD POME in
-            COD POME out
-            COD sludge out
-            Electricity generated
-            """)
+            h1 = '<p font-size: 5px;"><strong>INPUT</strong>\
+            <br>POME to AD (f.u.)\
+            <br>Biogas recirculation\
+            <br>Electricity (pump)\
+            <br><strong>OUTPUT</strong>\
+            <br>Raw effluent\
+            <br>Sludge\
+            <br>Raw biogas\
+            <br>CH$_{4}$\
+            <br>CO$_{2}$\
+            <br>H$_{2}$S\
+            <br><strong>OTHER</strong>\
+            <br>COD POME in\
+            <br>COD POME out\
+            <br>COD sludge out\
+            <br>Electricity generated</p>'
+            st.markdown(h1, unsafe_allow_html=True)
+        
          
         with col2:
-            st.markdown("""
-
-            1.000
-            0.694
-            1.872
-
-            0.944
-            0.056
-            19.437
-            12.140
-            6.576
-            0.014
-
-            67.362
-            14.273
-            26.853
-            72.536
-            """)
+            h1 = '<p font-size: 5px;">\
+            <br>1.000\
+            <br>0.694\
+            <br>1.872\
+            <br>\
+            <br>0.944\
+            <br>0.056\
+            <br>19.437\
+            <br>12.140\
+            <br>6.576\
+            <br>0.014\
+            <br>\
+            <br>67.362\
+            <br>14.273\
+            <br>26.853\
+            <br>72.536</p>'
+            st.markdown(h1, unsafe_allow_html=True)            
+           
 
         with col3:
-            st.markdown("""
+            h1 = '<p font-size: 5px;">\
+            <br>m$^{3}$\
+            <br>m$^{3}$\
+            <br>kWh\
+            <br>\
+            <br>m$^{3}$\
+            <br>m$^{3}$\
+            <br>m$^{3}$\
+            <br>m$^{3}$\
+            <br>m$^{3}$\
+            <br>m$^{3}$\
+            <br>\
+            <br>kg/m$^{3}$\
+            <br>kg/m$^{3}$\
+            <br>kg/m$^{3}$\
+            <br>kWh</p>'
+            st.markdown(h1, unsafe_allow_html=True)    
             
-            m$^{3}$
-            m$^{3}$
-            kWh
-            
-            m$^{3}$
-            m$^{3}$
-            m$^{3}$
-            m$^{3}$
-            m$^{3}$
-            m$^{3}$
-            
-            kg/m$^{3}$
-            kg/m$^{3}$
-            kg/m$^{3}$
-            kWh
-            """)
+
          
         with col4:
-            st.markdown("""
+            h1 = '<p font-size: 5px;">\
+            <br>\
+            <br>\
+            <br>\
+            <br>\
+            <br>\
+            <br>48.657\
+            <br>19.380\
+            <br>7.369\
+            <br>10.975\
+            <br>0.022\
+            <br>\
+            <br>\
+            <br>\
+            <br>\
+            <br></p>'
+            st.markdown(h1, unsafe_allow_html=True)  
             
-            
-            
-            
-            
-            
-            48.657
-            19.380
-            7.369
-            10.975
-            0.022
-            
-            
-            
-            
-            
-            """)            
+             
             
         with col5:
-            st.markdown("""
-            
-            
-            
-            
-            
-            
-            kg
-            kg
-            kg
-            kg
-            kg
-            
-            
-            
-            
-            
-            """)    
+            h1 = '<p font-size: 5px;">\
+            <br>\
+            <br>\
+            <br>\
+            <br>\
+            <br>\
+            <br>kg\
+            <br>kg\
+            <br>kg\
+            <br>kg\
+            <br>kg\
+            <br>\
+            <br>\
+            <br>\
+            <br>\
+            <br></p>'
+            st.markdown(h1, unsafe_allow_html=True) 
     
     
     
