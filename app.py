@@ -164,7 +164,7 @@ def main():
         new_title = '<p style="font-size: 20px;"><strong>Extreme Gradient Boosting (XGBoost)<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)
         st.write('Proposed by Chen and Guestrin in 2016, the XGBoost algorithm is an optimised version of\
-        gradient boosting. Boosting assigns weight to observations and increased the weight of the\
+        gradient boosting [2]. Boosting assigns weight to observations and increased the weight of the\
         misclassified observations in subsequent training rounds. Results from each tree are then\
         combined to improve the accuracy of the model. Gradient boosting focuses on reducing the\
         gradient of the loss function in previous models through an iterative feedback process\
@@ -208,7 +208,7 @@ def main():
         new_title = '<p style="font-size: 20px;"><strong>Random Forest (RF)<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)  
         st.write('Random forest is a non-parametric model as partr of the Ensemble of Trees (EoT) system\
-        that was proposed by Breiman in 2001. The Classification and Regression Tree (CART) methodology\
+        that was proposed by Breiman in 2001 [3]. The Classification and Regression Tree (CART) methodology\
         is applied, where subspace randomisation with bagging is conducted to resample the training set\
         with replacement each time a new tree is grown. This technique trains multiple subsets using\
         bootstrap replicas of the original ttraining dataset with replacement. This resampling approach\
@@ -255,12 +255,22 @@ def main():
         st.write(mystyle, unsafe_allow_html=True)
         
 
+        reference1 = '<p font-size: 10px;">[1] Karch, J. D., Brandmaier, A. M. and Voelkle, M. C. (2020) ‘Gaussian Process Panel Modeling—Machine Learning Inspired Analysis of Longitudinal Panel Data’, Frontiers in Psychology, 11. doi: 10.3389/fpsyg.2020.00351.</p>'
+        reference2 = '<p font-size: 10px;">[2] Chen, T. and Guestrin, C. (2016) ‘XGBoost: A Scalable Tree Boosting System’, in Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. New York, NY, USA: ACM, pp. 785–794. doi: 10.1145/2939672.2939785.</p>'
+        reference3 = '<p font-size: 10px;">[3] Breiman, L. (2001) ‘Random forests’, Machine Learning. Springer, 45(1), pp. 5–32. doi: 10.1023/A:1010933404324/METRICS.</p>'
+        
+        st.markdown("""
+        **References**
+        reference1
+        reference2
+        reference3
+        """,unsafe_allow_html=True) 
     ########################################################################
 if __name__=='__main__':
     main()
     
     
-    
+########################################################################    
 with tab2:
     new_title = '<p style="color:red; font-size: 30px;"><strong>Development of prediction models<strong></p>'
     st.markdown(new_title, unsafe_allow_html=True)   
@@ -273,39 +283,40 @@ with tab2:
     (i) Lepar Hilir Palm Oil Mill, (ii) Adela Palm Oil Mill, (iii) Keratong Estate Oil Palm Mill and (iv)\
     Felda Lok Heng Palm Oil Mill.')
     st.write('All data used were monthly average values.')
-    st.markdown("""
-    The collected dataset contains 96 data points, where the input parameters consist of:
-    - POME inlet flowrate
-    - Chemical Oxygen Demand (COD)
-    - Biological Oxygen Demand (BOD$_{5}$)
-    - Total solids (TS)
-    - Suspended solids (SS)
-    - Temperature
-    - pH
-    - Organic loading rate (OLR)
-    - Hydraulic retention time (HRT)
-    """)
-
     st.write('The collected dataset contains 96 data points, where the input parameters \
     are within the range of:')
     
     st.metric("POME inlet flowrate (m$^{3}$/month)","3600 to 24200", delta=None)
     
     col21,col22 = st.columns(2)
-    col21.metric("Chemical Oxygen Demand, COD (mg/L)","53500 to 92800", delta=None)
-    col22.metric("Biological Oxygen Demand, BOD$_{5}$ (mg/L)","22500 to 47500", delta=None)
+    col21.metric("Chemical Oxygen Demand, COD (mg/L)","53500 - 92800", delta=None)
+    col22.metric("Biological Oxygen Demand, BOD$_{5}$ (mg/L)","22500 - 47500", delta=None)
     
     col23,col24 = st.columns(2)
-    col23.metric("Total solids, TS (mg/L)","20200 to 56500", delta=None)
-    col24.metric("Suspended solids, SS (mg/L)","12300 to 57650", delta=None)
+    col23.metric("Total solids, TS (mg/L)","20200 - 56500", delta=None)
+    col24.metric("Suspended solids, SS (mg/L)","12300 - 57650", delta=None)
     
     col25,col26 = st.columns(2)
-    col25.metric("Organic loading rate, OLR (kg COD in/m$^{3}$ day)","0.85 to 1.80", delta=None)
-    col26.metric("Hydraulic retention time, HRT (days)","34 to 88", delta=None)    
+    col25.metric("Organic loading rate, OLR (kg COD in/m$^{3}$ day)","0.85 - 1.80", delta=None)
+    col26.metric("Hydraulic retention time, HRT (days)","34 - 88", delta=None)    
     
     col27,col28 = st.columns(2)
-    col27.metric("Temperature (°C)","47 to 62", delta=None)
-    col28.metric("pH","6.80 to 7.40", delta=None)
+    col27.metric("Temperature (°C)","47 - 62", delta=None)
+    col28.metric("pH","6.80 - 7.40", delta=None)
+
+    ########################################################################   
+    
+    new_title = '<p style="font-size: 20px;"><strong>Stage 2: Data pre-processing<strong></p>'
+    st.markdown(new_title, unsafe_allow_html=True)
+    
+    st.write('Due to limited available plant data, data expansion was carried out using the \
+    Synthetic Minority Oversampling Technique (SMOTE) to generate synthetic datasets. SMOTE uses \
+    the k-nearest neighbour approach to synthesise new observations based on the existing dataset.')
+    st.write('In this tudy, the SMOTE algorithm for regression developed by **Larsen (2023)** \
+    on MATLAB was employed.
+    
+    
+    
     
     
     # OLD Code
