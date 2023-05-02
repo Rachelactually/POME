@@ -277,7 +277,7 @@ with tab2:
         
     new_title = '<p style="font-size: 20px;"><strong>Stage 1: Scoping & data collection<strong></p>'
     st.markdown(new_title, unsafe_allow_html=True)
-    st.caption('Real scale industrial data of the covered lagoon POME anerobic digestor used in this study were\
+    st.write('Real scale industrial data of the covered lagoon POME anerobic digestor used in this study were\
     obtained from four Malaysian plants over a period of 24 months (July 2019 to June 2021).')
     st.write('The plants inlude (i) Lepar Hilir Palm Oil Mill, (ii) Adela Palm Oil Mill, (iii) Keratong Estate Oil Palm Mill and (iv)\
     Felda Lok Heng Palm Oil Mill. All data used were monthly average values. The collected dataset contains 96 data points, where the input parameters \
@@ -300,18 +300,22 @@ with tab2:
     col27,col28 = st.columns(2)
     col27.metric("Temperature (°C)","47 - 62", delta=None)
     col28.metric("pH","6.80 - 7.40", delta=None)
+    
+    st.markdown("""
+    
+    """)
 
     ########################################################################   
     
     new_title = '<p style="font-size: 20px;"><strong>Stage 2: Data pre-processing<strong></p>'
     st.markdown(new_title, unsafe_allow_html=True)
    
-    st.caption('Due to limited available plant data, data expansion was carried out using the \
+    st.write('Due to limited available plant data, data expansion was carried out using the \
     Synthetic Minority Oversampling Technique (SMOTE) to generate synthetic datasets. SMOTE uses \
     the k-nearest neighbour approach to synthesise new observations based on the existing dataset.')
-    
-    url = "https://www.mathworks.com/matlabcentral/fileexchange/75401-synthetic-minority-over-sampling-technique-smote"
-    st.write('In this study, the SMOTE algorithm for regression developed by [**Larsen**](https://www.mathworks.com/matlabcentral/fileexchange/75401-synthetic-minority-over-sampling-technique-smote) \
+  
+    st.write('In this study, the SMOTE algorithm for regression developed by [**Larsen**]\
+    (https://www.mathworks.com/matlabcentral/fileexchange/75401-synthetic-minority-over-sampling-technique-smote) \
     on MATLAB was employed [1]. **Fig 1** illustrates that to construct a synthetic sample with\
     SMOTE, a random observation from the initial dataset (origin) was chosen. Then, among its \
     nearest neighbours, _k_ number of points with distance _b$_{k}$_ was selected. In accordance\
@@ -327,7 +331,6 @@ with tab2:
     were synthesised. As synthesised data will only be used for model training, this leaves the\
     train-test ratio to be at 87.5 to 12.5.')
     
-   
     from PIL import Image
     #opening the image
     image = Image.open('SMOTE.png')
