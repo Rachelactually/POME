@@ -113,7 +113,7 @@ def main():
         
         new_title = '<p style="color:red; font-size: 30px;"><strong>Predicting biogas components<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)
-        st.caption('The **Gaussian Process Regressor (GPR)** model, **Random Forest (RF)** model and **Extreme Gradient Booosting (XGBoost)** model\
+        st.write('The **Gaussian Process Regressor (GPR)** model, **Random Forest (RF)** model and **Extreme Gradient Booosting (XGBoost)** model\
         are among the selected predictors for POME biogas components. The accuracy of the respective models, represented by the :blue[R$^{2}$ coefficient of\
         determination] on the prediction of the target outputs are shown in :blue[_italic_].\
         The predicted components include total biogas production, methane (CH$_{4}$), carbon dioxide (CO$_{2}$) and hydrogen sulphide (H$_{2}$S).')   
@@ -121,7 +121,7 @@ def main():
         # GPR
         new_title = '<p style="font-size: 20px;"><strong>Gaussian Process Regressor (GPR)<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)
-        st.caption('GPR is a **probabilistic model** bassed on non-parametric kernel models.\
+        st.write('GPR is a **probabilistic model** bassed on non-parametric kernel models.\
         Unlike linear regression, GPR makes predictions in the form of probability values\
         instead of scalar values [1]. This is achieved by assigning a prior probability to a\
         set of functions, with higher probability given to functions that are more representative\
@@ -164,7 +164,7 @@ def main():
         # XGBoost
         new_title = '<p style="font-size: 20px;"><strong>Extreme Gradient Boosting (XGBoost)<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)
-        st.caption('Proposed by Chen and Guestrin in 2016, the XGBoost algorithm is an optimised version of\
+        st.write('Proposed by Chen and Guestrin in 2016, the XGBoost algorithm is an optimised version of\
         gradient boosting. Boosting assigns weight to observations and increased the weight of the\
         misclassified observations in subsequent training rounds. Results from each tree are then\
         combined to improve the accuracy of the model. Gradient boosting focuses on reducing the\
@@ -209,11 +209,11 @@ def main():
         # RF
         new_title = '<p style="font-size: 20px;"><strong>Random Forest (RF)<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)  
-        st.caption('Random forest is a non-parametric model as partr of the Ensemble of Trees (EoT) system\
+        st.write('Random forest is a non-parametric model as partr of the Ensemble of Trees (EoT) system\
         that was proposed by Breiman in 2001. The Classification and Regression Tree (CART) methodology\
         is applied, where subspace randomisation with bagging is conducted to resample the training set\
         with replacement each time a new tree is grown. This technique trains multiple subsets using\
-        bootsttrap replicas of the original ttraining dataset with replacement. This resampling approach\
+        bootstrap replicas of the original ttraining dataset with replacement. This resampling approach\
         generates a diverse set of conditions, whereby the final prediction is based upon the average value\
         from the combined prediction value of each ensemble.')
 
@@ -266,7 +266,7 @@ if __name__=='__main__':
 with tab2:
     new_title = '<p style="color:red; font-size: 30px;"><strong>Development of prediction models<strong></p>'
     st.markdown(new_title, unsafe_allow_html=True)   
-    st.caption('To develop the models, 4 stages are followed.')
+    st.write('To develop the models, 4 stages are followed.')
         
     new_title = '<p style="font-size: 20px;"><strong>Stage 1: Scoping & data collection<strong></p>'
     st.markdown(new_title, unsafe_allow_html=True)
