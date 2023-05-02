@@ -384,24 +384,32 @@ with tab2:
         
         st.subheader('Random Forest')
         h1 = '<p font-size: 5px;"><strong>max_depth</strong>\
-        <em> :blue[max no. of levels in each decision tree]</em>\
+        <em> max no. of levels in each decision tree</em>\
         <br>[20, 30, 50, 80, 100, None]</p>'
         st.markdown(h1, unsafe_allow_html=True)
         
-        st.markdown("""
-        **max_depth** _max no. of levels in each decision tree_
-        [20, 30, 50, 80, 100, None]
-        **max_features** _max no. of features considered for node splitting_
-        [sqrt, log2, None] 
-        **min_samples_leaf** _min no. of points allowed in a leaf node_
-        [1,2,4]
-        **"min_samples_split"** _min no. of points placed in a node before split_
-        [2,5,10]
-        **"n_estimators"** _no. of trees in the forest_
-        [100, 150, 200, 250,300, 350, 400, 450, 500, 600, 800, 1000] 
-        """)
+        h1 = '<p font-size: 5px;"><strong>max_features</strong>\
+        <em> max no. of features considered for node splitting</em>\
+        <br>[sqrt, log2, None]</p>'
+        st.markdown(h1, unsafe_allow_html=True)
+        
+        h1 = '<p font-size: 5px;"><strong>min_samples_leaf</strong>\
+        <em> min no. of points allowed in a leaf node</em>\
+        <br>[1, 2, 4]</p>'
+        st.markdown(h1, unsafe_allow_html=True)
+        
+        h1 = '<p font-size: 5px;"><strong>min_samples_split</strong>\
+        <em> min no. of points placed in a node before split</em>\
+        <br>[2, 5, 10]</p>'
+        st.markdown(h1, unsafe_allow_html=True)
+        
+        h1 = '<p font-size: 5px;"><strong>n_estimators</strong>\
+        <em> no. of trees in the forest</em>\
+        <br>[100, 150, 200, 250,300, 350, 400, 450, 500, 600, 800, 1000</p>'
+        st.markdown(h1, unsafe_allow_html=True)
         
         
+       
         
         
         st.markdown("""
