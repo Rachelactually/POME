@@ -391,5 +391,3 @@ with tab2:
         #output = round(result[0],2)
     #st.success(output)
     
-
-    
