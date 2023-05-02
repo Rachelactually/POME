@@ -487,10 +487,10 @@ with tab2:
 
         """)
         
-        st.write('**References**')
-        st.caption('[1] Larsen, B. S. (2023) Synthetic Minority Over-sampling Technique (SMOTE). Available at: https://github.com/dkbsl/matlab_smote/releases/tag/1.0 (Accessed: 31 March 2023).')
-        st.caption('[2] Pedregosa, F. et al. (2011) ‘Scikit-learn: Machine Learning in Python’, Journal of Machine Learning Research, 12, pp. 2825--2830.')
-        st.caption('[3] Developers, X. (2023) xgboost- Release 2.0.0-dev.')
+    st.write('**References**')
+    st.caption('[1] Larsen, B. S. (2023) Synthetic Minority Over-sampling Technique (SMOTE). Available at: https://github.com/dkbsl/matlab_smote/releases/tag/1.0 (Accessed: 31 March 2023).')
+    st.caption('[2] Pedregosa, F. et al. (2011) ‘Scikit-learn: Machine Learning in Python’, Journal of Machine Learning Research, 12, pp. 2825--2830.')
+    st.caption('[3] Developers, X. (2023) xgboost- Release 2.0.0-dev.')
 
         # OLD Code
         # Create subheaders for dependent variables
