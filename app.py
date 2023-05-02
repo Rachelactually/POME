@@ -32,13 +32,6 @@ hide_streamlit_style = """
         """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
-hide_header_style = """
-        <style>
-        #MainMenu {visibility: hidden;}
-        header {visibility: hidden;}
-        </style>
-        """
-st.markdown(hide_header_style, unsafe_allow_html=True) 
 
 ########################################################################
 # Creating a function and loading the model
