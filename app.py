@@ -153,7 +153,7 @@ def main():
         new_title = '<p style="font-size: 20px;"><strong>Gaussian Process Regressor (GPR)<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)
         with st.beta_expander("Learn more about GPR here."):
-            st.write('GPR is a **probabilistic model** bassed on non-parametric kernel models.\
+            st.write('GPR is a **probabilistic model** based on non-parametric kernel models.\
             Unlike linear regression, GPR makes predictions in the form of probability values\
             instead of scalar values [1]. This is achieved by assigning a prior probability to a\
             set of functions, with higher probability given to functions that are more representative\
@@ -518,6 +518,54 @@ with tab2:
     st.caption('[2] Pedregosa, F. et al. (2011) ‘Scikit-learn: Machine Learning in Python’, Journal of Machine Learning Research, 12, pp. 2825--2830.')
     st.caption('[3] Developers, X. (2023) xgboost- Release 2.0.0-dev.')
 
+########################################################################    
+with tab3:
+    new_title = '<p style="color:red; font-size: 30px;"><strong>Environmental impact of biogas capture and repurposing<strong></p>'
+    st.markdown(new_title, unsafe_allow_html=True)   
+    st.write('Utilising POME for biogas production presents a sustainable approach for\
+    reducing GHG emissions while offering economic benefits. POME biogas can be utilized \
+    to meet the plant’s energy requirement, making the industry self-sufficient. Subsequently, \
+    POME biogas capture offers substantial environmental benefits as it facilitates a \
+    circular economy via the reuse of process waste for energy generation. POMs with biogas \
+    plants generate lower carbon footprint compared to conventional mills, achieving a 76% \
+    carbon reduction [1].For a more comprehensive environmental evaluation to assess \
+    the impact of this process throughout the system boundary, a **life cycle assessment (LCA)** \
+    approach was carried out.')
+    
+    st.subheader('**Life Cycle Assessment (LCA)**'):
+     
+    st.write('An LCA of the AD covered lagoon unit was conducted on the base case (Lepar \
+    Hilir Plant) **with bioelectricity production** and another case **without \
+    bioelectricity production**.')
+    st.write('This LCA comprises of four key phases: (i) goal and scope definition, \
+    (ii) life cycle inventory (LCI), (iii) life cycle impact assessment (LCIA), and \
+    (iv) interpretation.')
+
+    st.info('This LCA adhered to the framework outlined in the :blue[**ISO 14040/ 14044**] series.\
+    The :blue[**openLCA 1.11.0**] software for windows was used for the study, and the\
+    Life Cycle Impact Assessment (LCIA) was carried out using the :blue[**ReCiPe 2016 (World H) midpoint technique**]\
+    with the :blue[**EcoInvent V3.8 database**].')
+                
+    
+    
+    
+    st.write('**References**')
+    st.caption('[1] Lim ')
+    st.caption('[2] Pedregosa, F. et al. (2011) ‘Scikit-learn: Machine Learning in Python’, Journal of Machine Learning Research, 12, pp. 2825--2830.')
+    st.caption('[3] Developers, X. (2023) xgboost- Release 2.0.0-dev.')    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
         # OLD Code
         # Create subheaders for dependent variables
             #st.subheader('Coefficient of Performance')
