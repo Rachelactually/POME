@@ -289,34 +289,35 @@ with tab2:
     st.write('To develop the models, 4 stages are followed.')
         
     new_title = '<p style="font-size: 20px;"><strong>Stage 1: Scoping & data collection<strong></p>'
-    st.markdown(new_title, unsafe_allow_html=True)
-    st.write('Real scale industrial data of the covered lagoon POME anerobic digestor used in this study were\
-    obtained from four Malaysian plants over a period of 24 months (July 2019 to June 2021).')
-    st.write('The plants inlude (i) Lepar Hilir Palm Oil Mill, (ii) Adela Palm Oil Mill, (iii) Keratong Estate Oil Palm Mill and (iv)\
-    Felda Lok Heng Palm Oil Mill. All data used were monthly average values. The collected dataset contains 96 data points, where the input parameters \
-    are within the range of:')
-    
-    st.metric("POME inlet flowrate (m$^{3}$/month)","3600 to 24200", delta=None)
-    
-    col21,col22 = st.columns(2)
-    col21.metric("Chemical Oxygen Demand, COD (mg/L)","53500 - 92800", delta=None)
-    col22.metric("Biological Oxygen Demand, BOD$_{5}$ (mg/L)","22500 - 47500", delta=None)
-    
-    col23,col24 = st.columns(2)
-    col23.metric("Total solids, TS (mg/L)","20200 - 56500", delta=None)
-    col24.metric("Suspended solids, SS (mg/L)","12300 - 57650", delta=None)
-    
-    col25,col26 = st.columns(2)
-    col25.metric("Organic loading rate, OLR (kg COD in/m$^{3}$ day)","0.85 - 1.80", delta=None)
-    col26.metric("Hydraulic retention time, HRT (days)","34 - 88", delta=None)    
-    
-    col27,col28 = st.columns(2)
-    col27.metric("Temperature (°C)","47 - 62", delta=None)
-    col28.metric("pH","6.80 - 7.40", delta=None)
-    
-    st.markdown("""
-    
-    """)
+    with st.beta_expander(new_title, unsafe_allow_html=True):
+    #st.markdown(new_title, unsafe_allow_html=True)
+        st.write('Real scale industrial data of the covered lagoon POME anerobic digestor used in this study were\
+        obtained from four Malaysian plants over a period of 24 months (July 2019 to June 2021).')
+        st.write('The plants inlude (i) Lepar Hilir Palm Oil Mill, (ii) Adela Palm Oil Mill, (iii) Keratong Estate Oil Palm Mill and (iv)\
+        Felda Lok Heng Palm Oil Mill. All data used were monthly average values. The collected dataset contains 96 data points, where the input parameters \
+        are within the range of:')
+
+        st.metric("POME inlet flowrate (m$^{3}$/month)","3600 to 24200", delta=None)
+
+        col21,col22 = st.columns(2)
+        col21.metric("Chemical Oxygen Demand, COD (mg/L)","53500 - 92800", delta=None)
+        col22.metric("Biological Oxygen Demand, BOD$_{5}$ (mg/L)","22500 - 47500", delta=None)
+
+        col23,col24 = st.columns(2)
+        col23.metric("Total solids, TS (mg/L)","20200 - 56500", delta=None)
+        col24.metric("Suspended solids, SS (mg/L)","12300 - 57650", delta=None)
+
+        col25,col26 = st.columns(2)
+        col25.metric("Organic loading rate, OLR (kg COD in/m$^{3}$ day)","0.85 - 1.80", delta=None)
+        col26.metric("Hydraulic retention time, HRT (days)","34 - 88", delta=None)    
+
+        col27,col28 = st.columns(2)
+        col27.metric("Temperature (°C)","47 - 62", delta=None)
+        col28.metric("pH","6.80 - 7.40", delta=None)
+
+        st.markdown("""
+
+        """)
 
     ########################################################################   
     
