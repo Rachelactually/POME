@@ -521,20 +521,28 @@ with tab2:
 ########################################################################    
 with tab3:
     new_title = '<p style="color:red; font-size: 30px;"><strong>Environmental impact of biogas repurposing<strong></p>'
-    st.markdown(new_title, unsafe_allow_html=True)   
+    st.markdown(new_title, unsafe_allow_html=True)
+    
+    st.subheader('Circular palm oil industry')
     st.write('Utilising POME for biogas production presents a sustainable approach for\
     reducing GHG emissions while offering economic benefits. POME biogas can be utilized \
     to meet the plant’s energy requirement, making the industry self-sufficient. Subsequently, \
     POME biogas capture offers substantial environmental benefits as it facilitates a \
     circular economy via the reuse of process waste for energy generation. POMs with biogas \
     plants generate lower carbon footprint compared to conventional mills, achieving a 76% \
-    carbon reduction [1].For a more comprehensive environmental evaluation to assess \
-    the impact of this process throughout the system boundary, a **life cycle assessment (LCA)** \
-    approach was carried out.')
+    carbon reduction [1]. The concept of a circular economy in the palm oil industry is demonstrated \
+    in **Fig 1**. As POME biogas has a high heating value similar to that of a commercial fuel, \
+    electricity can be produced by this by-product. The application of this **_waste to wealth_** \
+    concept allows energy to be recirculated back into the process, producing a :blue[**circular**] loop.')
+    
+    image = Image.open('Boundary_1.png')
+    st.image(image, caption='Fig 1: Circular economy of a POM with a biogas plant.')
     
     st.subheader('Life Cycle Assessment (LCA)')
      
-    st.write('An LCA of the AD covered lagoon unit was conducted on the base case (Lepar \
+    st.write('For a more comprehensive environmental evaluation to assess \
+    the impact of this process throughout the system boundary, a **life cycle assessment (LCA)** \
+    of the AD covered lagoon unit was conducted on the base case (Lepar \
     Hilir Plant) **with bioelectricity production** and another case **without \
     bioelectricity production**.')
     st.write('This LCA comprises of four key phases: (i) goal and scope definition, \
@@ -551,20 +559,16 @@ with tab3:
         reception of POME from the process to the completion of its anaerobic treatment. Inputs to the \
         AD system were in the form of materials and energy, while outputs were in the form of effluent, \
         solid waste and biogas emissions. Two scenarios were considered in this LCA evaluation, the first one \
-        being AD without biogas repurposing (**Fig 1**), and the second one being AD with biogas repurposing \
-        such as electricity generation (**Fig 2**). This allowed the comparison of environmental impact of \
+        being AD without biogas repurposing (**Fig 2**), and the second one being AD with biogas repurposing \
+        such as electricity generation (**Fig 3**). This allowed the comparison of environmental impact of \
         biogas repurposing to the process to be made, where bio-energy generation should offset the \
         negative impacts of the process. A functional unit of 1m3 of POME influent was used for this study.')
         
-        from PIL import Image
-        #opening the image
         image = Image.open('Boundary_1.png')
-        #displaying the image on streamlit app
-        st.image(image, caption='Fig 1: System boundary of a covered lagoon AD in a POME plant without electricity generation.')
+        st.image(image, caption='Fig 2: System boundary of a covered lagoon AD in a POME plant without electricity generation.')
         
         image = Image.open('Boundary_2.png')
-        #displaying the image on streamlit app
-        st.image(image, caption='Fig 2: System boundary of a covered lagoon AD in a POME plant with electricity generation.')
+        st.image(image, caption='Fig 3: System boundary of a covered lagoon AD in a POME plant with electricity generation.')
         
         st.markdown("""
 
