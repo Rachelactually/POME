@@ -289,20 +289,22 @@ with tab2:
     st.write('The collected dataset contains 96 data points, where the input parameters \
     are within the range of:')
     
-    col21,col22,col23 = st.columns(3)
+    col21,col22 = st.columns(2)
     col21.metric("POME inlet flowrate (m$^{3}$/month)","3600 to 24200", delta=None)
     col22.metric("Chemical Oxygen Demand, COD (mg/L)","53500 to 92800", delta=None)
-    col23.metric("Biological Oxygen Demand, BOD$_{5}$ (mg/L)","22500 to 47500", delta=None)
     
-    col24,col25,col26 = st.columns(3)
+    col23,col24 = st.columns(2)
+    col23.metric("Biological Oxygen Demand, BOD$_{5}$ (mg/L)","22500 to 47500", delta=None)
     col24.metric("Total solids, TS (mg/L)","20200 to 56500", delta=None)
+    
+    col25,col26 = st.columns(2)
     col25.metric("Suspended solids, SS (mg/L)","12300 to 57650", delta=None)
     col26.metric("Hydraulic retention time, HRT (days)","34 to 88", delta=None)    
     
-    col27,col28,col29 = st.columns(3)
+    col27,col28 = st.columns(2)
     col27.metric("Temperature (°C)","47 to 62", delta=None)
     col28.metric("pH","6.80 to 7.40", delta=None)
-    col29.metric("Organic loading rate, OLR (kg COD in/m$^{3}$ day)","0.85 to 1.80", delta=None)
+    st.metric("Organic loading rate, OLR (kg COD in/m$^{3}$ day)","0.85 to 1.80", delta=None)
     
     # OLD Code
     # Create subheaders for dependent variables
