@@ -520,7 +520,7 @@ with tab2:
 
 ########################################################################    
 with tab3:
-    new_title = '<p style="color:red; font-size: 30px;"><strong>Environmental impact of biogas capture and repurposing<strong></p>'
+    new_title = '<p style="color:red; font-size: 30px;"><strong>Environmental impact of biogas repurposing<strong></p>'
     st.markdown(new_title, unsafe_allow_html=True)   
     st.write('Utilising POME for biogas production presents a sustainable approach for\
     reducing GHG emissions while offering economic benefits. POME biogas can be utilized \
@@ -543,11 +543,24 @@ with tab3:
 
     st.info('This LCA adhered to the framework outlined in the :blue[**ISO 14040/ 14044**] series.\
     The :blue[**openLCA 1.11.0**] software for windows was used for the study, and the\
-    Life Cycle Impact Assessment (LCIA) was carried out using the :blue[**ReCiPe 2016 (World H) midpoint technique**]\
+    LCIA was carried out using the :blue[**ReCiPe 2016 (World H) midpoint technique**]\
     with the :blue[**EcoInvent V3.8 database**].')
                 
+    with st.beta_expander('**Phase (i): Goal and scope definition**'):
+        st.write('The system boundary of this study focused on ‘gate-to-gate’, which considered the \
+        reception of POME from the process to the completion of its anaerobic treatment. Inputs to the \
+        AD system were in the form of materials and energy, while outputs were in the form of effluent, \
+        solid waste and biogas emissions. Two scenarios were considered in this LCA evaluation, the first one \
+        being AD without biogas repurposing (**Fig 1**), and the second one being AD with biogas repurposing \
+        such as electricity generation (**Fig 2**). This allowed the comparison of environmental impact of \
+        biogas repurposing to the process to be made, where bio-energy generation should offset the \
+        negative impacts of the process. A functional unit of 1m3 of POME influent was used for this study.')
+        
+        
     
-    
+    st.markdown("""
+
+    """)
     
     st.write('**References**')
     st.caption('[1] Lim ')
