@@ -12,7 +12,7 @@ from PIL import Image
 
 
 #opening the image
-image1 = Image.open('UNMC.png')
+image1 = Image.open('UNMClogo.jpeg')
 
 st.set_page_config(
     page_title="POME biogas predictor",
