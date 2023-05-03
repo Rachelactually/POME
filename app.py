@@ -907,7 +907,7 @@ with tab3:
 
 
             with col3:
-                col4,col5,col6 = st.columns([1,6,1])
+                col4,col5,col6 = st.columns([0.5,6,0.5])
 
                 with col4:
                     st.write("")
