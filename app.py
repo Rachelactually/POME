@@ -858,12 +858,14 @@ with tab3:
             
             with col5:
                 image = Image.open('QY.png')
-                st.image(image, caption='Qian Yee Ong', width=150)
+                st.image(image, width=150)
+                name = '<p style= "text-align:center; color:black; font-size: 20px;"><strong>Qian Yee Ong</strong></p>'
+                st.markdown(name, unsafe_allow_html=True)
             
             with col6:
                 st.write("")
             
-            title = '<p style= "text-align:center; color:blue; font-size: 10px;">Masters in Chemical with Environmental Engineering</p>'
+            title = '<p style= "text-align:center; color:blue; font-size: 15px;">Masters in Chemical with Environmental Engineering</p>'
             st.markdown(title, unsafe_allow_html=True)
            
             st.caption(':e-mail:: slenderqianyeeong@gmail.com')
@@ -882,15 +884,20 @@ with tab3:
             
             with col5:
                 image = Image.open('Amanda.png')
-                st.image(image, caption='Xin Yun Kiew', width=150)
+                st.image(image, width=150)
+                name = '<p style= "text-align:center; color:black; font-size: 20px;"><strong>Xin Yun Kiew</strong></p>'
+                st.markdown(name, unsafe_allow_html=True)
             
             with col6:
                 st.write("")
-                
-            st.caption('Masters in Chemical with Environmental Engineering')
+            
+            title = '<p style= "text-align:center; color:blue; font-size: 15px;">Masters in Chemical with Environmental Engineering</p>'
+            st.markdown(title, unsafe_allow_html=True)
+           
             st.caption(':e-mail:: amandakiewxy@gmail.com')
-            h1 = '<p font-size: 5px;">\
-             - Data pre-processing \
+            
+            h1 = '<p style= "font-size: 15px;">\
+            - Data pre-processing \
             <br> - Life Cycle Assessment </p>'
             st.markdown(h1, unsafe_allow_html=True)
 
@@ -903,19 +910,25 @@ with tab3:
             
             with col5:
                 image = Image.open('Joshua.png')
-                st.image(image, caption='Joshua Liew Yeh Loong', width=150)
+                st.image(image, width=150)
+                name = '<p style= "text-align:center; color:black; font-size: 20px;"><strong>Joshua Liew Yeh Loong</strong></p>'
+                st.markdown(name, unsafe_allow_html=True)
             
             with col6:
                 st.write("")
-                
-            st.caption('Masters in Chemical Engineering')
+            
+            title = '<p style= "text-align:center; color:blue; font-size: 15px;">Masters in Chemical Engineering</p>'
+            st.markdown(title, unsafe_allow_html=True)
+           
             st.caption(':e-mail:: joshualiew10@gmail.com')
-            h1 = '<p font-size: 5px;">\
-             - Website deployment \
+            
+            h1 = '<p style= "font-size: 15px;">\
+            - Website deployment \
             <br> - Website author </p>'
             st.markdown(h1, unsafe_allow_html=True)
             
             
+
         st.markdown("""
 
         """)
