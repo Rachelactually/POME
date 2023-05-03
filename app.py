@@ -8,6 +8,7 @@ import numpy as np
 import pickle
 import streamlit as st
 import altair as alt
+import xgboost
 from PIL import Image
 
 
