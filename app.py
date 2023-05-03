@@ -18,7 +18,7 @@ st.image(image)
 
 st.set_page_config(
     page_title="POME biogas predictor",
-    page_icon="image",
+    page_icon=image,
     #layout="wide",
     initial_sidebar_state="expanded",
     )
