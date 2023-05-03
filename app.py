@@ -581,6 +581,8 @@ with tab3:
         st.write('This LCI contains all essential information for the assessment of the base \
         case and alternate case to be carried out.')
         
+        #LCI= pd.dataframe({
+        
         col1,col2,col3,col4,col5 = st.columns([1,0.5,0.5,0.5,0.5])
         
         with col1:
@@ -861,7 +863,7 @@ with tab3:
                 with col5:
                     image = Image.open('QY.png')
                     st.image(image, width=150)
-                    name = '<p style= "text-align:center; color:black; font-size: 20px;"><strong>Qian Yee Ong</strong></p>'
+                    name = '<p style= "text-align:center; font-size: 20px;"><strong>Qian Yee Ong</strong></p>'
                     st.markdown(name, unsafe_allow_html=True)
 
                 with col6:
@@ -887,7 +889,7 @@ with tab3:
                 with col5:
                     image = Image.open('Amanda.png')
                     st.image(image, width=150)
-                    name = '<p style= "text-align:center; color:black; font-size: 20px;"><strong>Xin Yun Kiew</strong></p>'
+                    name = '<p style= "text-align:center; font-size: 20px;"><strong>Xin Yun Kiew</strong></p>'
                     st.markdown(name, unsafe_allow_html=True)
 
                 with col6:
@@ -913,7 +915,7 @@ with tab3:
                 with col5:
                     image = Image.open('Joshua.png')
                     st.image(image, width=150)
-                    name = '<p style= "text-align:center; color:black; font-size: 20px;"><strong>Joshua Liew Y.L.</strong></p>'
+                    name = '<p style= "text-align:center; font-size: 20px;"><strong>Joshua Liew Y.L.</strong></p>'
                     st.markdown(name, unsafe_allow_html=True)
 
                 with col6:
