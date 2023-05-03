@@ -8,11 +8,17 @@ import numpy as np
 import pickle
 import streamlit as st
 import altair as alt
+from PIL import Image
 
+
+#opening the image
+image = Image.open('UNMC.png')
+#displaying the image on streamlit app
+st.image(image)
 
 st.set_page_config(
     page_title="POME biogas predictor",
-    page_icon=":palm_tree:",
+    page_icon="image",
     #layout="wide",
     initial_sidebar_state="expanded",
     )
@@ -87,7 +93,7 @@ with col2:
     st.write("")
 
 with col3:
-    from PIL import Image
+    
     #opening the image
     image = Image.open('UNMC.png')
     #displaying the image on streamlit app
