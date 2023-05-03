@@ -850,8 +850,19 @@ with tab3:
         col1,col2,col3 = st.columns([1,1,1])
 
         with col1:
-            image = Image.open('QY.png')
-            st.image(image, caption='Qian Yee Ong', width=150)
+            
+            col4,col5,ccol6 = st.columns([1,6,1])
+            
+            with col4:
+                st.write("")
+            
+            with col5:
+                image = Image.open('QY.png')
+                st.image(image, caption='Qian Yee Ong', width=150)
+            
+            with col6:
+                st.write("")
+                
             st.caption('Masters in Chemical with Environmental Engineering')
             st.caption(':e-mail:: slenderqianyeeong@gmail.com')
             h1 = '<p font-size: 5px;">\
@@ -861,8 +872,18 @@ with tab3:
             
            
         with col2:
-            image = Image.open('Amanda.png')
-            st.image(image, caption='Xin Yun Kiew', width=150)
+            col4,col5,ccol6 = st.columns([1,6,1])
+            
+            with col4:
+                st.write("")
+            
+            with col5:
+                image = Image.open('Amanda.png')
+                st.image(image, caption='Xin Yun Kiew', width=150)
+            
+            with col6:
+                st.write("")
+                
             st.caption('Masters in Chemical with Environmental Engineering')
             st.caption(':e-mail:: amandakiewxy@gmail.com')
             h1 = '<p font-size: 5px;">\
@@ -872,8 +893,18 @@ with tab3:
 
 
         with col3:
-            image = Image.open('Joshua.png')
-            st.image(image, caption='Joshua Liew Yeh Loong', width=150)
+            col4,col5,ccol6 = st.columns([1,6,1])
+            
+            with col4:
+                st.write("")
+            
+            with col5:
+                image = Image.open('Joshua.png')
+                st.image(image, caption='Joshua Liew Yeh Loong', width=150)
+            
+            with col6:
+                st.write("")
+                
             st.caption('Masters in Chemical Engineering')
             st.caption(':e-mail:: joshualiew10@gmail.com')
             h1 = '<p font-size: 5px;">\
