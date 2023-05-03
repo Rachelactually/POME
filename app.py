@@ -729,7 +729,7 @@ with tab3:
             color='site'
         )
         
-        st.altair_chart(chart, use_container_width=True)
+        #st.altair_chart(chart, use_container_width=True)
         
         st.subheader('Acidification potential (AP)')
         
