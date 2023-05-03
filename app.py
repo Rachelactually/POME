@@ -10,6 +10,8 @@ import streamlit as st
 import altair as alt
 from PIL import Image
 
+filename = 'model1.sav'
+pickle.dump(modelgpr1, open(filename, 'wb'))
 
 #opening the image
 image1 = Image.open('UNMClogo.jpeg')
