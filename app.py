@@ -582,12 +582,11 @@ with tab3:
         case and alternate case to be carried out.')
         
         st.write('**INPUT**')
-        LCI= pd.dataframe({"Value":[1.000, 0.694, 1.872],\
+        LCI= pd.DataFrame({"Value":[1.000, 0.694, 1.872],\
                            "Unit":['m3','m3','kWh']},
-                          index=['POME to AD (f.u.)','Biogas recirculation','Electricity (pump)'])
+                          index=["POME to AD (f.u.)","Biogas recirculation","Electricity (pump)"])
         LCI
-      
-        col1,col2,col3,col4,col5 = st.columns([1,0.5,0.5,0.5,0.5])
+
         
         with col1:
             h1 = '<p font-size: 5px;"><strong>INPUT</strong>\
