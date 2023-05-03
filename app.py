@@ -714,13 +714,12 @@ with tab3:
     with st.beta_expander('**Phase (iv) : LCA interpretation**'):
         
         st.subheader('Global warming potential (GWP)')
-        data = pd.DataFrame({"Emission from POME AD":[22.112, 22.112],\
-                             "Emission from POME sludge":[9.923, 9.923],\
-                             "Emission from recirculated biogas":[0, 0.516],\
-                             "Emission from POME effluent":[-14.667, -14.667],\
-                             "Emission from electricity generation":[0, -66.072],\
-                             "Other emissions":[-1.475, -1.475]},\
-                            index=['Open lagoon','Closed lagoon'])
+        data = {"Emission from POME AD":[22.112, 22.112],\
+                "Emission from POME sludge":[9.923, 9.923],\
+                "Emission from recirculated biogas":[0, 0.516],\
+                "Emission from POME effluent":[-14.667, -14.667],\
+                "Emission from electricity generation":[0, -66.072],\
+                "Other emissions":[-1.475, -1.475]})
         chart_data = alt.Chart(data).mark_bar().encode(x='', y='GWP in kg CO$_{2}$', color='site')
         st.altair_chart(chart_data, use_container_width=True)
         #st.altair_chart(chart,width=500,height=500,use_container_width=False)
