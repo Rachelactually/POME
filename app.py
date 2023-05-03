@@ -581,8 +581,12 @@ with tab3:
         st.write('This LCI contains all essential information for the assessment of the base \
         case and alternate case to be carried out.')
         
-        #LCI= pd.dataframe({
+        st.write('**INPUT**')
+        LCI= pd.dataframe({"":[1.000, 0.694, 1.872],\
+                           "":['m3','m3','kWh']},
+                          index=['POME to AD (f.u.)','Biogas recirculation','Electricity (pump)'])
         
+      
         col1,col2,col3,col4,col5 = st.columns([1,0.5,0.5,0.5,0.5])
         
         with col1:
@@ -907,7 +911,7 @@ with tab3:
 
 
             with col3:
-                col4,col5,col6 = st.columns([0.5,6,0.5])
+                col4,col5,col6 = st.columns([1,6,1])
 
                 with col4:
                     st.write("")
