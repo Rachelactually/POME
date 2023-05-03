@@ -312,7 +312,7 @@ if __name__=='__main__':
     
 ########################################################################    
 with tab2:
-    new_title = '<p style="color:red; font-size: 30px;"><strong>Development of prediction models<strong></p>'
+    new_title = '<p style="text-align:center; color:red; font-size: 30px;"><strong>Development of prediction models<strong></p>'
     st.markdown(new_title, unsafe_allow_html=True)   
     st.write('To develop the models, 4 stages are followed.')
         
@@ -522,7 +522,7 @@ with tab2:
 
 ########################################################################    
 with tab3:
-    new_title = '<p style="color:red; font-size: 30px;"><strong>Environmental impact of biogas repurposing<strong></p>'
+    new_title = '<p style="text-align:center; color:red; font-size: 30px;"><strong>Environmental impact of biogas repurposing<strong></p>'
     st.markdown(new_title, unsafe_allow_html=True)
     
     st.subheader('Circular palm oil industry')
