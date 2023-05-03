@@ -723,19 +723,7 @@ with tab3:
                                "Other emissions":[-1.475, -1.475]},
                               index=["Closed lagoon", "Open lagoon"])
         
-        # specify the type of selection, here single selection is used
-        selector = alt.selection_single(encodings=['x', 'color'])    
-        
-        # use mark_bar function to plot a stacked bar and specify x and y axis
-        chart = alt.Chart(source).mark_bar().encode(
-            x='',
-            y='GWP in kg CO2/day',
-            color=alt.condition(selector, 'Sources', alt.value('lightgray'))
-        ).add_selection(
-            selector
-        )
-        
-        st.altair_chart(chart, use_container_width=True)
+        st.bar_chart(data=data, width=500,height=500,use_container_width=False)
         
         
         
