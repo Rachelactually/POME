@@ -729,7 +729,7 @@ with tab3:
             st.bar_chart(source, width=300,height=400,use_container_width=False)
         
         with col2:
-            st.metric("in kg CO$_{2}$ eq/ m$^{3}$","GWP", delta= +389%)
+            st.metric("in kg CO$_{2}$ eq/ m$^{3}$","GWP", delta= "+389%")
             st.caption('Up to 390% improvement in GWP when biogas is captured and repurposed.')
         
         st.write('When biogas in repurposed in the closed lagoon, the net GWP impact is positive, \
@@ -754,7 +754,7 @@ with tab3:
             st.bar_chart(source, width=300,height=400,use_container_width=False)        
         
         with col2:
-            st.metric("in kg SO$_{2}$ eq/ m$^{3}$","AP", delta= +323%)
+            st.metric("in kg SO$_{2}$ eq/ m$^{3}$","AP", delta= "+323%")
             st.caption('Up to 323% improvement in AP when biogas is captured and repurposed.')
         
         st.write('In a closed system, there is a significant decrease in AP impacts in contrast \
@@ -777,7 +777,7 @@ with tab3:
             st.bar_chart(source, width=300,height=400,use_container_width=False)   
         
         with col2:
-            st.metric("in kg P eq/ m$^{3}$","EP", delta= +1.92%)
+            st.metric("in kg P eq/ m$^{3}$","EP", delta= "+1.92%")
             st.caption('Up to 2% improvement in EP when biogas is captured and repurposed.')
     
         st.write('There is no significant difference in EP when it comes to biogas capture in \
