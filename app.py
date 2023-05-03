@@ -142,8 +142,8 @@ with col3:
     #displaying the image on streamlit app
     st.image(image)
     
-st.caption('© 2023 Website is the creation of **Q.Y. Ong**, **X.Y. Kiew** and **Joshua Liew Y.L.** \
-under the :blue[**Department of Chemical with Environmental Engineering**], **University of Nottingham Malaysia.**')
+st.caption('© 2023 Website is the creation of **Q.Y. Ong**, **X.Y. Kiew** and **Joshua Y.L. Liew** \
+under the :blue[**Department of Chemical and Environmental Engineering**], **University of Nottingham Malaysia.**')
 st.write('**This app predicts the biogas output from a closed system POME anaerobic digestion process.**')
 #Create tabs
 tab1, tab2, tab3, tab4 = st.tabs(["Prediction models", "Methodology", "Sustainability", "About"])
@@ -883,7 +883,7 @@ with tab3:
                 with col5:
                     image = Image.open('Joshua.png')
                     st.image(image, width=150)
-                    name = '<p style= "text-align:center; font-size: 20px;"><strong>Joshua Liew Y.L.</strong></p>'
+                    name = '<p style= "text-align:center; font-size: 20px;"><strong>Joshua Y.L. Liew</strong></p>'
                     st.markdown(name, unsafe_allow_html=True)
 
                 with col6:
