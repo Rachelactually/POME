@@ -723,7 +723,7 @@ with tab3:
                                "Other emissions":[-1.475, -1.475]},
                               index=["Closed lagoon", "Open lagoon"])
         
-        st.bar_chart(source, width=500,height=500,use_container_width=False)
+        st.bar_chart(source, width=300,height=800,use_container_width=False)
         
         
         
