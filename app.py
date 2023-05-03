@@ -13,7 +13,7 @@ import altair as alt
 st.set_page_config(
     page_title="POME biogas predictor",
     page_icon=":palm_tree:",
-    layout="wide",
+    #layout="wide",
     initial_sidebar_state="expanded",
     )
 
@@ -722,8 +722,8 @@ with tab3:
                                "Emission from electricity generation":[0, -66.072],\
                                "Other emissions":[-1.475, -1.475]},
                               index=["Closed lagoon", "Open lagoon"])
-        
-        st.bar_chart(source, width=300,height=800,use_container_width=True)
+                
+        st.bar_chart(source, width=300,height=500,use_container_width=False)
         
         
         
