@@ -714,7 +714,7 @@ with tab3:
     with st.beta_expander('**Phase (iv) : LCA interpretation**'):
         
         #Create tabs
-        tab21, tab22, tab32 = st.tabs(["Global warming potential (GWP)", "Acidification potential (AP)", "Eutrophication potential (EP)"])
+        tab21, tab22, tab23 = st.tabs(["Global warming potential (GWP)", "Acidification potential (AP)", "Eutrophication potential (EP)"])
         
         with tab21:
             st.subheader('Global warming potential (GWP)')
