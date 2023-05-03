@@ -721,7 +721,7 @@ with tab3:
                              "Emission from electricity generation":[0, -66.072],\
                              "Other emissions":[-1.475, -1.475]},\
                             index=['Open lagoon','Closed lagoon'])
-        chart_data = alt.Chart(data).mark_bar().encode(x='a', y='b', size='c', color='c', tooltip=['a', 'b'])
+        chart_data = alt.Chart(data).mark_bar().encode(x='', y='GWP in kg CO$_{2}$', color='site')
         st.altair_chart(chart_data, use_container_width=True)
         #st.altair_chart(chart,width=500,height=500,use_container_width=False)
         #st.bar_chart(data=data, width=500,height=500,use_container_width=False)
