@@ -590,8 +590,8 @@ with tab3:
         st.write('**OUTPUT**')
         LCI_output= pd.DataFrame({"Value":[0.944,0.056,19.437,12.140,6.576,0.014],\
                                  "Unit":['m3','m3','m3','m3','m3','m3'],\
-                                 "Value":['',48.657, 19.380, 7.369, 10.975, 0.022],\
-                                 "Unit":['','kg','kg','kg','kg','kg']},
+                                 "Mass":['',48.657, 19.380, 7.369, 10.975, 0.022],\
+                                 "Unit Mass":['','kg','kg','kg','kg','kg']},
                                 index=["Raw effluent","Sludge","Raw biogas",\
                                       "CH4","CO2","H2S"])
         LCI_output
