@@ -639,7 +639,7 @@ with tab3:
         with tab21:
             st.subheader('Global warming potential (GWP)')
 
-            col1, col2 = st.columns([3,1])
+            col1, col2 = st.columns([3,2])
 
             with col1:
                 source = pd.DataFrame({"Emission from POME AD":[22.112, 22.112],\
@@ -671,7 +671,7 @@ with tab3:
             
             st.subheader('Acidification potential (AP)')
 
-            col1, col2 = st.columns([3,1])
+            col1, col2 = st.columns([3,2])
 
             with col1:
                 source = pd.DataFrame({"Emission of SO2 from AD":[0.004,0.004],\
@@ -695,7 +695,7 @@ with tab3:
         with tab23: 
             st.subheader('Eutrophication potential (EP)')
 
-            col1, col2 = st.columns([3,1])
+            col1, col2 = st.columns([3,2])
 
             with col1:
                 source = pd.DataFrame({"Emission of POME COD from AD":[1.103, 1.103],\
