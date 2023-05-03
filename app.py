@@ -844,106 +844,113 @@ with tab3:
 
 
         st.subheader('About us')
+        
+        tab31, tab32, tab33 = st.tabs(["Researchers", "Academic Supervisors", "Ackowledgements"])
 
-        st.write('**Researchers**')
+        with tab31:
 
-        col1,col2,col3 = st.columns([1,1,1])
+            col1,col2,col3 = st.columns([1,1,1])
 
-        with col1:
+            with col1:
+
+                col4,col5,col6 = st.columns([1,6,1])
+
+                with col4:
+                    st.write("")
+
+                with col5:
+                    image = Image.open('QY.png')
+                    st.image(image, width=150)
+                    name = '<p style= "text-align:center; color:black; font-size: 20px;"><strong>Qian Yee Ong</strong></p>'
+                    st.markdown(name, unsafe_allow_html=True)
+
+                with col6:
+                    st.write("")
+
+                title = '<p style= "text-align:center; color:blue; font-size: 15px;">Masters in Chemical with Environmental Engineering</p>'
+                st.markdown(title, unsafe_allow_html=True)
+
+                st.caption(':e-mail:: slenderqianyeeong@gmail.com')
+
+                h1 = '<p style= "font-size: 15px;">\
+                 - Model development \
+                <br> - Primary website author </p>'
+                st.markdown(h1, unsafe_allow_html=True)
+
+
+            with col2:
+                col4,col5,col6 = st.columns([1,6,1])
+
+                with col4:
+                    st.write("")
+
+                with col5:
+                    image = Image.open('Amanda.png')
+                    st.image(image, width=150)
+                    name = '<p style= "text-align:center; color:black; font-size: 20px;"><strong>Xin Yun Kiew</strong></p>'
+                    st.markdown(name, unsafe_allow_html=True)
+
+                with col6:
+                    st.write("")
+
+                title = '<p style= "text-align:center; color:blue; font-size: 15px;">Masters in Chemical with Environmental Engineering</p>'
+                st.markdown(title, unsafe_allow_html=True)
+
+                st.caption(':e-mail:: amandakiewxy@gmail.com')
+
+                h1 = '<p style= "font-size: 15px;">\
+                - Data pre-processing \
+                <br> - Life Cycle Assessment </p>'
+                st.markdown(h1, unsafe_allow_html=True)
+
+
+            with col3:
+                col4,col5,col6 = st.columns([1,6,1])
+
+                with col4:
+                    st.write("")
+
+                with col5:
+                    image = Image.open('Joshua.png')
+                    st.image(image, width=150)
+                    name = '<p style= "text-align:center; color:black; font-size: 20px;"><strong>Joshua Liew Y.L.</strong></p>'
+                    st.markdown(name, unsafe_allow_html=True)
+
+                with col6:
+                    st.write("")
+
+                title = '<p style= "text-align:center; color:blue; font-size: 15px;">Masters in Chemical Engineering</p>'
+                st.markdown(title, unsafe_allow_html=True)
+
+                st.caption(':e-mail:: joshualiew10@gmail.com')
+
+                h1 = '<p style= "font-size: 15px;">\
+                - Website deployment \
+                <br> - Website author </p>'
+                st.markdown(h1, unsafe_allow_html=True)
+
+
+
+            st.markdown("""
+
+            """)
+
             
-            col4,col5,col6 = st.columns([1,6,1])
-            
-            with col4:
-                st.write("")
-            
-            with col5:
-                image = Image.open('QY.png')
-                st.image(image, width=150)
-                name = '<p style= "text-align:center; color:black; font-size: 20px;"><strong>Qian Yee Ong</strong></p>'
+        with tab32:
+
+            col1,col2 = st.columns(2)
+            with col1:
+                name = '<p style= "text-align:center; color:black; font-size: 20px;"><strong>Dr. Sara Kazemi Yazdi</strong></p>'
                 st.markdown(name, unsafe_allow_html=True)
-            
-            with col6:
-                st.write("")
-            
-            title = '<p style= "text-align:center; color:blue; font-size: 15px;">Masters in Chemical with Environmental Engineering</p>'
-            st.markdown(title, unsafe_allow_html=True)
-           
-            st.caption(':e-mail:: slenderqianyeeong@gmail.com')
-            
-            h1 = '<p style= "font-size: 15px;">\
-             - Model development \
-            <br> - Primary website author </p>'
-            st.markdown(h1, unsafe_allow_html=True)
-            
-           
-        with col2:
-            col4,col5,col6 = st.columns([1,6,1])
-            
-            with col4:
-                st.write("")
-            
-            with col5:
-                image = Image.open('Amanda.png')
-                st.image(image, width=150)
-                name = '<p style= "text-align:center; color:black; font-size: 20px;"><strong>Xin Yun Kiew</strong></p>'
+                st.caption(':e-mail:: Sara.Yazdi@nottingham.edu.my')
+                title = '<p style= "text-align:center; color:blue; font-size: 15px;">Assistant Professor, :blue[Department of Chemical with Environmental Engineering]</p>'
+                st.markdown(title, unsafe_allow_html=True)
+
+            with col2:
+                name = '<p style= "text-align:center; color:black; font-size: 20px;"><strong>Dr. Zhiyuan Chen</strong></p>'
                 st.markdown(name, unsafe_allow_html=True)
-            
-            with col6:
-                st.write("")
-            
-            title = '<p style= "text-align:center; color:blue; font-size: 15px;">Masters in Chemical with Environmental Engineering</p>'
-            st.markdown(title, unsafe_allow_html=True)
-           
-            st.caption(':e-mail:: amandakiewxy@gmail.com')
-            
-            h1 = '<p style= "font-size: 15px;">\
-            - Data pre-processing \
-            <br> - Life Cycle Assessment </p>'
-            st.markdown(h1, unsafe_allow_html=True)
-
-
-        with col3:
-            col4,col5,col6 = st.columns([1,6,1])
-            
-            with col4:
-                st.write("")
-            
-            with col5:
-                image = Image.open('Joshua.png')
-                st.image(image, width=150)
-                name = '<p style= "text-align:center; color:black; font-size: 20px;"><strong>Joshua Liew Yeh Loong</strong></p>'
-                st.markdown(name, unsafe_allow_html=True)
-            
-            with col6:
-                st.write("")
-            
-            title = '<p style= "text-align:center; color:blue; font-size: 15px;">Masters in Chemical Engineering</p>'
-            st.markdown(title, unsafe_allow_html=True)
-           
-            st.caption(':e-mail:: joshualiew10@gmail.com')
-            
-            h1 = '<p style= "font-size: 15px;">\
-            - Website deployment \
-            <br> - Website author </p>'
-            st.markdown(h1, unsafe_allow_html=True)
-            
-            
-
-        st.markdown("""
-
-        """)
-
-        new_title = '<p style="font-size: 20 px;"><strong>Supervisors<strong></p>'
-        st.markdown(new_title, unsafe_allow_html=True)
-
-        col1,col2 = st.columns(2)
-        with col1:
-            st.caption('Dr. Sara Kazemi Yazdi')
-            st.caption('Assistant Professor, :blue[Department of Chemical with Environmental Engineering]')
-            st.caption(':e-mail:: Sara.Yazdi@nottingham.edu.my')
-
-        with col2:
-            st.caption('Dr. Zhiyuan Chen')
-            st.caption('Head of School of Computer Science/ Associate Professor')
-            st.caption(':e-mail:: Zhiyuan.Chen@nottingham.edu.my')
+                st.caption(':e-mail:: Zhiyuan.Chen@nottingham.edu.my')
+                title = '<p style= "text-align:center; color:blue; font-size: 15px;">Head of School of Computer Science/ Associate Professor</p>'
+                st.markdown(title, unsafe_allow_html=True)
+                
             
