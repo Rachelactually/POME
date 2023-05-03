@@ -845,7 +845,7 @@ with tab3:
 
         st.subheader('About us')
         
-        tab31, tab32, tab33 = st.tabs(["Researchers", "Academic Supervisors", "Ackowledgements"])
+        tab31, tab32 = st.tabs(["Researchers", "Ackowledgements"])
 
         with tab31:
 
@@ -937,20 +937,13 @@ with tab3:
 
             
         with tab32:
-
-            col1,col2 = st.columns(2)
-            with col1:
-                name = '<p style= "text-align:center; color:black; font-size: 20px;"><strong>Dr. Sara Kazemi Yazdi</strong></p>'
-                st.markdown(name, unsafe_allow_html=True)
-                st.caption(':e-mail:: Sara.Yazdi@nottingham.edu.my')
-                title = '<p style= "text-align:center; color:blue; font-size: 15px;">Assistant Professor, :blue[Department of Chemical with Environmental Engineering]</p>'
-                st.markdown(title, unsafe_allow_html=True)
-
-            with col2:
-                name = '<p style= "text-align:center; color:black; font-size: 20px;"><strong>Dr. Zhiyuan Chen</strong></p>'
-                st.markdown(name, unsafe_allow_html=True)
-                st.caption(':e-mail:: Zhiyuan.Chen@nottingham.edu.my')
-                title = '<p style= "text-align:center; color:blue; font-size: 15px;">Head of School of Computer Science/ Associate Professor</p>'
-                st.markdown(title, unsafe_allow_html=True)
-                
             
+            st.caption('We would like to express out gratitude towards out academic supervisors, \
+            Dr Sara Kazemi Yazdi and Dr Chen Zhi Yuan for their guidance, support and encouragement \
+            throughout the research process, which helped us to refine our research objectives, \
+            methodology and results. We are especially grateful to Dr Chan Yi Jing, who provided us \
+            with much literature and information relevant to this research. We are also grateful to \
+            the University of Nottingham Malaysia for providing us with the software support required \
+            to conduct this research. We would also like to show appreciation for the engineers and \
+            managers of Lepar Hilir Palm Oil Mill, Adela Palm Oil Mill, Keratong Estate Oil Palm \
+            Mill and Felda Lok Heng Palm Oil Mill for providing the dataset required for this study.')
