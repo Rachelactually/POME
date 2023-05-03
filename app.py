@@ -735,7 +735,7 @@ with tab3:
             selector
         )
         
-        st.altair_chart(source,use_container_width=True)
+        st.altair_chart(chart,use_container_width=True)
         
         
         
