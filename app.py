@@ -41,7 +41,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
 ########################################################################
-# Creating a function and loading the model
+# GPR model
 def Biogas_prediction(input_data):
     Biogas_model=pickle.load(open('model1.sav','rb'))
     scaler_Biogas=pickle.load(open('scaler.sav','rb'))
@@ -81,6 +81,50 @@ def H2S_prediction(input_data):
     H2S_modelprediction=H2S_model.predict(input_data_reshaped)
     print(H2S_modelprediction)
     return H2S_modelprediction
+
+# RF model
+def Biogas_prediction_forest(input_data):
+    Biogas_model_forest=pickle.load(open('model_forest1.sav','rb'))
+    scaler_Biogas=pickle.load(open('scaler.sav','rb'))
+    input_data_as_numpy_array=np.asarray(input_data)
+    std_data=scaler_Biogas.transform(input_data_as_numpy_array)
+    input_data_reshaped=std_data.reshape(1,-1)
+    Biogas_model_forestprediction=Biogas_model_forest.predict(input_data_reshaped)
+    print(Biogas_model_forestprediction)
+    return Biogas_model_forestprediction
+
+def CH4_prediction_forest(input_data):
+    CH4_model_forest=pickle.load(open('model_forest2.sav','rb'))
+    scaler_CH4=pickle.load(open('scaler.sav','rb'))
+    input_data_as_numpy_array=np.asarray(input_data)
+    std_data=scaler_CH4.transform(input_data_as_numpy_array)
+    input_data_reshaped=std_data.reshape(1,-1)
+    CH4_model_forestprediction=CH4_model_forest.predict(input_data_reshaped)
+    print(CH4_model_forestprediction)
+    return CH4_model_forestprediction
+
+def CO2_prediction_forest(input_data):
+    CO2_model_forest=pickle.load(open('model_forest3.sav','rb'))
+    scaler_CO2=pickle.load(open('scaler.sav','rb'))
+    input_data_as_numpy_array=np.asarray(input_data)
+    std_data=scaler_CO2.transform(input_data_as_numpy_array)
+    input_data_reshaped=std_data.reshape(1,-1)
+    CO2_model_forestprediction=CO2_model_forest.predict(input_data_reshaped)
+    print(CO2_model_forestprediction)
+    return CO2_model_forestprediction
+
+def H2S_prediction_forest(input_data):
+    H2S_model_forest=pickle.load(open('model_forest4.sav','rb'))
+    scaler_H2S=pickle.load(open('scaler.sav','rb'))
+    input_data_as_numpy_array=np.asarray(input_data)
+    std_data=scaler_H2S.transform(input_data_as_numpy_array)
+    input_data_reshaped=std_data.reshape(1,-1)
+    H2S_model_forestprediction=H2S_model_forest.predict(input_data_reshaped)
+    print(H2S_model_forestprediction)
+    return H2S_model_forestprediction
+
+
+
 ########################################################################
 
 col1, col2, col3 = st.columns([4,1,1])
@@ -267,28 +311,28 @@ def main():
 
         col1.subheader('Biogas')
         col1.caption(':blue[_0.920_]')
-        result_Biogas = Biogas_prediction(df)
+        result_Biogas = Biogas_prediction_forest(df)
         series = pd.Series(result_Biogas[0])
         rounded_Biogas = round(series[0],3)
         col1.write(rounded_Biogas)
 
         col2.subheader('CH$_{4}$')
         col2.caption(':blue[_0.916_]')
-        result_CH4 = CH4_prediction(df)
+        result_CH4 = CH4_prediction_forest(df)
         series = pd.Series(result_CH4[0])
         rounded_CH4 = round(series[0],3)
         col2.write(rounded_CH4)
 
         col3.subheader('CO$_{2}$')
         col3.caption(':blue[_0.916_]')
-        result_CO2 = CO2_prediction(df)
+        result_CO2 = CO2_prediction_forest(df)
         series = pd.Series(result_CO2[0])
         rounded_CO2 = round(series[0],3)
         col3.write(rounded_CO2)
 
         col4.subheader('H$_{2}$S')
         col4.caption(':blue[_0.922_]')
-        result_H2S = H2S_prediction(df)
+        result_H2S = H2S_prediction_forest(df)
         series = pd.Series(result_H2S[0])
         rounded_H2S = round(series[0],2)
         col4.write(rounded_H2S)
