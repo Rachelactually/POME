@@ -90,7 +90,7 @@ with col3:
     #opening the image
     image = Image.open('UNMC.png')
     #displaying the image on streamlit app
-    st.image(image)
+    st.image(image,width=150)
     
 st.caption('© 2023 Website is the creation of **Q.Y. Ong**, **X.Y. Kiew** and **Joshua Liew Y.L.** \
 under the :blue[**Department of Chemical with Environmental Engineering**], **University of Nottingham Malaysia.**')
