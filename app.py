@@ -587,7 +587,21 @@ with tab3:
                                 index=["POME to AD (f.u.)","Biogas recirculation","Electricity (pump)"])
         LCI_input
         
+        st.write('**OUTPUT**')
+        LCI_output= pd.DataFrame({"Value":[0.944,0.056,19.437,12.140,6.576,0.014],\
+                                 "Unit":['m3','m3','m3','m3','m3','m3'],\
+                                 "Value":['',48.657, 19.380, 7.369, 10.975, 0.022],\
+                                 "Unit":['','kg','kg','kg','kg','kg']},
+                                index=["Raw effluent","Sludge","Raw biogas",\
+                                      "CH4","CO2","H2S"])
+        LCI_output
         
+        st.write('**OTHER**')
+        LCI_other= pd.DataFrame({"Value":[67.362,14.273,26.853,72.536],\
+                                 "Unit":['kg/m3','kg/m3','kg/m3','kWh']},
+                                index=["COD POME in", "COD POME out", "COD sludge out",\
+                                      "Electricity generated"])
+        LCI_other
 
         col1, col2, col3, col4, col5 = st.columns([1,0.5,0.5,0.5,0.5])
                                             
