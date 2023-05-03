@@ -12,13 +12,11 @@ from PIL import Image
 
 
 #opening the image
-image = Image.open('UNMC.png')
-#displaying the image on streamlit app
-st.image(image)
+image1 = Image.open('UNMC.png')
 
 st.set_page_config(
     page_title="POME biogas predictor",
-    page_icon=image,
+    page_icon=image1,
     #layout="wide",
     initial_sidebar_state="expanded",
     )
