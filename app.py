@@ -722,13 +722,10 @@ with tab3:
                                "Emission from electricity generation":[0, -66.072],\
                                "Other emissions":[-1.475, -1.475]},
                               index=['Open lagoon', 'Closed lagoon'])
-        chart = alt.Chart(source).mark_bar().encode(
-            x='GWP impacts in kg CO$_{2}$',
-            y='System',
-            color='site'
-        )
         
-        st.altair_chart(chart, theme="streamlit", use_container_width=True)
+        source
+        
+        
         
         st.subheader('Acidification potential (AP)')
         
