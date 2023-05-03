@@ -650,7 +650,7 @@ with tab3:
                                        "Other emissions":[-1.475, -1.475]},
                                       index=["Open lagoon", "Closed lagoon"])
 
-                st.bar_chart(source, width=400,height=400,use_container_width=False)
+                st.bar_chart(source, width=300,height=400,use_container_width=False)
 
             with col2:
                 st.metric("in kg CO$_{2}$ eq/ m$^{3}$","GWP", delta= "+389%")
@@ -678,7 +678,7 @@ with tab3:
                                        "AP from software":[-0.067, -0.270]},
                                       index=["Open lagoon", "Closed lagoon"])
 
-                st.bar_chart(source, width=400,height=400,use_container_width=False)        
+                st.bar_chart(source, width=300,height=400,use_container_width=False)        
 
             with col2:
                 st.metric("in kg SO$_{2}$ eq/ m$^{3}$","AP", delta= "+323%")
@@ -703,7 +703,7 @@ with tab3:
                                        "EP from software":[-0.088, -0.115]},
                                       index=["Open lagoon", "Closed lagoon"])
 
-                st.bar_chart(source, width=400,height=400,use_container_width=False)   
+                st.bar_chart(source, width=300,height=400,use_container_width=False)   
 
             with col2:
                 st.metric("in kg P eq/ m$^{3}$","EP", delta= "+1.92%")
