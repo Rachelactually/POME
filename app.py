@@ -726,7 +726,7 @@ with tab3:
                                    "Other emissions":[-1.475, -1.475]},
                                   index=["Open lagoon", "Closed lagoon"])
 
-            st.bar_chart(source, width=300,height=400,use_container_width=False)
+            st.bar_chart(source, width=400,height=400,use_container_width=False)
         
         with col2:
             st.metric("in kg CO$_{2}$ eq/ m$^{3}$","GWP", delta= "+389%")
@@ -747,7 +747,7 @@ with tab3:
         col1, col2 = st.columns([3,1])
         
         with col1:
-            source = pd.DataFrame({"Emission of SO$_{2}$ from AD":[0.004,0.004],\
+            source = pd.DataFrame({"Emission of SO<sub>2</sub> from AD":[0.004,0.004],\
                                    "AP from software":[-0.067, -0.270]},
                                   index=["Open lagoon", "Closed lagoon"])
 
