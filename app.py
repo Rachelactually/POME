@@ -851,7 +851,7 @@ with tab3:
 
         with col1:
             
-            col4,col5,ccol6 = st.columns([1,6,1])
+            col4,col5,col6 = st.columns([1,6,1])
             
             with col4:
                 st.write("")
@@ -872,7 +872,7 @@ with tab3:
             
            
         with col2:
-            col4,col5,ccol6 = st.columns([1,6,1])
+            col4,col5,col6 = st.columns([1,6,1])
             
             with col4:
                 st.write("")
@@ -893,7 +893,7 @@ with tab3:
 
 
         with col3:
-            col4,col5,ccol6 = st.columns([1,6,1])
+            col4,col5,col6 = st.columns([1,6,1])
             
             with col4:
                 st.write("")
