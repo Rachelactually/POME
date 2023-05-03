@@ -714,15 +714,20 @@ with tab3:
     with st.beta_expander('**Phase (iv) : LCA interpretation**'):
         
         st.subheader('Global warming potential (GWP)')
-        source = pd.DataFrame({
-            'a': ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'],
-            'b': [28, 55, 43, 91, 81, 53, 19, 87, 52]
-        })
-
+        
+        source = pd.DataFrame({"Emission from POME AD":[22.112, 22.112],\
+                               "Emission from POME sludge":[9.923, 9.923],\
+                               "Emission from recirculated biogas":[0, 0.516],\
+                               "Emission from POME effluent":[-14.667, -14.667],\
+                               "Emission from electricity generation":[0, -66.072],\
+                               "Other emissions":[-1.475, -1.475]},
+                              index=['Open lagoon', 'Closed lagoon'])
         chart = alt.Chart(source).mark_bar().encode(
-            x='a',
-            y='b'
+            x='GWP impacts in kg CO$_{2}$',
+            y='System',
+            color='site'
         )
+        
         st.altair_chart(chart, theme="streamlit", use_container_width=True)
         
         st.subheader('Acidification potential (AP)')
