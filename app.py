@@ -715,13 +715,23 @@ with tab3:
         
         st.subheader('Global warming potential (GWP)')
         
-        source = pd.DataFrame({"Emission from POME AD":[22.112, 22.112],\
-                               "Emission from POME sludge":[9.923, 9.923],\
-                               "Emission from recirculated biogas":[0, 0.516],\
-                               "Emission from POME effluent":[-14.667, -14.667],\
-                               "Emission from electricity generation":[0, -66.072],\
-                               "Other emissions":[-1.475, -1.475]},
-                              index=['Open lagoon', 'Closed lagoon'])
+        source = pd.DataFrame({"Open lagoon":[22.112, 9.923, 0, -14.667, 0, -1.475],\
+                               "Closed lagoon":[22.112, 9.923, 0.516, -14.667, -66.072, -1.475]},
+                              index=["Emission from POME AD", "Emission from POME sludge",\
+                                     "Emission from recirculated biogas", "Emission from POME effluent"\
+                                     "Emission from electricity generation", "Other emissions"])
+        
+        # specify the type of selection, here single selection is used
+        selector = alt.selection_single(encodings=['x', 'color'])    
+        
+        # use mark_bar function to plot a stacked bar and specify x and y axis
+        chart = alt.Chart(source).mark_bar().encode(
+            x='',
+            y='GWP in kg CO2/day',
+            color=alt.condition(selector, 'Sources', alt.value('lightgray'))
+        ).add_selection(
+            selector
+        )
         
         st.altair_chart(source,use_container_width=True)
         
