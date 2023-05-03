@@ -7,6 +7,7 @@ import pandas as pd
 import numpy as np
 import pickle
 import streamlit as st
+import altair as alt
 
 
 st.set_page_config(
@@ -720,7 +721,9 @@ with tab3:
                              "Emission from electricity generation":[0, -66.072],\
                              "Other emissions":[-1.475, -1.475]},\
                             index=['Open lagoon','Closed lagoon'])
-        st.bar_chart(data=data, width=500,height=500,use_container_width=False)
+        chart = alt.Chart(data).mark_bar().encode()
+        st.altair_chart(chart,width=500,height=500,use_container_width=False)
+        #st.bar_chart(data=data, width=500,height=500,use_container_width=False)
 
         
         st.subheader('Acidification potential (AP)')
