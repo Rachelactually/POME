@@ -723,9 +723,13 @@ with tab3:
                                "Other emissions":[-1.475, -1.475]},
                               index=['Open lagoon', 'Closed lagoon'])
         
-        source
+        chart = alt.Chart(source).mark_bar().encode(
+            x='A',
+            y='System',
+            color='site'
+        )
         
-        
+        st.altair_chart(chart, theme="streamlit", use_container_width=True)
         
         st.subheader('Acidification potential (AP)')
         
