@@ -862,12 +862,13 @@ with tab3:
             
             with col6:
                 st.write("")
-                
-            st.caption('Masters in Chemical with Environmental Engineering')
+            
+            title = '<p style= "text-align:center; color:blue; font-size: 10px;">Masters in Chemical with Environmental Engineering</p>'
+            st.markdown(title, unsafe_allow_html=True)
+           
             st.caption(':e-mail:: slenderqianyeeong@gmail.com')
-            #new_title = '<p style="font-size: 20px;"><strong>Extreme Gradient Boosting (XGBoost)<strong></p>'
-       
-            h1 = '<p style= "font-size: 5px;">\
+            
+            h1 = '<p style= "font-size: 15px;">\
              - Model development \
             <br> - Primary website author </p>'
             st.markdown(h1, unsafe_allow_html=True)
