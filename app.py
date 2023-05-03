@@ -253,7 +253,7 @@ def main():
             that was proposed by Breiman in 2001 [3]. The Classification and Regression Tree (CART) methodology\
             is applied, where subspace randomisation with bagging is conducted to resample the training set\
             with replacement each time a new tree is grown. This technique trains multiple subsets using\
-            bootstrap replicas of the original ttraining dataset with replacement. This resampling approach\
+            bootstrap replicas of the original training dataset with replacement. This resampling approach\
             generates a diverse set of conditions, whereby the final prediction is based upon the average value\
             from the combined prediction value of each ensemble.')
 
@@ -318,7 +318,7 @@ with tab2:
     with st.beta_expander('**Stage 1: Scoping & data collection**'):
         st.write('Real scale industrial data of the covered lagoon POME anerobic digestor used in this study were\
         obtained from four Malaysian plants over a period of 24 months (July 2019 to June 2021).')
-        st.write('The plants inlude (i) Lepar Hilir Palm Oil Mill, (ii) Adela Palm Oil Mill, (iii) Keratong Estate Oil Palm Mill and (iv)\
+        st.write('The plants include (i) Lepar Hilir Palm Oil Mill, (ii) Adela Palm Oil Mill, (iii) Keratong Estate Oil Palm Mill and (iv)\
         Felda Lok Heng Palm Oil Mill. All data used were monthly average values. The collected dataset contains 96 data points, where the input parameters \
         are within the range of:')
 
@@ -387,8 +387,8 @@ with tab2:
     with st.beta_expander('**Stage 3: Model Development**'):
         st.markdown("""
         - GPR was imported from the [**scikit learn**](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.GaussianProcessRegressor.html)\
-        library under **"gaussian_process.GaussianProcessRegressor"**.
-        - XGBoost was directly imported from the [**xgboost**](https://xgboost.readthedocs.io/en/stable/) library.
+        library under **"gaussian_process.GaussianProcessRegressor"**
+        - XGBoost was directly imported from the [**xgboost**](https://xgboost.readthedocs.io/en/stable/) library
         - Random Forest was imported from the [**scikit learn**](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html)\
         library under **"ensemble.RandomForestRegressor"**
         """)
@@ -581,7 +581,7 @@ with tab3:
         st.write('This LCI contains all essential information for the assessment of the base \
         case and alternate case to be carried out.')
         
-        col1,col2,col3,col4,col5 = st.columns([2,0.5,0.5,0.5,0.5])
+        col1,col2,col3,col4,col5 = st.columns([1,0.5,0.5,0.5,0.5])
         
         with col1:
             h1 = '<p font-size: 5px;"><strong>INPUT</strong>\
@@ -767,7 +767,7 @@ with tab3:
             st.write('In a closed system, there is a significant decrease in AP impacts in contrast \
             to an open system. This is consistent with the findings of [Nasution _et. al._, (2018)](https://www.sciencedirect.com/science/article/abs/pii/S0959652618306371?via%3Dihub) \
             thereby biogas repurposing systems have a 9.5% to 19% better AP impact performance \
-            than that of an open lagoon [5]. The reason is becassue the closed system prevents the emission \
+            than that of an open lagoon [5]. The reason is because the closed system prevents the emission \
             of SO$_{2}$ into the atmosphere, which results from the H$_{2}$S present in the biogas.')
 
             #############
@@ -791,7 +791,7 @@ with tab3:
 
             st.write('There is no significant difference in EP when it comes to biogas capture in \
             this system. The magnitude of EP is largely influenced by the total nitrogen and COD in \
-            the POME, which will likely not be affected regardless of whether biogas has been ccaptured.')
+            the POME, which will likely not be affected regardless of whether biogas has been captured.')
 
     st.markdown("""
 
