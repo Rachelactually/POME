@@ -720,7 +720,7 @@ with tab3:
                              "Emission from electricity generation":[0, -66.072],\
                              "Other emissions":[-1.475, -1.475]},\
                             index=['Open lagoon','Closed lagoon'])
-        st.bar_chart(data=data)
+        st.bar_chart(data=data, width=500,height=500,use_container_width=False)
 
         
         st.subheader('Acidification potential (AP)')
