@@ -865,7 +865,9 @@ with tab3:
                 
             st.caption('Masters in Chemical with Environmental Engineering')
             st.caption(':e-mail:: slenderqianyeeong@gmail.com')
-            h1 = '<p font-size: 5px;">\
+            #new_title = '<p style="font-size: 20px;"><strong>Extreme Gradient Boosting (XGBoost)<strong></p>'
+       
+            h1 = '<p style= "font-size: 5px;">\
              - Model development \
             <br> - Primary website author </p>'
             st.markdown(h1, unsafe_allow_html=True)
