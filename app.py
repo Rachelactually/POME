@@ -761,7 +761,7 @@ with tab3:
         to an open system. This is consistent with the findings of [Nasution _et. al._, (2018)](https://www.sciencedirect.com/science/article/abs/pii/S0959652618306371?via%3Dihub) \
         thereby biogas repurposing systems have a 9.5% to 19% better AP impact performance \
         than that of an open lagoon [5]. The reason is becassue the closed system prevents the emission \
-        of SO$_{2}$ into the atmosphere, which results from the H$_{2}$S present in the biogas.
+        of SO$_{2}$ into the atmosphere, which results from the H$_{2}$S present in the biogas.')
         
         #############
         st.subheader('Eutrophication potential (EP)')
