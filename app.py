@@ -203,7 +203,8 @@ with tab0:
     of POME biogas for bioelectricity generation contributes to a circular and sustainable palm oil industry. \
     We aim for :blue[**transparency**] in showcasing our work and research, \
     but most importantly, we aim to make our work more :blue[**accessible**] to the \
-    public. Try out our biogas prediction models today!')
+    public.')
+    st.info('Go to **Dashboard** to try out our biogas prediction models!')
 
     mystyle = '''
         <style>
@@ -251,11 +252,7 @@ def main():
         st.info('Specify input values by sliding on the left side bar.')
         with st.expander('I do not see a side bar.'):
             st.info('On the top left of the screen, click on **>** to expand the side bar.')
-        with st.expander('Tell me about the prediction models.'):
-            st.write('The **Gaussian Process Regressor (GPR)** model, **Random Forest (RF)** model and **Extreme Gradient Booosting (XGBoost)** model\
-            are among the selected predictors for POME biogas components. The accuracy of the respective models, represented by the :blue[_Root mean \
-            squared error (RMSE)_] on the prediction of the target outputs are also displayed. Lower RMSE indicates a more accurate prediction model.\
-            The predicted components include total biogas production, methane (CH$_{4}$), carbon dioxide (CO$_{2}$) and hydrogen sulphide (H$_{2}$S).')
+
 
         st.markdown("""
 
@@ -378,6 +375,17 @@ def main():
 
         ##############
         #FOR MORE INFORMATION
+        st.markdown("""
+
+        """)
+
+        st.write('**For more information:**')
+        with st.expander('Tell me about the prediction models.'):
+            st.write('The **Gaussian Process Regressor (GPR)** model, **Random Forest (RF)** model and **Extreme Gradient Booosting (XGBoost)** model\
+            are among the selected predictors for POME biogas components. The accuracy of the respective models, represented by the :blue[_Root mean \
+            squared error (RMSE)_] on the prediction of the target outputs are also displayed. Lower RMSE indicates a more accurate prediction model.\
+            The predicted components include total biogas production, methane (CH$_{4}$), carbon dioxide (CO$_{2}$) and hydrogen sulphide (H$_{2}$S).')
+            
         with st.expander("Learn more about GPR here."):
             st.write('GPR is a **probabilistic model** based on non-parametric kernel models.\
             Unlike linear regression, GPR makes predictions in the form of probability values\
