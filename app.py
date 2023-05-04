@@ -186,7 +186,7 @@ if result:
     st.balloons()    
     ##################################################################################################################################################################################
     #Create tabs
-    tab1, tab2, tab3, tab4 = st.tabs(["Prediction models", "Methodology", "Sustainability", "About"])
+    tab1, tab2, tab3, tab4 = st.tabs(["Prediction dashboard", "Methodology", "Sustainability", "About"])
 
     ##################################################################################################################################################################################
     #SIDEBAR TITLE AND SLIDER
@@ -220,17 +220,16 @@ if result:
 
         #~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#
         # Create subheaders for main performance indicator 
-
-            new_title = '<p style="text-align:left; color:red; font-size: 30px;"><strong>Predicting biogas components</strong></p>'
+            new_title = '<p style="text-align:left; color:red; font-size: 30px;"><strong>Try out our predictor!</strong></p>'
             st.markdown(new_title, unsafe_allow_html=True)
-            st.write('The **Gaussian Process Regressor (GPR)** model, **Random Forest (RF)** model and **Extreme Gradient Booosting (XGBoost)** model\
-            are among the selected predictors for POME biogas components. The accuracy of the respective models, represented by the :blue[_Root mean \
-            squared error (RMSE)_] on the prediction of the target outputs are also displayed. Lower RMSE indicates a more accurate prediction model.\
-            The predicted components include total biogas production, methane (CH$_{4}$), carbon dioxide (CO$_{2}$) and hydrogen sulphide (H$_{2}$S).')
-
-            st.write(':blue[**Try out our predictor!**]')
             st.info('On the top left of the screen, click on **>** to specify input values.')
-            #st.text_area(':blue[**Try out our predictor!**]',':blue[On the top left of the screen, click on **>** to specify input values.]')
+            
+            with st.expander("Tell me about the prediction models."):
+                st.write('The **Gaussian Process Regressor (GPR)** model, **Random Forest (RF)** model and **Extreme Gradient Booosting (XGBoost)** model\
+                are among the selected predictors for POME biogas components. The accuracy of the respective models, represented by the :blue[_Root mean \
+                squared error (RMSE)_] on the prediction of the target outputs are also displayed. Lower RMSE indicates a more accurate prediction model.\
+                The predicted components include total biogas production, methane (CH$_{4}$), carbon dioxide (CO$_{2}$) and hydrogen sulphide (H$_{2}$S).')
+
 
             st.markdown("""
 
@@ -246,28 +245,28 @@ if result:
             col1, col2, col3 , col4= st.columns(4)
 
             col1.subheader('Biogas')
-            col1.caption('Nm$^{3}$ | :blue[_ RMSE-98_]')
+            col1.caption('Nm$^{3}$ | :blue[_RMSE: 98_]')
             result_Biogas = Biogas_prediction(df)
             series = pd.Series(result_Biogas[0])
             rounded_Biogas = round(series[0],0)
             col1.write(rounded_Biogas)
 
             col2.subheader('CH$_{4}$')
-            col2.caption('Nm$^{3}$ | :blue[_ RMSE-77_]')
+            col2.caption('Nm$^{3}$ | :blue[_RMSE: 77_]')
             result_CH4 = CH4_prediction(df)
             series = pd.Series(result_CH4[0])
             rounded_CH4 = round(series[0],0)
             col2.write(rounded_CH4)
 
             col3.subheader('CO$_{2}$')
-            col3.caption('Nm$^{3}$ | :blue[_ RMSE-59_]')
+            col3.caption('Nm$^{3}$ | :blue[_RMSE: 59_]')
             result_CO2 = CO2_prediction(df)
             series = pd.Series(result_CO2[0])
             rounded_CO2 = round(series[0],0)
             col3.write(rounded_CO2)
 
             col4.subheader('H$_{2}$S')
-            col4.caption('Nm$^{3}$ | :blue[_ RMSE-4.4_]')
+            col4.caption('Nm$^{3}$ | :blue[_RMSE: 4.4_]')
             result_H2S = H2S_prediction(df)
             series = pd.Series(result_H2S[0])
             rounded_H2S = round(series[0],1)
@@ -285,28 +284,28 @@ if result:
             col1, col2, col3 , col4= st.columns(4)
 
             col1.subheader('Biogas')
-            col1.caption('Nm$^{3}$ | :blue[_ RMSE-137_]')
+            col1.caption('Nm$^{3}$ | :blue[_RMSE:137_]')
             result_Biogas = Biogas_prediction_xgb(df)
             series = pd.Series(result_Biogas[0])
             rounded_Biogas = round(series[0],0)
             col1.write(rounded_Biogas)
 
             col2.subheader('CH$_{4}$')
-            col2.caption('Nm$^{3}$ | :blue[_ RMSE-112_]')
+            col2.caption('Nm$^{3}$ | :blue[_RMSE: 112_]')
             result_CH4 = CH4_prediction_xgb(df)
             series = pd.Series(result_CH4[0])
             rounded_CH4 = round(series[0],0)
             col2.write(rounded_CH4)
 
             col3.subheader('CO$_{2}$')
-            col3.caption('Nm$^{3}$ | :blue[_ RMSE-88_]')
+            col3.caption('Nm$^{3}$ | :blue[_RMSE: 88_]')
             result_CO2 = CO2_prediction_xgb(df)
             series = pd.Series(result_CO2[0])
             rounded_CO2 = round(series[0],0)
             col3.write(rounded_CO2)
 
             col4.subheader('H$_{2}$S')
-            col4.caption('Nm$^{3}$ | :blue[_ RMSE-6.2_]')
+            col4.caption('Nm$^{3}$ | :blue[_RMSE: 6.2_]')
             result_H2S = H2S_prediction_xgb(df)
             series = pd.Series(result_H2S[0])
             rounded_H2S = round(series[0],1)
@@ -324,28 +323,28 @@ if result:
             col1, col2, col3 , col4= st.columns(4)
 
             col1.subheader('Biogas')
-            col1.caption('Nm$^{3}$ |:blue[_ RMSE-164_]')
+            col1.caption('Nm$^{3}$ |:blue[_RMSE: 164_]')
             result_Biogas = Biogas_prediction_forest(df)
             series = pd.Series(result_Biogas[0])
             rounded_Biogas = round(series[0],0)
             col1.write(rounded_Biogas)
 
             col2.subheader('CH$_{4}$')
-            col2.caption('Nm$^{3}$ |:blue[_ RMSE-127_]')
+            col2.caption('Nm$^{3}$ |:blue[_RMSE: 127_]')
             result_CH4 = CH4_prediction_forest(df)
             series = pd.Series(result_CH4[0])
             rounded_CH4 = round(series[0],0)
             col2.write(rounded_CH4)
 
             col3.subheader('CO$_{2}$')
-            col3.caption('Nm$^{3}$ |:blue[_ RMSE-100_]')
+            col3.caption('Nm$^{3}$ |:blue[_RMSE: 100_]')
             result_CO2 = CO2_prediction_forest(df)
             series = pd.Series(result_CO2[0])
             rounded_CO2 = round(series[0],0)
             col3.write(rounded_CO2)
 
             col4.subheader('H$_{2}$S')
-            col4.caption('Nm$^{3}$ |:blue[_ RMSE-6.8_]')
+            col4.caption('Nm$^{3}$ |:blue[_RMSE: 6.8_]')
             result_H2S = H2S_prediction_forest(df)
             series = pd.Series(result_H2S[0])
             rounded_H2S = round(series[0],1)
@@ -363,7 +362,7 @@ if result:
                 function (otherwise known as a kernel). In this tuned GPR model, the **rational quaduatic** kernel\
                 is used.')
             
-            with st.beta_expander("Learn more about XGBoost here."):
+            with st.expander("Learn more about XGBoost here."):
                 st.write('Proposed by Chen and Guestrin in 2016, the XGBoost algorithm is an optimised version of\
                 gradient boosting [2]. Boosting assigns weight to observations and increased the weight of the\
                 misclassified observations in subsequent training rounds. Results from each tree are then\
@@ -374,7 +373,7 @@ if result:
                 and reduce modelling complexities, which could lead to overfitting. The objective function contains a loss function and a regularisation function.\
                 The aim is to minimise this function.')
             
-            with st.beta_expander("Learn more about Random Forest here."):
+            with st.expander("Learn more about Random Forest here."):
                 st.write('Random forest is a non-parametric model as part of the Ensemble of Trees (EoT) system\
                 that was proposed by Breiman in 2001 [3]. The Classification and Regression Tree (CART) methodology\
                 is applied, where subspace randomisation with bagging is conducted to resample the training set\
