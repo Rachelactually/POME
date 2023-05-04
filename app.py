@@ -183,7 +183,7 @@ st.write('**This application predicts the biogas output from a closed system POM
 #MAKING A BUTTON
 result = st.button("Click here to explore our app!", type="primary")
 if result:
-        
+    st.balloons()    
     ##################################################################################################################################################################################
     #Create tabs
     tab1, tab2, tab3, tab4 = st.tabs(["Prediction models", "Methodology", "Sustainability", "About"])
@@ -972,7 +972,7 @@ else:
     of POME biogas for bioelectricity generation contributes to a circular and sustainable palm oil industry. \
     We aim for :blue[**transparency**] in showcasing our work and research, \
     but most importantly, we aim to make our work more :blue[**accessible**] to the \
-    public. We are also excited to let you try out our prediction models.')
+    public. Try out our biogas prediction models today!')
     
     mystyle = '''
         <style>
@@ -990,6 +990,6 @@ st.markdown("""
 
 """)
 
-new_title = '<p style="text-align:left; font-size: 10px;">© 2023 Website is the creation of <strong>Q.Y. Ong</strong>, <strong>X.Y. Kiew</strong> \
+new_title = '<p style="text-align:left; font-size: 10px;">© 2023 Website developed by <strong>Q.Y. Ong</strong>, <strong>X.Y. Kiew</strong> \
 and <strong>Joshua Y.L. Liew</strong> under the Department of Chemical and Environmental Engineering, University of Nottingham Malaysia.</p>'
 st.markdown(new_title, unsafe_allow_html=True)        
