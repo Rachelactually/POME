@@ -182,7 +182,7 @@ st.write('**This app predicts the biogas output from a closed system POME anaero
 
 
 #MAKING A BUTTON
-result = st.button("Click here to try it out!",on_click=1,type="primary")
+result = st.button("Click here to try it out!", type="primary")
 if result:
         
     ##################################################################################################################################################################################
