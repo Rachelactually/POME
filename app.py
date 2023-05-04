@@ -224,7 +224,7 @@ if result:
             st.markdown(new_title, unsafe_allow_html=True)
             st.info('Specify input values by sliding on the left side bar!')
             
-            colA, colB: st.columns(2)
+            colA, colB= st.columns(2)
             
             with colA:
                 sidebar = st.button("I do not see a side bar.", type="secondary")
