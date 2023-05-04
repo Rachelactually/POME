@@ -237,124 +237,12 @@ if result:
             """)
 
             #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-            # Showcase the models here
-
+            # #MONITORING DASHBOARD
+           
             # GPR model
             new_title = '<p style="font-size: 20px;"><strong>Gaussian Process Regressor (GPR)<strong></p>'
             st.markdown(new_title, unsafe_allow_html=True)
-            with st.expander("Learn more about GPR here."):
-                st.write('GPR is a **probabilistic model** based on non-parametric kernel models.\
-                Unlike linear regression, GPR makes predictions in the form of probability values\
-                instead of scalar values [1]. This is achieved by assigning a prior probability to a\
-                set of functions, with higher probability given to functions that are more representative\
-                of the data. The combination of the prior distribution and the available data points\
-                results in a posterior distribution. GPR is defined by a function which includes the mean function and a covariance\
-                function (otherwise known as a kernel). In this tuned GPR model, the **rational quaduatic** kernel\
-                is used.')
-            
-            col1, col2, col3 , col4= st.columns(4)
-            
-            with col1:
-                st.write("")
-                st.subheader('Biogas')
-                st.write("")
-                st.write("")
-                st.write("")
-                st.subheader('CH$_{4}$')
-                st.write("")
-                st.write("")
-                st.write("")
-                st.subheader('CO$_{2}$')
-                st.write("")
-                st.write("")
-                st.write("")
-                st.subheader('H$_{2}$S')
-                st.write("")
-                st.write("")
-            
-            with col2:
-                st.subheader('GPR')
-                st.caption('Nm$^{3}$ | :blue[_ RMSE: 98_]')
-                result_Biogas = Biogas_prediction(df)
-                series = pd.Series(result_Biogas[0])
-                rounded_Biogas = round(series[0],0)
-                st.write(rounded_Biogas)
-                st.write("")
-                
-                st.caption('Nm$^{3}$ | :blue[_ RMSE: 77_]')
-                result_CH4 = CH4_prediction(df)
-                series = pd.Series(result_CH4[0])
-                rounded_CH4 = round(series[0],0)
-                col2.write(rounded_CH4)
-                st.write("")
-                
-                st.caption('Nm$^{3}$ | :blue[_ RMSE: 59_]')
-                result_CO2 = CO2_prediction(df)
-                series = pd.Series(result_CO2[0])
-                rounded_CO2 = round(series[0],0)
-                st.write(rounded_CO2)
-                st.write("")
-                
-                st.caption('Nm$^{3}$ | :blue[_ RMSE: 4.4_]')
-                result_H2S = H2S_prediction(df)
-                series = pd.Series(result_H2S[0])
-                rounded_H2S = round(series[0],1)
-                st.write(rounded_H2S)
-                
-            with col3:
-                st.subheader('XGBoost')
-                st.caption('Nm$^{3}$ | :blue[_ RMSE: 137_]')
-                result_Biogas = Biogas_prediction_xgb(df)
-                series = pd.Series(result_Biogas[0])
-                rounded_Biogas = round(series[0],0)
-                st.write(rounded_Biogas)
 
-                st.caption('Nm$^{3}$ | :blue[_ RMSE: 112_]')
-                result_CH4 = CH4_prediction_xgb(df)
-                series = pd.Series(result_CH4[0])
-                rounded_CH4 = round(series[0],0)
-                st.write(rounded_CH4)
-
-                st.caption('Nm$^{3}$ | :blue[_ RMSE: 88_]')
-                result_CO2 = CO2_prediction_xgb(df)
-                series = pd.Series(result_CO2[0])
-                rounded_CO2 = round(series[0],0)
-                st.write(rounded_CO2)
-
-                st.caption('Nm$^{3}$ | :blue[_ RMSE: 6.2_]')
-                result_H2S = H2S_prediction_xgb(df)
-                series = pd.Series(result_H2S[0])
-                rounded_H2S = round(series[0],1)
-                st.write(rounded_H2S)
-
-            with col4:
-                st.subheader('RF')
-                st.caption('Nm$^{3}$ |:blue[_ RMSE: 164_]')
-                result_Biogas = Biogas_prediction_forest(df)
-                series = pd.Series(result_Biogas[0])
-                rounded_Biogas = round(series[0],0)
-                st.write(rounded_Biogas)
-
-                st.caption('Nm$^{3}$ |:blue[_ RMSE: 127_]')
-                result_CH4 = CH4_prediction_forest(df)
-                series = pd.Series(result_CH4[0])
-                rounded_CH4 = round(series[0],0)
-                st.write(rounded_CH4)
-
-                st.caption('Nm$^{3}$ |:blue[_ RMSE: 100_]')
-                result_CO2 = CO2_prediction_forest(df)
-                series = pd.Series(result_CO2[0])
-                rounded_CO2 = round(series[0],0)
-                st.write(rounded_CO2)
-
-                st.caption('Nm$^{3}$ |:blue[_ RMSE: 6.8_]')
-                result_H2S = H2S_prediction_forest(df)
-                series = pd.Series(result_H2S[0])
-                rounded_H2S = round(series[0],1)
-                st.write(rounded_H2S)
-            
-            
-              ###############  
             col1, col2, col3 , col4= st.columns(4)
 
             col1.subheader('Biogas')
@@ -389,20 +277,11 @@ if result:
 
             """)
 
+            ##############
             # XGBoost
             new_title = '<p style="font-size: 20px;"><strong>Extreme Gradient Boosting (XGBoost)<strong></p>'
             st.markdown(new_title, unsafe_allow_html=True)
-            with st.beta_expander("Learn more about XGBoost here."):
-                st.write('Proposed by Chen and Guestrin in 2016, the XGBoost algorithm is an optimised version of\
-                gradient boosting [2]. Boosting assigns weight to observations and increased the weight of the\
-                misclassified observations in subsequent training rounds. Results from each tree are then\
-                combined to improve the accuracy of the model. Gradient boosting focuses on reducing the\
-                gradient of the loss function in previous models through an iterative feedback process\
-                to minimise the degree of error in the gradient direction. The main improvement of XGBoost\
-                is the **normalisation of the loss function** using Taylor expansion to mitigate model variances\
-                and reduce modelling complexities, which could lead to overfitting. The objective function contains a loss function and a regularisation function.\
-                The aim is to minimise this function.')
-
+            
             col1, col2, col3 , col4= st.columns(4)
 
             col1.subheader('Biogas')
@@ -437,18 +316,11 @@ if result:
 
             """)
 
+            ##############
             # RF
             new_title = '<p style="font-size: 20px;"><strong>Random Forest (RF)<strong></p>'
             st.markdown(new_title, unsafe_allow_html=True)
-            with st.beta_expander("Learn more about Random Forest here."):
-                st.write('Random forest is a non-parametric model as part of the Ensemble of Trees (EoT) system\
-                that was proposed by Breiman in 2001 [3]. The Classification and Regression Tree (CART) methodology\
-                is applied, where subspace randomisation with bagging is conducted to resample the training set\
-                with replacement each time a new tree is grown. This technique trains multiple subsets using\
-                bootstrap replicas of the original training dataset with replacement. This resampling approach\
-                generates a diverse set of conditions, whereby the final prediction is based upon the average value\
-                from the combined prediction value of each ensemble.')
-
+            
             col1, col2, col3 , col4= st.columns(4)
 
             col1.subheader('Biogas')
@@ -478,7 +350,39 @@ if result:
             series = pd.Series(result_H2S[0])
             rounded_H2S = round(series[0],1)
             col4.write(rounded_H2S)
-
+            
+            ##############
+            #FOR MORE INFORMATION
+            with st.expander("Learn more about GPR here."):
+                st.write('GPR is a **probabilistic model** based on non-parametric kernel models.\
+                Unlike linear regression, GPR makes predictions in the form of probability values\
+                instead of scalar values [1]. This is achieved by assigning a prior probability to a\
+                set of functions, with higher probability given to functions that are more representative\
+                of the data. The combination of the prior distribution and the available data points\
+                results in a posterior distribution. GPR is defined by a function which includes the mean function and a covariance\
+                function (otherwise known as a kernel). In this tuned GPR model, the **rational quaduatic** kernel\
+                is used.')
+            
+            with st.beta_expander("Learn more about XGBoost here."):
+                st.write('Proposed by Chen and Guestrin in 2016, the XGBoost algorithm is an optimised version of\
+                gradient boosting [2]. Boosting assigns weight to observations and increased the weight of the\
+                misclassified observations in subsequent training rounds. Results from each tree are then\
+                combined to improve the accuracy of the model. Gradient boosting focuses on reducing the\
+                gradient of the loss function in previous models through an iterative feedback process\
+                to minimise the degree of error in the gradient direction. The main improvement of XGBoost\
+                is the **normalisation of the loss function** using Taylor expansion to mitigate model variances\
+                and reduce modelling complexities, which could lead to overfitting. The objective function contains a loss function and a regularisation function.\
+                The aim is to minimise this function.')
+            
+            with st.beta_expander("Learn more about Random Forest here."):
+                st.write('Random forest is a non-parametric model as part of the Ensemble of Trees (EoT) system\
+                that was proposed by Breiman in 2001 [3]. The Classification and Regression Tree (CART) methodology\
+                is applied, where subspace randomisation with bagging is conducted to resample the training set\
+                with replacement each time a new tree is grown. This technique trains multiple subsets using\
+                bootstrap replicas of the original training dataset with replacement. This resampling approach\
+                generates a diverse set of conditions, whereby the final prediction is based upon the average value\
+                from the combined prediction value of each ensemble.')
+            
             mystyle = '''
                 <style>
                     p {
