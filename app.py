@@ -20,7 +20,7 @@ st.set_page_config(
     page_title="POME biogas predictor",
     page_icon=image1,
     #layout="wide",
-    initial_sidebar_state="expanded",
+    #initial_sidebar_state="expanded",
     )
 
 #hide menu bar and footer
