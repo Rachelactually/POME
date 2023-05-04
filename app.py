@@ -179,8 +179,10 @@ with col3:
 #HEADER CAPTIONS
 st.write('**This app predicts the biogas output from a closed system POME anaerobic digestion process.**')
 
+
+
 #MAKING A BUTTON
-result = st.button("Try out our prediction app!")
+result = st.button("Click here to try it out!")
 if result:
         
     ##################################################################################################################################################################################
@@ -997,4 +999,11 @@ if result:
             st.markdown(new_title, unsafe_allow_html=True)  
         
         
-        
+#COPYRIGHT STATEMENT FOR MAIN PAGE
+st.markdown("""
+
+""")
+
+new_title = '<p style="text-align:left; font-size: 10px;">© 2023 Website is the creation of <strong>Q.Y. Ong</strong>, <strong>X.Y. Kiew</strong> \
+and <strong>Joshua Y.L. Liew</strong> under the Department of Chemical and Environmental Engineering, University of Nottingham Malaysia.</p>'
+st.markdown(new_title, unsafe_allow_html=True)        
