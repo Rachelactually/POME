@@ -973,6 +973,15 @@ else:
     We aim for :blue[**transparency**] in showcasing our work and research, \
     but most importantly, we aim to make our work more :blue[**accessible**] to the \
     public. We are also excited to let you try out our prediction models.')
+    
+    mystyle = '''
+        <style>
+            p {
+                text-align: justify;
+            }
+        </style>
+        '''
+    st.write(mystyle, unsafe_allow_html=True)
 
 
 
