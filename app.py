@@ -831,9 +831,10 @@ if result:
 
     ##################################################################################################################################################################################
         with tab4:
-            
+  
             tab10, tab20= st.tabs('About the project','About us')
-                with tab10: 
+    
+            with tab10:
                 st.subheader('About the project')
                 st.write('Malaysia is the second-largest global palm oil producer, accounting for 100 million tonnes of annual fresh fruit bunches (FFB) harvest. \
                 During palm oil production, 90% of the total FFB forms biomass waste comprising of mainly empty fruit bunches (EFB), biomass sludge, and palm oil \
@@ -871,100 +872,100 @@ if result:
 
 
             #~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#
-                with tab20:
-
+            with tab20:
+                
                 st.subheader('About us')
 
                 tab31, tab32 = st.tabs(["Researchers", "Ackowledgements"])
 
-                #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-                with tab31:
-                    col1,col2,col3 = st.columns([1,1,1])
-                    #############
-                    with col1:
-                        col4,col5,col6 = st.columns([1,6,1])
-                        with col4:
-                            st.write("")
-                        with col5:
-                            image = Image.open('QY.png')
-                            st.image(image, width=150)
-                            name = '<p style= "text-align:center; font-size: 20px;"><strong>Qian Yee Ong</strong></p>'
-                            st.markdown(name, unsafe_allow_html=True)
-                        with col6:
-                            st.write("")
+                    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+                    with tab31:
+                        col1,col2,col3 = st.columns([1,1,1])
+                        #############
+                        with col1:
+                            col4,col5,col6 = st.columns([1,6,1])
+                            with col4:
+                                st.write("")
+                            with col5:
+                                image = Image.open('QY.png')
+                                st.image(image, width=150)
+                                name = '<p style= "text-align:center; font-size: 20px;"><strong>Qian Yee Ong</strong></p>'
+                                st.markdown(name, unsafe_allow_html=True)
+                            with col6:
+                                st.write("")
 
-                        title = '<p style= "text-align:center; color:blue; font-size: 15px;">Masters in Chemical with Environmental Engineering</p>'
-                        st.markdown(title, unsafe_allow_html=True)
+                            title = '<p style= "text-align:center; color:blue; font-size: 15px;">Masters in Chemical with Environmental Engineering</p>'
+                            st.markdown(title, unsafe_allow_html=True)
 
-                        st.caption(':e-mail:: slenderqianyeeong@gmail.com')
+                            st.caption(':e-mail:: slenderqianyeeong@gmail.com')
 
-                        h1 = '<p style= "font-size: 15px;">\
-                         - Model development \
-                        <br> - Primary website author </p>'
-                        st.markdown(h1, unsafe_allow_html=True)
+                            h1 = '<p style= "font-size: 15px;">\
+                             - Model development \
+                            <br> - Primary website author </p>'
+                            st.markdown(h1, unsafe_allow_html=True)
 
 
-                    #############
-                    with col2:
-                        col4,col5,col6 = st.columns([1,6,1])
-                        with col4:
-                            st.write("")
-                        with col5:
-                            image = Image.open('Amanda.png')
-                            st.image(image, width=150)
-                            name = '<p style= "text-align:center; font-size: 20px;"><strong>Xin Yun Kiew</strong></p>'
-                            st.markdown(name, unsafe_allow_html=True)
-                        with col6:
-                            st.write("")
+                        #############
+                        with col2:
+                            col4,col5,col6 = st.columns([1,6,1])
+                            with col4:
+                                st.write("")
+                            with col5:
+                                image = Image.open('Amanda.png')
+                                st.image(image, width=150)
+                                name = '<p style= "text-align:center; font-size: 20px;"><strong>Xin Yun Kiew</strong></p>'
+                                st.markdown(name, unsafe_allow_html=True)
+                            with col6:
+                                st.write("")
 
-                        title = '<p style= "text-align:center; color:blue; font-size: 15px;">Masters in Chemical with Environmental Engineering</p>'
-                        st.markdown(title, unsafe_allow_html=True)
+                            title = '<p style= "text-align:center; color:blue; font-size: 15px;">Masters in Chemical with Environmental Engineering</p>'
+                            st.markdown(title, unsafe_allow_html=True)
 
-                        st.caption(':e-mail:: amandakiewxy@gmail.com')
+                            st.caption(':e-mail:: amandakiewxy@gmail.com')
 
-                        h1 = '<p style= "font-size: 15px;">\
-                        - Data pre-processing \
-                        <br> - Life Cycle Assessment </p>'
-                        st.markdown(h1, unsafe_allow_html=True)
+                            h1 = '<p style= "font-size: 15px;">\
+                            - Data pre-processing \
+                            <br> - Life Cycle Assessment </p>'
+                            st.markdown(h1, unsafe_allow_html=True)
 
-                    #############
-                    with col3:
-                        col4,col5,col6 = st.columns([1,6,1])
-                        with col4:
-                            st.write("")
-                        with col5:
-                            image = Image.open('Joshua.png')
-                            st.image(image, width=150)
-                            name = '<p style= "text-align:center; font-size: 20px;"><strong>Joshua Y.L. Liew</strong></p>'
-                            st.markdown(name, unsafe_allow_html=True)
-                        with col6:
-                            st.write("")
+                        #############
+                        with col3:
+                            col4,col5,col6 = st.columns([1,6,1])
+                            with col4:
+                                st.write("")
+                            with col5:
+                                image = Image.open('Joshua.png')
+                                st.image(image, width=150)
+                                name = '<p style= "text-align:center; font-size: 20px;"><strong>Joshua Y.L. Liew</strong></p>'
+                                st.markdown(name, unsafe_allow_html=True)
+                            with col6:
+                                st.write("")
 
-                        title = '<p style= "text-align:center; color:blue; font-size: 15px;">Masters in Chemical Engineering</p>'
-                        st.markdown(title, unsafe_allow_html=True)
+                            title = '<p style= "text-align:center; color:blue; font-size: 15px;">Masters in Chemical Engineering</p>'
+                            st.markdown(title, unsafe_allow_html=True)
 
-                        st.caption(':e-mail:: joshualiew10@gmail.com')
+                            st.caption(':e-mail:: joshualiew10@gmail.com')
 
-                        h1 = '<p style= "font-size: 15px;">\
-                        - Website deployment \
-                        <br> - Website author </p>'
-                        st.markdown(h1, unsafe_allow_html=True)
+                            h1 = '<p style= "font-size: 15px;">\
+                            - Website deployment \
+                            <br> - Website author </p>'
+                            st.markdown(h1, unsafe_allow_html=True)
 
-                    st.markdown("""
+                        st.markdown("""
 
-                    """)
+                        """)
 
-                #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#    
-                with tab32:
-                    st.caption('We would like to express out gratitude towards out academic supervisors, \
-                    Dr Sara Kazemi Yazdi and Dr Chen Zhi Yuan for their guidance, support and encouragement \
-                    throughout the research process, which helped us to refine our research objectives, \
-                    methodology and results. We are especially grateful to Dr Chan Yi Jing, who provided us \
-                    with much literature and information relevant to this research. We are also grateful to \
-                    the University of Nottingham Malaysia for providing us with the software support required \
-                    to conduct this research. We would also like to show appreciation for the engineers and \
-                    managers of Lepar Hilir Palm Oil Mill, Adela Palm Oil Mill, Keratong Estate Oil Palm \
-                    Mill and Felda Lok Heng Palm Oil Mill for providing the dataset required for this study.')
+                    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#    
+                    with tab32:
+                        st.caption('We would like to express out gratitude towards out academic supervisors, \
+                        Dr Sara Kazemi Yazdi and Dr Chen Zhi Yuan for their guidance, support and encouragement \
+                        throughout the research process, which helped us to refine our research objectives, \
+                        methodology and results. We are especially grateful to Dr Chan Yi Jing, who provided us \
+                        with much literature and information relevant to this research. We are also grateful to \
+                        the University of Nottingham Malaysia for providing us with the software support required \
+                        to conduct this research. We would also like to show appreciation for the engineers and \
+                        managers of Lepar Hilir Palm Oil Mill, Adela Palm Oil Mill, Keratong Estate Oil Palm \
+                        Mill and Felda Lok Heng Palm Oil Mill for providing the dataset required for this study.')
 
         
 ######################################################################################################################################################################################        
