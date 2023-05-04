@@ -223,24 +223,14 @@ if result:
             new_title = '<p style="text-align:left; color:red; font-size: 30px;"><strong>Try out our predictor!</strong></p>'
             st.markdown(new_title, unsafe_allow_html=True)
             st.info('Specify input values by sliding on the left side bar!')
-            
-            colA, colB= st.columns(2)
-            
-            with colA:
-                sidebar = st.button("I do not see a side bar.", type="secondary")
-                if sidebar:
-                    st.info('On the top left of the screen, click on **>** to expand the side bar!')
-                else:
-                    
-            with colB:
-                info = st.button("Tell me about the prediction models.", type="secondary")
-                if info:
-                    st.write('The **Gaussian Process Regressor (GPR)** model, **Random Forest (RF)** model and **Extreme Gradient Booosting (XGBoost)** model\
-                    are among the selected predictors for POME biogas components. The accuracy of the respective models, represented by the :blue[_Root mean \
-                    squared error (RMSE)_] on the prediction of the target outputs are also displayed. Lower RMSE indicates a more accurate prediction model.\
-                    The predicted components include total biogas production, methane (CH$_{4}$), carbon dioxide (CO$_{2}$) and hydrogen sulphide (H$_{2}$S).')
-                else:
-                    
+            with st.expander('I do not see a side bar.'):
+                st.info('On the top left of the screen, click on **>** to expand the side bar!')
+            with st.expander('Tell me about the prediction models.'):
+                st.write('The **Gaussian Process Regressor (GPR)** model, **Random Forest (RF)** model and **Extreme Gradient Booosting (XGBoost)** model\
+                are among the selected predictors for POME biogas components. The accuracy of the respective models, represented by the :blue[_Root mean \
+                squared error (RMSE)_] on the prediction of the target outputs are also displayed. Lower RMSE indicates a more accurate prediction model.\
+                The predicted components include total biogas production, methane (CH$_{4}$), carbon dioxide (CO$_{2}$) and hydrogen sulphide (H$_{2}$S).')
+           
             st.markdown("""
 
             """)
