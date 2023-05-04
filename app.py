@@ -2,20 +2,19 @@
 Created on Wed Oct 26 15:45:07 2022
 @author: joshua and qianyee
 '''
-
+##################################################################################################################################################################################
 import pandas as pd
 import numpy as np
 import pickle
 import streamlit as st
 import altair as alt
-
 from PIL import Image
-
-
+##################################################################################################################################################################################
 
 #opening the image
 image1 = Image.open('UNMClogo.jpeg')
 
+#set website title, icon, page settings and sidebar state
 st.set_page_config(
     page_title="POME biogas predictor",
     page_icon=image1,
@@ -23,24 +22,18 @@ st.set_page_config(
     initial_sidebar_state="expanded",
     )
 
-
-#hide_menu_style = """
-        #<style>
-        ##MainMenu {visibility: hidden;}
-        #</style>
-        #"""
-#st.markdown(hide_menu_style, unsafe_allow_html=True)
-
+#hide menu bar and footer
 hide_streamlit_style = """
         <style>
+        ##MainMenu {visibility: hidden;}
         footer {visibility: hidden;}
         </style>
         """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
+##################################################################################################################################################################################
+#BRING IN THE TRAINED MODELS HERE
 
-
-########################################################################
 # GPR model
 def Biogas_prediction(input_data):
     Biogas_model=pickle.load(open('model1.sav','rb'))
@@ -81,6 +74,8 @@ def H2S_prediction(input_data):
     H2S_modelprediction=H2S_model.predict(input_data_reshaped)
     print(H2S_modelprediction)
     return H2S_modelprediction
+
+#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#
 
 # XGB model
 def Biogas_prediction_xgb(input_data):
@@ -123,6 +118,7 @@ def H2S_prediction_xgb(input_data):
     print(H2S_model_xgbprediction)
     return H2S_model_xgbprediction
 
+#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#
 
 # RF model
 def Biogas_prediction_forest(input_data):
@@ -166,9 +162,8 @@ def H2S_prediction_forest(input_data):
     return H2S_model_forestprediction
 
 
-
-########################################################################
-
+##################################################################################################################################################################################
+#MAIN TITLE and NOTTINGHAM LOGO at HEADER
 col1, col2, col3 = st.columns([4,1,1])
 
 with col1:
@@ -178,26 +173,23 @@ with col2:
     st.write("")
 
 with col3:
-    
-    #opening the image
     image = Image.open('UNMC.png')
-    #displaying the image on streamlit app
     st.image(image)
-    
-st.caption('© 2023 Website is the creation of **Q.Y. Ong**, **X.Y. Kiew** and **Joshua Y.L. Liew** \
-under the :blue[**Department of Chemical and Environmental Engineering**], **University of Nottingham Malaysia.**')
+
+#HEADER CAPTIONS
 st.write('**This app predicts the biogas output from a closed system POME anaerobic digestion process.**')
+
+
+##################################################################################################################################################################################
 #Create tabs
 tab1, tab2, tab3, tab4 = st.tabs(["Prediction models", "Methodology", "Sustainability", "About"])
 
-########################################################################
-#Create title and slider
+##################################################################################################################################################################################
+#SIDEBAR TITLE AND SLIDER
+#TAB 1: PREDICTION MODEL
 def main():
-    # Giving a title
  with tab1:
-        # Sidebar header
         st.sidebar.header('Input Parameters')
-        # Define user input features
         def user_input_features():
             POME_in = st.sidebar.slider('POME', 3800, 24000, 12000,1000,"%f")
             COD_in = st.sidebar.slider('COD',55000,92000,65000,1000,"%f")
@@ -221,14 +213,11 @@ def main():
             return features
     # Create user input parameters title    
         df = user_input_features()
-        #st.subheader('User Input Parameters')
-        #st.write(df)
-
-
-    ########################################################################
+        
+    #~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#
     # Create subheaders for main performance indicator 
         
-        new_title = '<p style="text-align:left; color:red; font-size: 30px;"><strong>Predicting biogas components<strong></p>'
+        new_title = '<p style="text-align:left; color:red; font-size: 30px;"><strong>Predicting biogas components</strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)
         st.write('The **Gaussian Process Regressor (GPR)** model, **Random Forest (RF)** model and **Extreme Gradient Booosting (XGBoost)** model\
         are among the selected predictors for POME biogas components. The accuracy of the respective models, represented by the :blue[R$^{2}$ coefficient of\
@@ -242,10 +231,14 @@ def main():
         st.markdown("""
         
         """)
-        # GPR
+        
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        # Showcase the models here
+        
+        # GPR model
         new_title = '<p style="font-size: 20px;"><strong>Gaussian Process Regressor (GPR)<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)
-        with st.beta_expander("Learn more about GPR here."):
+        with st.expander("Learn more about GPR here."):
             st.write('GPR is a **probabilistic model** based on non-parametric kernel models.\
             Unlike linear regression, GPR makes predictions in the form of probability values\
             instead of scalar values [1]. This is achieved by assigning a prior probability to a\
@@ -388,26 +381,38 @@ def main():
             '''
         st.write(mystyle, unsafe_allow_html=True)
         
-             
+        
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        #REFERENCES FOR TAB 1
         st.write('**References**')
         st.caption('[1] Karch, J. D., Brandmaier, A. M. and Voelkle, M. C. (2020) ‘Gaussian Process Panel Modeling—Machine Learning Inspired Analysis of Longitudinal Panel Data’, Frontiers in Psychology, 11. doi: 10.3389/fpsyg.2020.00351.')
         st.caption('[2] Chen, T. and Guestrin, C. (2016) ‘XGBoost: A Scalable Tree Boosting System’, in Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. New York, NY, USA: ACM, pp. 785–794. doi: 10.1145/2939672.2939785.')
         st.caption('[3] Breiman, L. (2001) ‘Random forests’, Machine Learning. Springer, 45(1), pp. 5–32. doi: 10.1023/A:1010933404324/METRICS.')
         
-       
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        #COPYRIGHT STATEMENT FOR TAB 1
+        st.markdown("""
+
+        """)
+        
+        new_title = '<p style="text-align:left; font-size: 10px;">© 2023 Website is the creation of <strong>Q.Y. Ong</strong>, <strong>X.Y. Kiew</strong> \
+        and <strong>Joshua Y.L. Liew</strong> under the Department of Chemical and Environmental Engineering, University of Nottingham Malaysia.</p>'
+        st.markdown(new_title, unsafe_allow_html=True)           
     
-    ########################################################################
 if __name__=='__main__':
     main()
     
     
-########################################################################    
+##################################################################################################################################################################################
+#TAB 2: METHODOLOGY
+
 with tab2:
     new_title = '<p style="text-align:left; color:red; font-size: 30px;"><strong>Development of prediction models<strong></p>'
     st.markdown(new_title, unsafe_allow_html=True)   
     st.write('To develop the models, 4 stages are followed.')
-        
-    with st.beta_expander('**Stage 1: Scoping & data collection**'):
+    
+    #~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#
+    with st.expander('**Stage 1: Scoping & data collection**'):
         st.write('Real scale industrial data of the covered lagoon POME anerobic digestor used in this study were\
         obtained from four Malaysian plants over a period of 24 months (July 2019 to June 2021).')
         st.write('The plants include (i) Lepar Hilir Palm Oil Mill, (ii) Adela Palm Oil Mill, (iii) Keratong Estate Oil Palm Mill and (iv)\
@@ -436,9 +441,9 @@ with tab2:
 
         """)
 
-    ########################################################################   
+    #~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#  
     
-    with st.beta_expander('**Stage 2: Data pre-processing**'):
+    with st.expander('**Stage 2: Data pre-processing**'):
    
         st.write('Due to limited available plant data, data expansion was carried out using the \
         Synthetic Minority Oversampling Technique (SMOTE) to generate synthetic datasets. SMOTE uses \
@@ -460,10 +465,7 @@ with tab2:
         were synthesised. As synthesised data will only be used for model training, this leaves the\
         train-test ratio to be at 87.5 to 12.5.')
 
-        from PIL import Image
-        #opening the image
         image = Image.open('SMOTE.png')
-        #displaying the image on streamlit app
         st.image(image, caption='Fig 1: Random point along the vector connecting the origin to the KNN points.')
 
         st.write('Prior to training, z-score data normalisation technique was applied to the input variables.\
@@ -474,9 +476,9 @@ with tab2:
 
         """)
 
-    ########################################################################   
+    #~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#   
     
-    with st.beta_expander('**Stage 3: Model Development**'):
+    with st.expander('**Stage 3: Model Development**'):
         st.markdown("""
         - GPR was imported from the [**scikit learn**](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.GaussianProcessRegressor.html)\
         library under **"gaussian_process.GaussianProcessRegressor"**
@@ -489,9 +491,9 @@ with tab2:
 
         """)
 
-    ########################################################################     
+    #~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#    
 
-    with st.beta_expander('**Stage 4: Model Tuning and Validation**'):
+    with st.expander('**Stage 4: Model Tuning and Validation**'):
         
         st.subheader('Hyperparameter tuning')
         st.write('Hyperparameter tuning was performed to optimise all models prior to performance comparisons.\
@@ -502,6 +504,8 @@ with tab2:
         each trial in continuous processing.\
         A parameter grid for the models was created with a variety of hyperparameter options:')
 
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        #GPR HYPERPARAMETERS
         new_title = '<p style="font-size: 20px;"><strong>GPR [2]<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)
         h1 = '<p font-size: 5px;"><strong>kernel</strong>\
@@ -519,7 +523,8 @@ with tab2:
         <br>[1e-10, 1e-5, 1e-2, log-uniform]</p>'
         st.markdown(h1, unsafe_allow_html=True)
 
-        
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        #XGBOOST HYPERPARAMETERS
         new_title = '<p style="font-size: 20px;"><strong>XGBoost [3]<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)           
         h1 = '<p font-size: 5px;"><strong>learning_rate</strong>\
@@ -547,7 +552,8 @@ with tab2:
         <br>[0.3, 0.5, 0.7, 1 ]</p>'
         st.markdown(h1, unsafe_allow_html=True)
 
-        
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        #RANDOM FOREST HYPERPARAMETERS
         new_title = '<p style="font-size: 20px;"><strong>Random forest [2]<strong></p>'
         st.markdown(new_title, unsafe_allow_html=True)          
         h1 = '<p font-size: 5px;"><strong>max_depth</strong>\
@@ -579,6 +585,8 @@ with tab2:
 
         """)
         
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        #MODEL VALIDATION
         st.subheader('Model validation')
         st.write('To account for overfitting, k-fold cross validation (CV) was also performed \
         during tuning. In k-fold CV, training sets were split into k number of subsets (or folds).\
@@ -592,6 +600,8 @@ with tab2:
 
         """)
         
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        #MODEL EVALUATION
         st.subheader('Model evaluation')   
         st.write('To assess the performance of trained models, the predicted value, _y$_{i}$_\
         was compared to the observed (test) value, _x$_{i}$_. Several evaluation metrics came\
@@ -605,17 +615,32 @@ with tab2:
         st.markdown("""
 
         """)
-        
+    
+    #~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#
     st.write('**References**')
     st.caption('[1] Larsen, B. S. (2023) Synthetic Minority Over-sampling Technique (SMOTE). Available at: https://github.com/dkbsl/matlab_smote/releases/tag/1.0 (Accessed: 31 March 2023).')
     st.caption('[2] Pedregosa, F. et al. (2011) ‘Scikit-learn: Machine Learning in Python’, Journal of Machine Learning Research, 12, pp. 2825--2830.')
     st.caption('[3] Developers, X. (2023) xgboost- Release 2.0.0-dev.')
 
-########################################################################    
+    
+    #~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#
+    #COPYRIGHT STATEMENT FOR TAB 2
+    st.markdown("""
+
+    """)
+
+    new_title = '<p style="text-align:left; font-size: 10px;">© 2023 Website is the creation of <strong>Q.Y. Ong</strong>, <strong>X.Y. Kiew</strong> \
+    and <strong>Joshua Y.L. Liew</strong> under the Department of Chemical and Environmental Engineering, University of Nottingham Malaysia.</p>'
+    st.markdown(new_title, unsafe_allow_html=True)      
+    
+    
+##################################################################################################################################################################################   
 with tab3:
+    
     new_title = '<p style="text-align:left; color:red; font-size: 30px;"><strong>Environmental impact of biogas repurposing<strong></p>'
     st.markdown(new_title, unsafe_allow_html=True)
     
+    #~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#
     st.subheader('Circular palm oil industry')
     st.write('Utilising POME for biogas production presents a sustainable approach for\
     reducing GHG emissions while offering economic benefits. POME biogas can be utilized \
@@ -631,6 +656,7 @@ with tab3:
     image = Image.open('Circular.png')
     st.image(image, caption='Fig 1: Circular economy of a POM with a biogas plant.')
     
+    #~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#
     st.subheader('Life Cycle Assessment (LCA)')
      
     st.write('For a more comprehensive environmental evaluation to assess \
@@ -647,7 +673,8 @@ with tab3:
     LCIA was carried out using the :blue[**ReCiPe 2016 (World H) midpoint technique**]\
     with the :blue[**EcoInvent V3.8 database**].')
                 
-    with st.beta_expander('**Phase (i): Goal and scope definition**'):
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+    with st.expander('**Phase (i): Goal and scope definition**'):
         st.write('The system boundary of this study focused on ‘gate-to-gate’, which considered the \
         reception of POME from the process to the completion of its anaerobic treatment. Inputs to the \
         AD system were in the form of materials and energy, while outputs were in the form of effluent, \
@@ -667,8 +694,8 @@ with tab3:
 
         """)
     
-    
-    with st.beta_expander('**Phase (ii): Life cycle inventory (LCI)**'):
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+    with st.expander('**Phase (ii): Life cycle inventory (LCI)**'):
         
         st.write('This LCI contains all essential information for the assessment of the base \
         case and alternate case to be carried out.')
@@ -700,8 +727,7 @@ with tab3:
 
         """)
     
-    
-    
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
     with st.beta_expander('**Phase (iii) : Life Cycle Impact Assessment (LCIA)**'):
         st.write('In this study, the [EcoInvent](https://ecoinvent.org/) database was employed. With over 18,000 \
         LCI datasets, this database encompasses sectors including agriculture, waste treatments, \
@@ -722,12 +748,11 @@ with tab3:
         focus was placed on 3 categories, namely: (i) global warming potential (GWP), (ii) terrestrial \
         acidification (TAP), and (iii) freshwater eutrophication. (FEP).')
     
-    
-    with st.beta_expander('**Phase (iv) : LCA interpretation**'):
-        
-        #Create tabs
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+    with st.expander('**Phase (iv) : LCA interpretation**'):
         tab21, tab22, tab23 = st.tabs(["Global warming potential (GWP)", "Acidification potential (AP)", "Eutrophication potential (EP)"])
         
+        #############
         with tab21:
             st.subheader('Global warming potential (GWP)')
 
@@ -757,8 +782,7 @@ with tab3:
             biogas from the POME treatment system cannot be overstated as it serves as a crucial means of \
             offsetting the adverse impacts of electricity consumption.')
 
-            #############
-        
+        #############
         with tab22:
             
             st.subheader('Acidification potential (AP)')
@@ -782,8 +806,7 @@ with tab3:
             than that of an open lagoon [5]. The reason is because the closed system prevents the emission \
             of SO$_{2}$ into the atmosphere, which results from the H$_{2}$S present in the biogas.')
 
-            #############
-        
+        #############
         with tab23: 
             st.subheader('Eutrophication potential (EP)')
 
@@ -809,6 +832,7 @@ with tab3:
 
     """)
     
+    #~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#
     st.write('**References**')
     st.caption('[1] Lim, C. and K. Biswas, W. (2019) ‘Sustainability Implications of the Incorporation of a Biogas Trapping System into a Conventional Crude Palm Oil Supply Chain’, Sustainability, 11(3), p. 792. doi: 10.3390/su11030792.')
     st.caption('[2] Eggleston, H. S. et al. (2006) IPCC guidelines for national greenhouse gas Inventories. Hayama, Japan.')
@@ -816,7 +840,17 @@ with tab3:
     st.caption('[4] Doorn, M. et al. (2006) Chapter 6-wastewater treatment and discharge. IPCC guidelines for national greenhouse gas Inventories. Hayama, Japan.')  
     st.caption('[5] Nasution, M. A. et al. (2018) ‘Comparative environmental impact evaluation of palm oil mill effluent treatment using a life cycle assessment approach: A case study based on composting and a combination for biogas technologies in North Sumatera of Indonesia’, Journal of Cleaner Production, 184, pp. 1028–1040. doi: 10.1016/j.jclepro.2018.02.299.')
     
-    ########################################################################
+    #~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#
+    #COPYRIGHT STATEMENT FOR TAB 3
+    st.markdown("""
+
+    """)
+
+    new_title = '<p style="text-align:left; font-size: 10px;">© 2023 Website is the creation of <strong>Q.Y. Ong</strong>, <strong>X.Y. Kiew</strong> \
+    and <strong>Joshua Y.L. Liew</strong> under the Department of Chemical and Environmental Engineering, University of Nottingham Malaysia.</p>'
+    st.markdown(new_title, unsafe_allow_html=True)  
+    
+##################################################################################################################################################################################
     with tab4:
     
         st.subheader('About the project')
@@ -855,27 +889,24 @@ with tab3:
 
 
 
+        #~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#
         st.subheader('About us')
         
         tab31, tab32 = st.tabs(["Researchers", "Ackowledgements"])
 
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         with tab31:
-
             col1,col2,col3 = st.columns([1,1,1])
-
+            #############
             with col1:
-
                 col4,col5,col6 = st.columns([1,6,1])
-
                 with col4:
                     st.write("")
-
                 with col5:
                     image = Image.open('QY.png')
                     st.image(image, width=150)
                     name = '<p style= "text-align:center; font-size: 20px;"><strong>Qian Yee Ong</strong></p>'
                     st.markdown(name, unsafe_allow_html=True)
-
                 with col6:
                     st.write("")
 
@@ -890,18 +921,16 @@ with tab3:
                 st.markdown(h1, unsafe_allow_html=True)
 
 
+            #############
             with col2:
                 col4,col5,col6 = st.columns([1,6,1])
-
                 with col4:
                     st.write("")
-
                 with col5:
                     image = Image.open('Amanda.png')
                     st.image(image, width=150)
                     name = '<p style= "text-align:center; font-size: 20px;"><strong>Xin Yun Kiew</strong></p>'
                     st.markdown(name, unsafe_allow_html=True)
-
                 with col6:
                     st.write("")
 
@@ -915,19 +944,16 @@ with tab3:
                 <br> - Life Cycle Assessment </p>'
                 st.markdown(h1, unsafe_allow_html=True)
 
-
+            #############
             with col3:
                 col4,col5,col6 = st.columns([1,6,1])
-
                 with col4:
                     st.write("")
-
                 with col5:
                     image = Image.open('Joshua.png')
                     st.image(image, width=150)
                     name = '<p style= "text-align:center; font-size: 20px;"><strong>Joshua Y.L. Liew</strong></p>'
                     st.markdown(name, unsafe_allow_html=True)
-
                 with col6:
                     st.write("")
 
@@ -941,15 +967,12 @@ with tab3:
                 <br> - Website author </p>'
                 st.markdown(h1, unsafe_allow_html=True)
 
-
-
             st.markdown("""
 
             """)
 
-            
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#    
         with tab32:
-            
             st.caption('We would like to express out gratitude towards out academic supervisors, \
             Dr Sara Kazemi Yazdi and Dr Chen Zhi Yuan for their guidance, support and encouragement \
             throughout the research process, which helped us to refine our research objectives, \
@@ -959,3 +982,16 @@ with tab3:
             to conduct this research. We would also like to show appreciation for the engineers and \
             managers of Lepar Hilir Palm Oil Mill, Adela Palm Oil Mill, Keratong Estate Oil Palm \
             Mill and Felda Lok Heng Palm Oil Mill for providing the dataset required for this study.')
+       
+        #~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#
+        #COPYRIGHT STATEMENT FOR TAB 4
+        st.markdown("""
+
+        """)
+
+        new_title = '<p style="text-align:left; font-size: 10px;">© 2023 Website is the creation of <strong>Q.Y. Ong</strong>, <strong>X.Y. Kiew</strong> \
+        and <strong>Joshua Y.L. Liew</strong> under the Department of Chemical and Environmental Engineering, University of Nottingham Malaysia.</p>'
+        st.markdown(new_title, unsafe_allow_html=True)  
+        
+        
+        
