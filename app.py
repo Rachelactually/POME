@@ -393,20 +393,9 @@ if result:
             st.caption('[1] Karch, J. D., Brandmaier, A. M. and Voelkle, M. C. (2020) ‘Gaussian Process Panel Modeling—Machine Learning Inspired Analysis of Longitudinal Panel Data’, Frontiers in Psychology, 11. doi: 10.3389/fpsyg.2020.00351.')
             st.caption('[2] Chen, T. and Guestrin, C. (2016) ‘XGBoost: A Scalable Tree Boosting System’, in Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. New York, NY, USA: ACM, pp. 785–794. doi: 10.1145/2939672.2939785.')
             st.caption('[3] Breiman, L. (2001) ‘Random forests’, Machine Learning. Springer, 45(1), pp. 5–32. doi: 10.1023/A:1010933404324/METRICS.')
-
-            #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-            #COPYRIGHT STATEMENT FOR TAB 1
-            st.markdown("""
-
-            """)
-
-            new_title = '<p style="text-align:left; font-size: 10px;">© 2023 Website is the creation of <strong>Q.Y. Ong</strong>, <strong>X.Y. Kiew</strong> \
-            and <strong>Joshua Y.L. Liew</strong> under the Department of Chemical and Environmental Engineering, University of Nottingham Malaysia.</p>'
-            st.markdown(new_title, unsafe_allow_html=True)           
-
+     
     if __name__=='__main__':
         main()
-
 
     ##################################################################################################################################################################################
     #TAB 2: METHODOLOGY
@@ -625,18 +614,7 @@ if result:
         st.write('**References**')
         st.caption('[1] Larsen, B. S. (2023) Synthetic Minority Over-sampling Technique (SMOTE). Available at: https://github.com/dkbsl/matlab_smote/releases/tag/1.0 (Accessed: 31 March 2023).')
         st.caption('[2] Pedregosa, F. et al. (2011) ‘Scikit-learn: Machine Learning in Python’, Journal of Machine Learning Research, 12, pp. 2825--2830.')
-        st.caption('[3] Developers, X. (2023) xgboost- Release 2.0.0-dev.')
-
-
-        #~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#
-        #COPYRIGHT STATEMENT FOR TAB 2
-        st.markdown("""
-
-        """)
-
-        new_title = '<p style="text-align:left; font-size: 10px;">© 2023 Website is the creation of <strong>Q.Y. Ong</strong>, <strong>X.Y. Kiew</strong> \
-        and <strong>Joshua Y.L. Liew</strong> under the Department of Chemical and Environmental Engineering, University of Nottingham Malaysia.</p>'
-        st.markdown(new_title, unsafe_allow_html=True)      
+        st.caption('[3] Developers, X. (2023) xgboost- Release 2.0.0-dev.')   
 
 
     ##################################################################################################################################################################################   
@@ -845,15 +823,6 @@ if result:
         st.caption('[4] Doorn, M. et al. (2006) Chapter 6-wastewater treatment and discharge. IPCC guidelines for national greenhouse gas Inventories. Hayama, Japan.')  
         st.caption('[5] Nasution, M. A. et al. (2018) ‘Comparative environmental impact evaluation of palm oil mill effluent treatment using a life cycle assessment approach: A case study based on composting and a combination for biogas technologies in North Sumatera of Indonesia’, Journal of Cleaner Production, 184, pp. 1028–1040. doi: 10.1016/j.jclepro.2018.02.299.')
 
-        #~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#
-        #COPYRIGHT STATEMENT FOR TAB 3
-        st.markdown("""
-
-        """)
-
-        new_title = '<p style="text-align:left; font-size: 10px;">© 2023 Website is the creation of <strong>Q.Y. Ong</strong>, <strong>X.Y. Kiew</strong> \
-        and <strong>Joshua Y.L. Liew</strong> under the Department of Chemical and Environmental Engineering, University of Nottingham Malaysia.</p>'
-        st.markdown(new_title, unsafe_allow_html=True)  
 
     ##################################################################################################################################################################################
         with tab4:
@@ -988,17 +957,8 @@ if result:
                 managers of Lepar Hilir Palm Oil Mill, Adela Palm Oil Mill, Keratong Estate Oil Palm \
                 Mill and Felda Lok Heng Palm Oil Mill for providing the dataset required for this study.')
 
-            #~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#~~#
-            #COPYRIGHT STATEMENT FOR TAB 4
-            st.markdown("""
-
-            """)
-
-            new_title = '<p style="text-align:left; font-size: 10px;">© 2023 Website is the creation of <strong>Q.Y. Ong</strong>, <strong>X.Y. Kiew</strong> \
-            and <strong>Joshua Y.L. Liew</strong> under the Department of Chemical and Environmental Engineering, University of Nottingham Malaysia.</p>'
-            st.markdown(new_title, unsafe_allow_html=True)  
         
-        
+######################################################################################################################################################################################        
 #COPYRIGHT STATEMENT FOR MAIN PAGE
 st.markdown("""
 
