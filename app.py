@@ -187,7 +187,10 @@ tab0, tab1, tab2, tab3, tab4, tab5 = st.tabs(["Home", "Dashboard", "Methodology"
 
 with tab0:
     st.balloons()
-    new_title = '<p style="text-align:left; color:red; font-size: 30px;"><strong>Welcome!</strong></p>'
+    press = '<p style="text-align:left; font-size: 30px;">    <strong>↑</strong></p>'
+    st.markdown(new_title, unsafe_allow_html=True)
+    
+    new_title = '<p style="text-align:left; color:red; font-size: 30px;"><strong>Welcome to our biogas prediction app!</strong></p>'
     st.markdown(new_title, unsafe_allow_html=True)
     st.caption('Palm oil mill effluent (POME) is an inevitable by-product of the palm oil extraction \
     process. In the anaerobic treatment process of POME, specific greenhouse gases (also known as biogas \
