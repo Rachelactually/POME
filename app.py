@@ -178,8 +178,15 @@ with col3:
     st.image(image)
 
 #HEADER CAPTIONS
-st.write('**This app predicts the biogas output from a closed system POME anaerobic digestion process.**')
-
+st.write('**This application predicts the biogas output from a closed system POME anaerobic digestion process.**')
+st.caption('Palm oil mill effluent (POME) is an inevitable by-product of the palm oil extraction \
+process. In the anaerobic treatment process of POME, specific greenhouse gases (also known as biogas \
+containing :red[**methane**] and :red[**carbon dioxide**] will be produced, which contributes to the significant increase \
+of carbon footprint. The introduction of the :blue[**Clean Development Mechanism (CDM)**] in the 2006 Kyoto Protocol \
+had since encouraged the close monitoring and even capture of the POME biogas emissions to earn \
+Certified Emission Reduction (CER) credits.)
+st.caption('This application is developed using real life industrial data provided by four Malaysian \
+palm oil mills. 
 
 #MAKING A BUTTON
 result = st.button("Click here to try it out!", type="primary")
