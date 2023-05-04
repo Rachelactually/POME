@@ -180,7 +180,7 @@ with col3:
 st.write('**This app predicts the biogas output from a closed system POME anaerobic digestion process.**')
 
 #MAKING A BUTTON
-result = st.buttom("Try out our prediction app!")
+result = st.button("Try out our prediction app!")
 if result:
         
     ##################################################################################################################################################################################
