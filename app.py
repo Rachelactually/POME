@@ -187,8 +187,6 @@ tab0, tab1, tab2, tab3, tab4, tab5 = st.tabs(["Home", "Dashboard", "Methodology"
 
 with tab0:
     st.balloons()
-    press = '<p style="text-align:left; font-size: 30px;">    <strong>↑</strong></p>'
-    st.markdown(new_title, unsafe_allow_html=True)
     
     new_title = '<p style="text-align:left; color:red; font-size: 30px;"><strong>Welcome to our biogas prediction app!</strong></p>'
     st.markdown(new_title, unsafe_allow_html=True)
