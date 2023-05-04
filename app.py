@@ -181,17 +181,8 @@ with col3:
 st.write('**This app predicts the biogas output from a closed system POME anaerobic digestion process.**')
 
 
-
 #MAKING A BUTTON
 result = st.button("Click here to try it out!", type="primary")
-primaryColor = toml.load(".streamlit/config.toml")['theme']['primaryColor']
-s = f"""
-<style>
-div.stButton > button:first-child {{ border: 5px solid {primaryColor}; border-radius:20px 20px 20px 20px; }}
-<style>
-"""
-st.markdown(s, unsafe_allow_html=True)
-
 if result:
         
     ##################################################################################################################################################################################
