@@ -327,7 +327,7 @@ if result:
                 rounded_H2S = round(series[0],1)
                 st.write(rounded_H2S)
 
-             with col4:
+            with col4:
                 st.subheader('RF')
                 st.caption('Nm$^{3}$ |:blue[_ RMSE: 164_]')
                 result_Biogas = Biogas_prediction_forest(df)
