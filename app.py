@@ -278,28 +278,28 @@ if result:
                 result_Biogas = Biogas_prediction(df)
                 series = pd.Series(result_Biogas[0])
                 rounded_Biogas = round(series[0],0)
-                st.write(**rounded_Biogas**)
+                st.write(rounded_Biogas)
                 st.write("")
                 
                 st.caption('Nm$^{3}$ | :blue[_ RMSE: 77_]')
                 result_CH4 = CH4_prediction(df)
                 series = pd.Series(result_CH4[0])
                 rounded_CH4 = round(series[0],0)
-                col2.write(**rounded_CH4**)
+                col2.write(rounded_CH4)
                 st.write("")
                 
                 st.caption('Nm$^{3}$ | :blue[_ RMSE: 59_]')
                 result_CO2 = CO2_prediction(df)
                 series = pd.Series(result_CO2[0])
                 rounded_CO2 = round(series[0],0)
-                st.write(**rounded_CO2**)
+                st.write(rounded_CO2)
                 st.write("")
                 
                 st.caption('Nm$^{3}$ | :blue[_ RMSE: 4.4_]')
                 result_H2S = H2S_prediction(df)
                 series = pd.Series(result_H2S[0])
                 rounded_H2S = round(series[0],1)
-                st.write(**rounded_H2S**)
+                st.write(rounded_H2S)
                 
             with col3:
                 st.subheader('XGBoost')
@@ -307,25 +307,25 @@ if result:
                 result_Biogas = Biogas_prediction_xgb(df)
                 series = pd.Series(result_Biogas[0])
                 rounded_Biogas = round(series[0],0)
-                st.write(**rounded_Biogas**)
+                st.write(rounded_Biogas)
 
                 st.caption('Nm$^{3}$ | :blue[_ RMSE: 112_]')
                 result_CH4 = CH4_prediction_xgb(df)
                 series = pd.Series(result_CH4[0])
                 rounded_CH4 = round(series[0],0)
-                st.write(**rounded_CH4**)
+                st.write(rounded_CH4)
 
                 st.caption('Nm$^{3}$ | :blue[_ RMSE: 88_]')
                 result_CO2 = CO2_prediction_xgb(df)
                 series = pd.Series(result_CO2[0])
                 rounded_CO2 = round(series[0],0)
-                st.write(**rounded_CO2**)
+                st.write(rounded_CO2)
 
                 st.caption('Nm$^{3}$ | :blue[_ RMSE: 6.2_]')
                 result_H2S = H2S_prediction_xgb(df)
                 series = pd.Series(result_H2S[0])
                 rounded_H2S = round(series[0],1)
-                st.write(**rounded_H2S**)
+                st.write(rounded_H2S)
 
              with col4:
                 st.subheader('RF')
@@ -333,25 +333,25 @@ if result:
                 result_Biogas = Biogas_prediction_forest(df)
                 series = pd.Series(result_Biogas[0])
                 rounded_Biogas = round(series[0],0)
-                st.write(**rounded_Biogas**)
+                st.write(rounded_Biogas)
 
                 st.caption('Nm$^{3}$ |:blue[_ RMSE: 127_]')
                 result_CH4 = CH4_prediction_forest(df)
                 series = pd.Series(result_CH4[0])
                 rounded_CH4 = round(series[0],0)
-                st.write(**rounded_CH4**)
+                st.write(rounded_CH4)
 
                 st.caption('Nm$^{3}$ |:blue[_ RMSE: 100_]')
                 result_CO2 = CO2_prediction_forest(df)
                 series = pd.Series(result_CO2[0])
                 rounded_CO2 = round(series[0],0)
-                st.write(**rounded_CO2**)
+                st.write(rounded_CO2)
 
                 st.caption('Nm$^{3}$ |:blue[_ RMSE: 6.8_]')
                 result_H2S = H2S_prediction_forest(df)
                 series = pd.Series(result_H2S[0])
                 rounded_H2S = round(series[0],1)
-                st.write(**rounded_H2S**)
+                st.write(rounded_H2S)
             
             
               ###############  
@@ -362,28 +362,28 @@ if result:
             result_Biogas = Biogas_prediction(df)
             series = pd.Series(result_Biogas[0])
             rounded_Biogas = round(series[0],0)
-            col1.write(**rounded_Biogas**)
+            col1.write(rounded_Biogas)
 
             col2.subheader('CH$_{4}$')
             col2.caption('Nm$^{3}$ | :blue[_ RMSE-77_]')
             result_CH4 = CH4_prediction(df)
             series = pd.Series(result_CH4[0])
             rounded_CH4 = round(series[0],0)
-            col2.write(**rounded_CH4**)
+            col2.write(rounded_CH4)
 
             col3.subheader('CO$_{2}$')
             col3.caption('Nm$^{3}$ | :blue[_ RMSE-59_]')
             result_CO2 = CO2_prediction(df)
             series = pd.Series(result_CO2[0])
             rounded_CO2 = round(series[0],0)
-            col3.write(**rounded_CO2**)
+            col3.write(rounded_CO2)
 
             col4.subheader('H$_{2}$S')
             col4.caption('Nm$^{3}$ | :blue[_ RMSE-4.4_]')
             result_H2S = H2S_prediction(df)
             series = pd.Series(result_H2S[0])
             rounded_H2S = round(series[0],1)
-            col4.write(**rounded_H2S**)
+            col4.write(rounded_H2S)
 
             st.markdown("""
 
@@ -410,28 +410,28 @@ if result:
             result_Biogas = Biogas_prediction_xgb(df)
             series = pd.Series(result_Biogas[0])
             rounded_Biogas = round(series[0],0)
-            col1.write(**rounded_Biogas**)
+            col1.write(rounded_Biogas)
 
             col2.subheader('CH$_{4}$')
             col2.caption('Nm$^{3}$ | :blue[_ RMSE-112_]')
             result_CH4 = CH4_prediction_xgb(df)
             series = pd.Series(result_CH4[0])
             rounded_CH4 = round(series[0],0)
-            col2.write(**rounded_CH4**)
+            col2.write(rounded_CH4)
 
             col3.subheader('CO$_{2}$')
             col3.caption('Nm$^{3}$ | :blue[_ RMSE-88_]')
             result_CO2 = CO2_prediction_xgb(df)
             series = pd.Series(result_CO2[0])
             rounded_CO2 = round(series[0],0)
-            col3.write(**rounded_CO2**)
+            col3.write(rounded_CO2)
 
             col4.subheader('H$_{2}$S')
             col4.caption('Nm$^{3}$ | :blue[_ RMSE-6.2_]')
             result_H2S = H2S_prediction_xgb(df)
             series = pd.Series(result_H2S[0])
             rounded_H2S = round(series[0],1)
-            col4.write(**rounded_H2S**)
+            col4.write(rounded_H2S)
 
             st.markdown("""
 
@@ -456,28 +456,28 @@ if result:
             result_Biogas = Biogas_prediction_forest(df)
             series = pd.Series(result_Biogas[0])
             rounded_Biogas = round(series[0],0)
-            col1.write(**rounded_Biogas**)
+            col1.write(rounded_Biogas)
 
             col2.subheader('CH$_{4}$')
             col2.caption('Nm$^{3}$ |:blue[_ RMSE-127_]')
             result_CH4 = CH4_prediction_forest(df)
             series = pd.Series(result_CH4[0])
             rounded_CH4 = round(series[0],0)
-            col2.write(**rounded_CH4**)
+            col2.write(rounded_CH4)
 
             col3.subheader('CO$_{2}$')
             col3.caption('Nm$^{3}$ |:blue[_ RMSE-100_]')
             result_CO2 = CO2_prediction_forest(df)
             series = pd.Series(result_CO2[0])
             rounded_CO2 = round(series[0],0)
-            col3.write(**rounded_CO2**)
+            col3.write(rounded_CO2)
 
             col4.subheader('H$_{2}$S')
             col4.caption('Nm$^{3}$ |:blue[_ RMSE-6.8_]')
             result_H2S = H2S_prediction_forest(df)
             series = pd.Series(result_H2S[0])
             rounded_H2S = round(series[0],1)
-            col4.write(**rounded_H2S**)
+            col4.write(rounded_H2S)
 
             mystyle = '''
                 <style>
