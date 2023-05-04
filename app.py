@@ -196,7 +196,7 @@ if result:
             st.sidebar.header('Input Parameters')
             def user_input_features():
                 POME_in = st.sidebar.slider('POME inflow [m$^{3}$/month]', 3800, 24000, 12000,1000,"%f")
-                COD_in = st.sidebar.slider('Chemical Oxygen Demand, COD [mg/L]',55000,92000,65000,1000,"%f")
+                COD_in = st.sidebar.slider('[Chemical Oxygen Demand, COD](https://www.sciencedirect.com/science/article/abs/pii/B0123693977006634) [mg/L]',55000,92000,65000,1000,"%f")
                 BOD_in = st.sidebar.slider('Biological Oxygen Demand, BOD$_{5}$ [mg/L]',23000,47000,30000,1000,"%f")
                 SS_in = st.sidebar.slider('Suspended Solids, SS [mg/L]',13000,55000,35000,1000,"%f")
                 TS_in = st.sidebar.slider('Total Solids, TS [mg/L]',22000,55000,35000,1000,"%f")
