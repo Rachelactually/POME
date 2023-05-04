@@ -196,14 +196,14 @@ if result:
             st.sidebar.header('Input Parameters')
             def user_input_features():
                 POME_in = st.sidebar.slider('POME inflow [m$^{3}$/month]', 3800, 24000, 12000,1000,"%f")
-                COD_in = st.sidebar.slider('[Chemical Oxygen Demand, COD](https://www.sciencedirect.com/science/article/abs/pii/B0123693977006634) [mg/L]',55000,92000,65000,1000,"%f")
-                BOD_in = st.sidebar.slider('Biological Oxygen Demand, BOD$_{5}$ [mg/L]',23000,47000,30000,1000,"%f")
-                SS_in = st.sidebar.slider('Suspended Solids, SS [mg/L]',13000,55000,35000,1000,"%f")
-                TS_in = st.sidebar.slider('Total Solids, TS [mg/L]',22000,55000,35000,1000,"%f")
+                COD_in = st.sidebar.slider('Chemical Oxygen Demand, [COD](https://www.sciencedirect.com/science/article/abs/pii/B0123693977006634) [mg/L]',55000,92000,65000,1000,"%f")
+                BOD_in = st.sidebar.slider('Biological Oxygen Demand, [BOD$_{5}$](https://wq.epa.gov.tw/EWQP/en/Encyclopedia/NounDefinition/Pedia_04.aspx#:~:text=Biochemical%20oxygen%20demand%20(BOD)%20refers,%E2%84%83%2C%20known%20as%20BOD5.) [mg/L]',23000,47000,30000,1000,"%f")
+                SS_in = st.sidebar.slider('Suspended Solids, [SS](https://www.corrosionpedia.com/definition/1063/suspended-solids-ss) [mg/L]',13000,55000,35000,1000,"%f")
+                TS_in = st.sidebar.slider('Total Solids, [TS](https://www.corrosionpedia.com/definition/1106/total-solids-water-treatment) [mg/L]',22000,55000,35000,1000,"%f")
                 Temp = st.sidebar.slider('Temperature [°C]', 37, 48, 41)
                 pH_in = st.sidebar.slider('pH', 6.8, 7.3, 7.0,0.1,"%f")
-                OLR = st.sidebar.slider('Organic Loading Rate, OLR [kg COD$_{in}$/m$^{3}$ day]', 0.86, 1.70, 1.1, 0.01,"%f")
-                HRT = st.sidebar.slider('Hydraulic Retention Time, HRT [days]', 35, 85, 50,5,"%f")
+                OLR = st.sidebar.slider('Organic Loading Rate, [OLR](https://www.climate-policy-watcher.org/aerobic-granules/organic-loading-rate-olr.html) [kg COD$_{in}$/m$^{3}$ day]', 0.86, 1.70, 1.1, 0.01,"%f")
+                HRT = st.sidebar.slider('Hydraulic Retention Time, [HRT](https://www.netsolwater.com/what-is-hydraulic-retention-time.php?blog=1392) [days]', 35, 85, 50,5,"%f")
                 data = {'COD_in': COD_in,
                         'BOD_in': BOD_in,
                         'TS_in': TS_in,
