@@ -183,7 +183,7 @@ st.write('**This application predicts the biogas output from a closed system POM
 #MAKING A BUTTON
 result = st.button("Click here to explore our app!", type="primary")
 if result:
-    st.balloons()    
+    #st.balloons()    
     ##################################################################################################################################################################################
     #Create tabs
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["Dashboard", "Methodology", "Sustainability", "Background of study", "About us"])
@@ -230,7 +230,8 @@ if result:
                 sidebar = st.button("I do not see a side bar.", type="secondary")
                 if sidebar:
                     st.info('On the top left of the screen, click on **>** to expand the side bar!')
-            
+                else:
+                    
             with colB:
                 info = st.button("Tell me about the prediction models.", type="secondary")
                 if info:
@@ -238,7 +239,8 @@ if result:
                     are among the selected predictors for POME biogas components. The accuracy of the respective models, represented by the :blue[_Root mean \
                     squared error (RMSE)_] on the prediction of the target outputs are also displayed. Lower RMSE indicates a more accurate prediction model.\
                     The predicted components include total biogas production, methane (CH$_{4}$), carbon dioxide (CO$_{2}$) and hydrogen sulphide (H$_{2}$S).')
-   
+                else:
+                    
             st.markdown("""
 
             """)
