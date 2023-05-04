@@ -179,21 +179,6 @@ with col3:
 
 #HEADER CAPTIONS
 st.write('**This application predicts the biogas output from a closed system POME anaerobic digestion process.**')
-st.caption('Palm oil mill effluent (POME) is an inevitable by-product of the palm oil extraction \
-process. In the anaerobic treatment process of POME, specific greenhouse gases (also known as biogas \
-containing :red[**methane**] and :red[**carbon dioxide**] will be produced, which contributes to the significant increase \
-of carbon footprint. The introduction of the :blue[**Clean Development Mechanism (CDM)**] in the 2006 Kyoto Protocol \
-had since encouraged the close monitoring and even capture of the POME biogas emissions to earn \
-Certified Emission Reduction (CER) credits.')
-image = Image.open('Process.png')
-st.image(image)
-st.caption('This application is developed using real life industrial data provided by four Malaysian \
-palm oil mills. In this app, we explore the process of constructing a biogas prediction model and the how the repurposing \
-of POME biogas for bioelectricity generation contributes to a circular and sustainable palm oil industry. \
-We aim for :blue[**transparency**] in showcasing our work and research, \
-but most importantly, we aim to make our work more :blue[**accessible**] to the \
-public. We are also excited to let you try out our prediction models.')
-
 
 #MAKING A BUTTON
 result = st.button("Click here to explore our app!", type="primary")
@@ -973,6 +958,24 @@ if result:
 
         
 ######################################################################################################################################################################################        
+else:
+    st.caption('Palm oil mill effluent (POME) is an inevitable by-product of the palm oil extraction \
+    process. In the anaerobic treatment process of POME, specific greenhouse gases (also known as biogas \
+    containing :red[**methane**] and :red[**carbon dioxide**] will be produced, which contributes to the significant increase \
+    of carbon footprint. The introduction of the :blue[**Clean Development Mechanism (CDM)**] in the 2006 Kyoto Protocol \
+    had since encouraged the close monitoring and even capture of the POME biogas emissions to earn \
+    Certified Emission Reduction (CER) credits.')
+    image = Image.open('Process.png')
+    st.image(image)
+    st.caption('This application is developed using real life industrial data provided by four Malaysian \
+    palm oil mills. In this app, we explore the process of constructing a biogas prediction model and the how the repurposing \
+    of POME biogas for bioelectricity generation contributes to a circular and sustainable palm oil industry. \
+    We aim for :blue[**transparency**] in showcasing our work and research, \
+    but most importantly, we aim to make our work more :blue[**accessible**] to the \
+    public. We are also excited to let you try out our prediction models.')
+
+
+
 #COPYRIGHT STATEMENT FOR MAIN PAGE
 st.markdown("""
 
