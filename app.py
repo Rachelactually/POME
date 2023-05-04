@@ -195,15 +195,15 @@ if result:
      with tab1:
             st.sidebar.header('Input Parameters')
             def user_input_features():
-                POME_in = st.sidebar.slider('POME', 3800, 24000, 12000,1000,"%f")
-                COD_in = st.sidebar.slider('COD',55000,92000,65000,1000,"%f")
-                BOD_in = st.sidebar.slider('BOD',23000,47000,30000,1000,"%f")
-                SS_in = st.sidebar.slider('SS',13000,55000,35000,1000,"%f")
-                TS_in = st.sidebar.slider('TS',22000,55000,35000,1000,"%f")
-                Temp = st.sidebar.slider('Temperature', 37, 48, 41)
+                POME_in = st.sidebar.slider('POME inflow [m$^{3}$/month]', 3800, 24000, 12000,1000,"%f")
+                COD_in = st.sidebar.slider('Chemical Oxygen Demand, COD [mg/L]',55000,92000,65000,1000,"%f")
+                BOD_in = st.sidebar.slider('Biological Oxygen Demand, BOD$_{5}$ [mg/L]',23000,47000,30000,1000,"%f")
+                SS_in = st.sidebar.slider('Suspended Solids, SS [mg/L]',13000,55000,35000,1000,"%f")
+                TS_in = st.sidebar.slider('Total Solids, TS [mg/L]',22000,55000,35000,1000,"%f")
+                Temp = st.sidebar.slider('Temperature [°C]', 37, 48, 41)
                 pH_in = st.sidebar.slider('pH', 6.8, 7.3, 7.0,0.1,"%f")
-                OLR = st.sidebar.slider('OLR', 0.86, 1.70, 1.1, 0.01,"%f")
-                HRT = st.sidebar.slider('HRT', 35, 85, 50,5,"%f")
+                OLR = st.sidebar.slider('Organic Loading Rate, OLR [kg COD$_{in}$/m$^{3}$ day]', 0.86, 1.70, 1.1, 0.01,"%f")
+                HRT = st.sidebar.slider('Hydraulic Retention Time, HRT [days]', 35, 85, 50,5,"%f")
                 data = {'COD_in': COD_in,
                         'BOD_in': BOD_in,
                         'TS_in': TS_in,
@@ -224,8 +224,8 @@ if result:
             new_title = '<p style="text-align:left; color:red; font-size: 30px;"><strong>Predicting biogas components</strong></p>'
             st.markdown(new_title, unsafe_allow_html=True)
             st.write('The **Gaussian Process Regressor (GPR)** model, **Random Forest (RF)** model and **Extreme Gradient Booosting (XGBoost)** model\
-            are among the selected predictors for POME biogas components. The accuracy of the respective models, represented by the :blue[R$^{2}$ coefficient of\
-            determination] on the prediction of the target outputs are shown in :blue[_italic_].\
+            are among the selected predictors for POME biogas components. The accuracy of the respective models, represented by the :blue[_Root mean \
+            squared error (RMSE)_] on the prediction of the target outputs are also displayed.\
             The predicted components include total biogas production, methane (CH$_{4}$), carbon dioxide (CO$_{2}$) and hydrogen sulphide (H$_{2}$S).')
 
             st.write(':blue[**Try out our predictor!**]')
