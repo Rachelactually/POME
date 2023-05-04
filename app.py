@@ -832,8 +832,8 @@ if result:
     ##################################################################################################################################################################################
         with tab4:
   
-            tab10, tab20= st.tabs('About the project','About us')
-    
+            tab10, tab20 = st.tabs(["About the project","About us"])
+            
             with tab10:
                 st.subheader('About the project')
                 st.write('Malaysia is the second-largest global palm oil producer, accounting for 100 million tonnes of annual fresh fruit bunches (FFB) harvest. \
